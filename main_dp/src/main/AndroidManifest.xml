@@ -10,6 +10,57 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab">
         <activity
+            android:name=".FishEtcActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HaejoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".CrapActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClamActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ClawActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FishActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FishMidActivity"
+            android:exported="false" />
+        <activity
+            android:name=".GrainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BreadActivity"
+            android:exported="false" />
+        <activity
+            android:name=".DairyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".FruitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VegeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MeatEtcActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ChickActiviy"
+            android:exported="false" />
+        <activity
+            android:name=".CowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".PigActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MeatMidActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

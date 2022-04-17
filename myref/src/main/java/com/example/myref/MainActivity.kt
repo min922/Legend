@@ -17,15 +17,16 @@ class MainActivity : AppCompatActivity() {
         Item("milk", "milk"),
         Item("milk", "milk1")
     )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val mAdapter = MyAdapter(this, MenuList)
-        recyclerView.adapter = mAdapter
+        recyclerView_ref.adapter = mAdapter
 
         val gm = GridLayoutManager(this, 3)
-        recyclerView.layoutManager = gm
-        recyclerView.setHasFixedSize(true)
+        recyclerView_ref.layoutManager = gm
+        recyclerView_ref.setHasFixedSize(true)
     }
 }
