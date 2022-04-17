@@ -1,11 +1,9 @@
 package com.example.show_recipes
 
-import android.content.ClipData
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -25,7 +23,7 @@ class RecipesListAdapter (val context: Context, val recipes_list: ArrayList<menu
     }
 
     inner class Holder(itemView: View?) : RecyclerView.ViewHolder(itemView!!) {
-        val recipes_photo = itemView?.findViewById<ImageButton>(R.id.menu_image)
+        val recipes_photo = itemView?.findViewById<ImageView>(R.id.menu_image)
         val recipes_name = itemView?.findViewById<TextView>(R.id.menu_name)
         val recipes_time = itemView?.findViewById<TextView>(R.id.menu_time)
 
@@ -42,4 +40,3 @@ class RecipesListAdapter (val context: Context, val recipes_list: ArrayList<menu
             }
         }
     }
-}

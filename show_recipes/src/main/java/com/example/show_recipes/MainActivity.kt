@@ -7,11 +7,11 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    /*아직 안 해쏘 성미야*/
     val recipes_List = arrayListOf<menu>(
-        menu("", "",""),
-        menu("", "",""),
-        menu("", "","")
+        menu("bibimbap", "비빔밥","1시간"),
+        menu("bulgogi", "불고기","1시간"),
+        menu("gopchang", "곱창","30분"),
+        menu("japchae", "잡채","1시간 반")
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
