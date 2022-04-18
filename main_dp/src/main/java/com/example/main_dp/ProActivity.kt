@@ -4,10 +4,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 
-class CrapActivity : AppCompatActivity() {
+class ProActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crap)
+        setContentView(R.layout.activity_pro)
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //액션바뒤로가기
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

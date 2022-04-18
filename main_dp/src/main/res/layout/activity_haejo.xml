@@ -74,7 +74,7 @@
                 android:textColor="@color/black"
                 android:background="#00FF0000" />
             <Button
-                android:id="@+id/UhmukButton"
+                android:id="@+id/womukButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:drawableTop="@drawable/fish"

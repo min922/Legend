@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Etccview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:columnCount="3"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/DubuButton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoSizeTextType="uniform"
+            android:text="두부"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="#00FF0000" />
+        <Button
+            android:id="@+id/SundubuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:text="순두부"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="#00FF0000" />
+        <Button
+            android:id="@+id/KongbijiButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:text="콩비지"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="#00FF0000" />
+        <Button
+            android:id="@+id/YubuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:autoSizeTextType="uniform"
+            android:text="유부"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:background="#00FF0000" />
+    </GridLayout>
+</LinearLayout>

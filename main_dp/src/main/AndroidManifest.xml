@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab">
         <activity
+            android:name=".EtcActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SauceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ProActivity"
+            android:exported="false" />
+        <activity
             android:name=".FishEtcActivity"
             android:exported="false" />
         <activity
@@ -22,7 +31,7 @@
             android:name=".ClamActivity"
             android:exported="false" />
         <activity
-            android:name=".ClawActivity"
+            android:name=".ClamActivity"
             android:exported="false" />
         <activity
             android:name=".FishActivity"

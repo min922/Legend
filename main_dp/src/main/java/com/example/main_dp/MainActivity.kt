@@ -2,6 +2,7 @@ package com.example.main_dp
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import com.example.main_dp.R
 import kotlinx.android.synthetic.main.activity_main.*
@@ -37,6 +38,18 @@ class MainActivity : AppCompatActivity() {
                 }
                 fishButton.setOnClickListener {
                         val intent = Intent(this, FishMidActivity::class.java)
+                        startActivity(intent)
+                }
+                proButton.setOnClickListener{
+                        val intent = Intent(this, ProActivity::class.java)
+                        startActivity(intent)
+                }
+                sauceButton.setOnClickListener {
+                        val intent = Intent(this, SauceActivity::class.java)
+                        startActivity(intent)
+                }
+                etcButton.setOnClickListener {
+                        val intent = Intent(this, EtcActivity::class.java)
                         startActivity(intent)
                 }
         }
