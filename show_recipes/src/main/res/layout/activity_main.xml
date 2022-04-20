@@ -11,12 +11,11 @@
     android:layout_gravity="center_horizontal"
     tools:context=".MainActivity">
 
-<!--    android:orientation="horizontal"-->
-
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_gravity="center">
 
         <GridLayout
             android:id="@+id/country"
@@ -114,7 +113,7 @@
 
             <CheckBox
                 android:id="@+id/middle_time"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="30분~60분"
                 tools:layout_editor_absoluteX="22dp"
@@ -129,31 +128,64 @@
                 tools:layout_editor_absoluteY="181dp" />
         </GridLayout>
 
-        <Button
-            android:id="@+id/BtnOK"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="추천 받기" />
     </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
 
-<!--        horixontal 어떤거 설정 더 해보면 될 듯!!!! -->
-<!--        scrollview는 됨-->
-        <ScrollView
+        <Button
+            android:id="@+id/BtnOK"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1">
-            <androidx.recyclerview.widget.RecyclerView
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                android:id="@+id/recyclerView_recipes_list"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                android:layout_weight="1" />
-        </ScrollView>
+            android:text="추천 받기" />
+
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="horizontal"
+        android:id="@+id/recyclerView_recipes_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+<!--    아래 코드 옆으로 스크롤되는데 음식이 하나만 뜸,, 0421 , 2:09 -->
+<!--    <HorizontalScrollView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:id="@+id/recyclerView_recipes_list"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content" />-->
+
+<!--    </HorizontalScrollView>-->
+
+
+
+<!--    <HorizontalScrollView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                app:layoutManager = "androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                android:orientation="horizontal"-->
+<!--                android:id="@+id/recyclerView_recipes_list"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content" >-->
+<!--            </androidx.recyclerview.widget.RecyclerView>-->
+
+<!--        </LinearLayout>-->
+<!--    </HorizontalScrollView>-->
 </LinearLayout>
 
 

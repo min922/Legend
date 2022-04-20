@@ -2,27 +2,29 @@
 <LinearLayout
     android:id="@+id/menu"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:padding="16dp"
-    android:layout_margin="8dp">
+    android:padding="5dp"
+    android:layout_margin="1dp">
+<!--   이미지 크기에 따라서 레시피들이 보여지는 크기가 다름,, 요거 고쳐야 되는데ㅠ-->
 
     <ImageButton
         android:id="@+id/menu_image"
-        android:layout_width="194dp"
-        android:layout_height="124dp" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <!-- width, height 숫자로 지정하면 번갈아가면서 그림 크기가 달라짐,,, 왜지,,? -->
 
     <TextView
         android:id="@+id/menu_name"
-        android:layout_width="194dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
         android:textColor="@color/black"
         android:textStyle="bold" />
     <TextView
         android:id="@+id/menu_time"
-        android:layout_width="194dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:autoSizeTextType="uniform"
         android:textColor="@color/black"

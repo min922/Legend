@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         val recipes_list_Adatper = RecipesListAdapter(this,recipes_List )
         recyclerView_recipes_list.adapter = recipes_list_Adatper
 
-        val recipes_linear_manager = LinearLayoutManager(this)
+        val recipes_linear_manager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
         recyclerView_recipes_list.layoutManager = recipes_linear_manager
         recyclerView_recipes_list.setHasFixedSize(true)
     }
