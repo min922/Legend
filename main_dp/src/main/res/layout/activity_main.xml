@@ -121,6 +121,28 @@
                 android:textColor="@color/black"
                 android:background="#00ff0000"/>
             <Button
+                android:id="@+id/oilButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:drawableTop="@drawable/oil"
+                android:text="기름"
+                android:autoSizeTextType="uniform"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="#00ff0000"/>
+            <Button
+                android:id="@+id/noodleButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="30dp"
+                android:drawableTop="@drawable/noodle"
+                android:text="면류"
+                android:autoSizeTextType="uniform"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="#00ff0000"/>
+            <Button
                 android:id="@+id/etcButton"
                 android:text="기타"
                 android:textSize="40dp"

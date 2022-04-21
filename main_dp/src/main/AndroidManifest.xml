@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab">
         <activity
+            android:name=".SelectActivity.NoodleActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelectActivity.OilActivity"
+            android:exported="false" />
+        <activity
             android:name=".SelectActivity.EtcActivity"
             android:exported="false" />
         <activity

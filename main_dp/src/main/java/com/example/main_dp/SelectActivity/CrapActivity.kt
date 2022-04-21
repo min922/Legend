@@ -33,6 +33,16 @@ class CrapActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("중새우살", "가재새우", "생새우", "새우살", "중새우", "잔새우")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "fish",
+                    "id" to "Shirimp",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         FlowercrapButton.setOnClickListener {
             val data = hashMapOf(
@@ -67,6 +77,16 @@ class CrapActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("게살")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "fish",
+                    "id" to "Crap",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         DaehaButton.setOnClickListener {
             val data = hashMapOf(

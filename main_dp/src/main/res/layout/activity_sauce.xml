@@ -180,32 +180,12 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/OliveoilButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@drawable/salt"
-                    android:autoSizeTextType="uniform"
-                    android:text="올리브유"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:background="#00FF0000" />
-                <Button
                     android:id="@+id/OligodangButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/salt"
                     android:autoSizeTextType="uniform"
                     android:text="올리고당"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:background="#00FF0000" />
-                <Button
-                    android:id="@+id/ChamoilButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:drawableTop="@drawable/salt"
-                    android:autoSizeTextType="uniform"
-                    android:text="참기름"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:background="#00FF0000" />

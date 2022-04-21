@@ -48,6 +48,14 @@ class MainActivity : AppCompatActivity() {
                         val intent = Intent(this, SauceActivity::class.java)
                         startActivity(intent)
                 }
+                oilButton.setOnClickListener {
+                        val intent = Intent(this, OilActivity::class.java)
+                        startActivity(intent)
+                }
+                noodleButton.setOnClickListener {
+                        val intent = Intent(this, NoodleActivity::class.java)
+                        startActivity(intent)
+                }
                 etcButton.setOnClickListener {
                         val intent = Intent(this, EtcActivity::class.java)
                         startActivity(intent)

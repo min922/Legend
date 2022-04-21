@@ -1,27 +1,27 @@
 package com.example.main_dp.SelectActivity
 
+import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.example.main_dp.R
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_bread.*
+import kotlinx.android.synthetic.main.activity_noodle.*
 
-class BreadActivity : AppCompatActivity() {
+class NoodleActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_bread)
+        setContentView(R.layout.activity_noodle)
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //액션바뒤로가기
 
-        GareButton.setOnClickListener {
+        DangButton.setOnClickListener {
             val data = hashMapOf(
-                "photo" to "bread",
-                "id" to "Gare",
-                "menuname" to "가래떡",
+                "photo" to "noodle",
+                "id" to "Dang",
+                "menuname" to "당면",
             )
             db.collection("UserSelect")
                 .add(data)
@@ -33,23 +33,56 @@ class BreadActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
-            val data_overlap = listOf("흰떡")
+        }
+        NaengButton.setOnClickListener {
+            val data = hashMapOf(
+                "photo" to "noodle",
+                "id" to "Naeng",
+                "menuname" to "냉면",
+            )
+            db.collection("UserSelect")
+                .add(data)
+                .addOnSuccessListener {
+                    // 성공할 경우
+                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // 실패할 경우
+                    Log.w("MainActivity", "Error getting documents: $exception")
+                }
+        }
+        KalButton.setOnClickListener {
+            val data = hashMapOf(
+                "photo" to "noodle",
+                "id" to "Kal",
+                "menuname" to "칼국수",
+            )
+            db.collection("UserSelect")
+                .add(data)
+                .addOnSuccessListener {
+                    // 성공할 경우
+                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // 실패할 경우
+                    Log.w("MainActivity", "Error getting documents: $exception")
+                }
+            val data_overlap = listOf("칼국수면")
             for (i in data_overlap.indices){
                 val data_over = hashMapOf(
-                    "photo" to "bread",
-                    "id" to "Gare",
+                    "photo" to "noodle",
+                    "id" to "Kal",
                     "menuname" to data_overlap[i],
                 )
                 db.collection("UserSelect").add(data_over)
             }
 
         }
-
-        DduckgukButton.setOnClickListener {
+        JjolButton.setOnClickListener {
             val data = hashMapOf(
-                "photo" to "bread",
-                "id" to "Dduckguk",
-                "menuname" to "떡국떡",
+                "photo" to "noodle",
+                "id" to "Jjol",
+                "menuname" to "쫄면",
             )
             db.collection("UserSelect")
                 .add(data)
@@ -61,22 +94,38 @@ class BreadActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
-            val data_overlap = listOf("흰떡")
+        }
+        SsalguksuButton.setOnClickListener {
+            val data = hashMapOf(
+                "photo" to "noodle",
+                "id" to "Ssalguksu",
+                "menuname" to "쌀국수",
+            )
+            db.collection("UserSelect")
+                .add(data)
+                .addOnSuccessListener {
+                    // 성공할 경우
+                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // 실패할 경우
+                    Log.w("MainActivity", "Error getting documents: $exception")
+                }
+            val data_overlap = listOf("쌀국수면")
             for (i in data_overlap.indices){
                 val data_over = hashMapOf(
-                    "photo" to "bread",
-                    "id" to "Dduckguk",
+                    "photo" to "noodle",
+                    "id" to "Ssalguksu",
                     "menuname" to data_overlap[i],
                 )
                 db.collection("UserSelect").add(data_over)
             }
         }
-
-        DduckbokkiButton.setOnClickListener {
+        UdongButton.setOnClickListener {
             val data = hashMapOf(
-                "photo" to "bread",
-                "id" to "Dduckbokki",
-                "menuname" to "떡볶이떡",
+                "photo" to "noodle",
+                "id" to "Udong",
+                "menuname" to "우동",
             )
             db.collection("UserSelect")
                 .add(data)
@@ -88,22 +137,38 @@ class BreadActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
-            val data_overlap = listOf("흰떡")
+        }
+        SpaButton.setOnClickListener {
+            val data = hashMapOf(
+                "photo" to "noodle",
+                "id" to "Spa",
+                "menuname" to "스파게티",
+            )
+            db.collection("UserSelect")
+                .add(data)
+                .addOnSuccessListener {
+                    // 성공할 경우
+                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // 실패할 경우
+                    Log.w("MainActivity", "Error getting documents: $exception")
+                }
+            val data_overlap = listOf("스파게티", "페투치네")
             for (i in data_overlap.indices){
                 val data_over = hashMapOf(
-                    "photo" to "bread",
-                    "id" to "Dduckbokki",
+                    "photo" to "noodle",
+                    "id" to "Spa",
                     "menuname" to data_overlap[i],
                 )
                 db.collection("UserSelect").add(data_over)
             }
         }
-
-        BaguetteButton.setOnClickListener {
+        RamenButton.setOnClickListener {
             val data = hashMapOf(
-                "photo" to "bread",
-                "id" to "Baguette",
-                "menuname" to "바게트",
+                "photo" to "noodle",
+                "id" to "Ramen",
+                "menuname" to "라면",
             )
             db.collection("UserSelect")
                 .add(data)
@@ -115,44 +180,35 @@ class BreadActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+        }
+        GuksuButton.setOnClickListener {
+            val data = hashMapOf(
+                "photo" to "noodle",
+                "id" to "Guksu",
+                "menuname" to "국수",
+            )
+            db.collection("UserSelect")
+                .add(data)
+                .addOnSuccessListener {
+                    // 성공할 경우
+                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // 실패할 경우
+                    Log.w("MainActivity", "Error getting documents: $exception")
+                }
+            val data_overlap = listOf("녹차국수", "밀국수", "소면")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "noodle",
+                    "id" to "Guksu",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
             }
-        BaegleButton.setOnClickListener {
-            val data = hashMapOf(
-                "photo" to "bread",
-                "id" to "Baegle",
-                "menuname" to "베이글",
-            )
-            db.collection("UserSelect")
-                .add(data)
-                .addOnSuccessListener {
-                    // 성공할 경우
-                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            }
-        ShickbbangButton.setOnClickListener {
-            val data = hashMapOf(
-                "photo" to "bread",
-                "id" to "Shickbbang",
-                "menuname" to "식빵",
-            )
-            db.collection("UserSelect")
-                .add(data)
-                .addOnSuccessListener {
-                    // 성공할 경우
-                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
-                }
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
         }
     }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean { //뒤로가기 액션
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item?.itemId){
             android.R.id.home -> {
                 finish()

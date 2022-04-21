@@ -18,14 +18,29 @@ class ChickActiviy : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true) //액션바뒤로가기
 
         ChickmeatButton.setOnClickListener {
-            val chickmeat = listOf("닭", "닭살", "닭가슴살")
-            for (i in chickmeat.indices){
-                val data = hashMapOf(
+            val data = hashMapOf(
+                "photo" to "meat",
+                "id" to "Chickmeat",
+                "menuname" to "닭고기",
+            )
+            db.collection("UserSelect")
+                .add(data)
+                .addOnSuccessListener {
+                    // 성공할 경우
+                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                }
+                .addOnFailureListener { exception ->
+                    // 실패할 경우
+                    Log.w("MainActivity", "Error getting documents: $exception")
+                }
+            val data_overlap = listOf("닭", "닭살", "닭가슴살")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
                     "photo" to "meat",
                     "id" to "Chickmeat",
-                    "menuname" to chickmeat[i],
+                    "menuname" to data_overlap[i],
                 )
-                db.collection("UserSelect").add(data)
+                db.collection("UserSelect").add(data_over)
             }
         }
         ChicklegButton.setOnClickListener {
@@ -44,6 +59,16 @@ class ChickActiviy : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("닭", "닭살")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Chickleg",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         ChickanshimButton.setOnClickListener {
             val data = hashMapOf(
@@ -61,6 +86,16 @@ class ChickActiviy : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("안심", "닭살")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Chickanshim",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         ChickbongButton.setOnClickListener {
             val data = hashMapOf(
@@ -78,6 +113,16 @@ class ChickActiviy : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("닭")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Chickbong",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         ChickfeetButton.setOnClickListener {
             val data = hashMapOf(
@@ -95,6 +140,16 @@ class ChickActiviy : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("닭")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Chickfeet",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

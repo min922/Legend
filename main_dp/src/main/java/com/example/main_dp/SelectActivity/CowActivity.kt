@@ -20,7 +20,7 @@ class CowActivity : AppCompatActivity() {
         CowmeatButton.setOnClickListener {
             val data = hashMapOf(
                 "photo" to "meat",
-                "id" to "Cowmea",
+                "id" to "Cowmeat",
                 "menuname" to "소고기",
             )
             db.collection("UserSelect")
@@ -33,6 +33,16 @@ class CowActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("쇠고기", "쇠고기(힘줄없는부위)", "쇠고기(안심 또는 등심)")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Cowmeat",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         CowcutButton.setOnClickListener {
             val data = hashMapOf(
@@ -50,6 +60,15 @@ class CowActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("다진쇠고기", "다짐육", "다짐육(소고기)", "채썬쇠고기")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Cowcut",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
         }
         CowtailButton.setOnClickListener {
             val data = hashMapOf(
@@ -84,6 +103,16 @@ class CowActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("안심", "쇠고기(안심 또는 등심)")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Cowanshim",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         CowdungshimButton.setOnClickListener {
             val data = hashMapOf(
@@ -101,6 +130,16 @@ class CowActivity : AppCompatActivity() {
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
                 }
+            val data_overlap = listOf("쇠고기(안심 또는 등심)")
+            for (i in data_overlap.indices){
+                val data_over = hashMapOf(
+                    "photo" to "meat",
+                    "id" to "Cowdungshim",
+                    "menuname" to data_overlap[i],
+                )
+                db.collection("UserSelect").add(data_over)
+            }
+
         }
         CowheadButton.setOnClickListener {
             val data = hashMapOf(

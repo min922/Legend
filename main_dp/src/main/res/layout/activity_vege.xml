@@ -30,7 +30,7 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/sukjuButton"
+                    android:id="@+id/SukjuButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/cabbage"
@@ -70,7 +70,7 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/Gosari"
+                    android:id="@+id/GosariButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/cabbage"
@@ -360,12 +360,12 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/BaechugimchiButton"
+                    android:id="@+id/KimchiButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/cabbage"
                     android:autoSizeTextType="uniform"
-                    android:text="배추김치"
+                    android:text="김치"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
@@ -396,6 +396,26 @@
                     android:drawableTop="@drawable/cabbage"
                     android:autoSizeTextType="uniform"
                     android:text="양배추"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="#00FF0000" />
+                <Button
+                    android:id="@+id/GogumaButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/cabbage"
+                    android:autoSizeTextType="uniform"
+                    android:text="고구마"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="#00FF0000" />
+                <Button
+                    android:id="@+id/OksusuButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/cabbage"
+                    android:autoSizeTextType="uniform"
+                    android:text="옥수수"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:background="#00FF0000" />

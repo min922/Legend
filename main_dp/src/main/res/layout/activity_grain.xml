@@ -100,7 +100,7 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/DelggaegruButton"
+                    android:id="@+id/DelggaegaruButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/rice"
@@ -110,7 +110,7 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/NolmalgaruButton"
+                    android:id="@+id/NokmalgaruButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/rice"
@@ -140,7 +140,7 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/FriegaruButton"
+                    android:id="@+id/FrygaruButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/rice"
@@ -196,6 +196,16 @@
                     android:drawableTop="@drawable/rice"
                     android:autoSizeTextType="uniform"
                     android:text="땅콩"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:background="#00FF0000" />
+                <Button
+                    android:id="@+id/GgaeButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableTop="@drawable/rice"
+                    android:autoSizeTextType="uniform"
+                    android:text="깨"
                     android:textStyle="bold"
                     android:textColor="@color/black"
                     android:background="#00FF0000" />

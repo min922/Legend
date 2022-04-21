@@ -46,6 +46,16 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:background="#00FF0000" />
+            <Button
+                android:id="@+id/MilkButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/milk"
+                android:autoSizeTextType="uniform"
+                android:text="우유"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:background="#00FF0000" />
         </GridLayout>
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
