@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import com.example.main_dp.R
+import com.google.firebase.firestore.FirebaseFirestore
 
 class VegeActivity : AppCompatActivity() {
+    val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vege)

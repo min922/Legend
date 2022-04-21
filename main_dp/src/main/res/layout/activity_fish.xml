@@ -280,7 +280,7 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/HunjaesalminButton"
+                    android:id="@+id/HunjaesalmonButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/fish"
@@ -300,7 +300,7 @@
                     android:textColor="@color/black"
                     android:background="#00FF0000" />
                 <Button
-                    android:id="@+id/gwanguhButton"
+                    android:id="@+id/GwanguhButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:drawableTop="@drawable/fish"
