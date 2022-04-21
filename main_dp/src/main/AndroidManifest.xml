@@ -10,64 +10,64 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidLab">
         <activity
-            android:name=".EtcActivity"
+            android:name=".SelectActivity.EtcActivity"
             android:exported="false" />
         <activity
-            android:name=".SauceActivity"
+            android:name=".SelectActivity.SauceActivity"
             android:exported="false" />
         <activity
-            android:name=".ProActivity"
+            android:name=".SelectActivity.ProActivity"
             android:exported="false" />
         <activity
-            android:name=".FishEtcActivity"
+            android:name=".SelectActivity.FishEtcActivity"
             android:exported="false" />
         <activity
-            android:name=".HaejoActivity"
+            android:name=".SelectActivity.HaejoActivity"
             android:exported="false" />
         <activity
-            android:name=".CrapActivity"
+            android:name=".SelectActivity.CrapActivity"
             android:exported="false" />
         <activity
-            android:name=".ClamActivity"
+            android:name=".SelectActivity.ClamActivity"
             android:exported="false" />
         <activity
-            android:name=".ClamActivity"
+            android:name=".SelectActivity.ClamActivity"
             android:exported="false" />
         <activity
-            android:name=".FishActivity"
+            android:name=".SelectActivity.FishActivity"
             android:exported="false" />
         <activity
-            android:name=".FishMidActivity"
+            android:name=".SelectActivity.FishMidActivity"
             android:exported="false" />
         <activity
-            android:name=".GrainActivity"
+            android:name=".SelectActivity.GrainActivity"
             android:exported="false" />
         <activity
-            android:name=".BreadActivity"
+            android:name=".SelectActivity.BreadActivity"
             android:exported="false" />
         <activity
-            android:name=".DairyActivity"
+            android:name=".SelectActivity.DairyActivity"
             android:exported="false" />
         <activity
-            android:name=".FruitActivity"
+            android:name=".SelectActivity.FruitActivity"
             android:exported="false" />
         <activity
-            android:name=".VegeActivity"
+            android:name=".SelectActivity.VegeActivity"
             android:exported="false" />
         <activity
-            android:name=".MeatEtcActivity"
+            android:name=".SelectActivity.MeatEtcActivity"
             android:exported="false" />
         <activity
-            android:name=".ChickActiviy"
+            android:name=".SelectActivity.ChickActiviy"
             android:exported="false" />
         <activity
-            android:name=".CowActivity"
+            android:name=".SelectActivity.CowActivity"
             android:exported="false" />
         <activity
-            android:name=".PigActivity"
+            android:name=".SelectActivity.PigActivity"
             android:exported="false" />
         <activity
-            android:name=".MeatMidActivity"
+            android:name=".SelectActivity.MeatMidActivity"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
