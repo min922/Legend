@@ -20,7 +20,6 @@ class MainActivity : AppCompatActivity() {
     val user_refrigerator = arrayListOf<String>() //괄호 안에 냉장고 재료 받기
     val ingredients = mutableListOf<String>("돼지고기" , "돼지 볼살", "돼기고기", "청포묵")
 
-
 //    val ingredients1 = mutableListOf<String>("쌀" , "안심", "콩나물", "청포묵", "미나리", "소금")
 //    val ingredients2 = mutableListOf<String>("찹쌀" , "수수", "차조", "소금", "콩", "팥")
 //    val ingredients4 = mutableListOf<String>("호박" , "당근", "쌀")
@@ -45,17 +44,18 @@ class MainActivity : AppCompatActivity() {
         db.collection("UserSelect") //작업할 컬렉션
             .get() //문서 가져오기
             .addOnSuccessListener { result ->
+
                 //성공할 경우
                 user_refrigerator.clear()
                 for (document in result){ //가져온 문서들은 result에 들어감
-                    val user_ingredients = document["menuname"] as String
+                    //Log.w("아이템", "${document.data["menuname"]}") menuname만 읽어들어짐!!
+                    val user_ingredients = document.data["menuname"].toString()
                     user_refrigerator.add(user_ingredients)
                 }
-                recipes_list_Adatper.notifyDataSetChanged() //리사이클러 뷰 갱신
             }
             .addOnFailureListener{exception ->
                 //실패할 경우
-                Log.w("MainActivity", "Error getting documents: $exception")
+                Log.w("MainActivity_Error", "Error getting documents: $exception")
             }
         //////////////////////////////////////////////////////////////////////////
 
