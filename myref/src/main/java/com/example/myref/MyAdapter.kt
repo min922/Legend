@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -34,7 +35,7 @@ class MyAdapter(val context: Context, val itemList: ArrayList<Item>):
             }
 
             inner class Holder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
-                val menuPhoto = itemView?.findViewById<ImageView>(R.id.menuPhotoImg)
+                val menuPhoto = itemView?.findViewById<ImageButton>(R.id.menuPhotoImg)
                 val menuName = itemView?.findViewById<TextView>(R.id.menuText)
 
                 fun bind(item:Item, context: Context){

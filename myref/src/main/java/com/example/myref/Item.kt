@@ -1,6 +1,5 @@
 package com.example.myref
 
-import android.graphics.drawable.Drawable
-
-class Item(val photo: String, val menuname: String) {
+class Item(val display: Int, val id: String,
+           val photo: String, val menuname: String) {
 }

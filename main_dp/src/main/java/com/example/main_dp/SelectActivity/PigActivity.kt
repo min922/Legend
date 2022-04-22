@@ -22,6 +22,7 @@ class PigActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Pigmeat",
                 "menuname" to "돼지고기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class PigActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Pigmeat",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
