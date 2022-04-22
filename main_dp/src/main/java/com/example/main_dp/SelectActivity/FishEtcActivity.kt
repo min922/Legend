@@ -22,6 +22,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Chunguhal",
                 "menuname" to "청어알",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Salmonal",
                 "menuname" to "연어알",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -56,6 +58,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Myungranjut",
                 "menuname" to "명란젓",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -73,6 +76,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Junuhjutgal",
                 "menuname" to "전어젓갈",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -90,6 +94,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Nalchial",
                 "menuname" to "날치알",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -107,6 +112,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Haepari",
                 "menuname" to "해파리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -124,6 +130,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Miduduk",
                 "menuname" to "미더덕",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -141,6 +148,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Myungran",
                 "menuname" to "명란",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -158,6 +166,7 @@ class FishEtcActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Haesam",
                 "menuname" to "해삼",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

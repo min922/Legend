@@ -22,6 +22,7 @@ class ChickActiviy : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Chickmeat",
                 "menuname" to "닭고기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class ChickActiviy : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Chickmeat",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -48,6 +50,7 @@ class ChickActiviy : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Chickleg",
                 "menuname" to "닭다리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -65,6 +68,7 @@ class ChickActiviy : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Chickleg",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -75,6 +79,7 @@ class ChickActiviy : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Chickanshim",
                 "menuname" to "닭안심",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -92,6 +97,7 @@ class ChickActiviy : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Chickanshim",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -102,6 +108,7 @@ class ChickActiviy : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Chickbong",
                 "menuname" to "닭봉",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -119,6 +126,7 @@ class ChickActiviy : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Chickbong",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -129,6 +137,7 @@ class ChickActiviy : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Chickfeet",
                 "menuname" to "닭발",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -146,6 +155,7 @@ class ChickActiviy : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Chickfeet",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

@@ -22,6 +22,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Crapmatsal",
                 "menuname" to "게맛살",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class ProActivity : AppCompatActivity() {
                     "photo" to "sausage",
                     "id" to "Crapmatsal",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -49,6 +51,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Umuk",
                 "menuname" to "장식용어묵",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -66,6 +69,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Ham",
                 "menuname" to "햄",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -83,6 +87,7 @@ class ProActivity : AppCompatActivity() {
                     "photo" to "sausage",
                     "id" to "Ham",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -93,6 +98,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Bacon",
                 "menuname" to "베이컨",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -110,6 +116,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Franksausage",
                 "menuname" to "프랑크소세지",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -127,6 +134,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Viennasiusage",
                 "menuname" to "비엔나소세지",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -144,6 +152,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Golbangcan",
                 "menuname" to "골뱅이통조림",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -161,6 +170,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Ggongchican",
                 "menuname" to "꽁치통조림",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -178,6 +188,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Chamchican",
                 "menuname" to "참치통조림",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -195,6 +206,7 @@ class ProActivity : AppCompatActivity() {
                     "photo" to "sausage",
                     "id" to "Chamchican",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -205,6 +217,7 @@ class ProActivity : AppCompatActivity() {
                 "photo" to "sausage",
                 "id" to "Fruitcan",
                 "menuname" to "과일통조림",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -222,6 +235,7 @@ class ProActivity : AppCompatActivity() {
                     "photo" to "sausage",
                     "id" to "Fruitcan",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

@@ -22,6 +22,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Mylchi",
                 "menuname" to "멸치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Squid",
                 "menuname" to "오징어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -56,6 +58,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Squid",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -66,6 +69,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Bukuh",
                 "menuname" to "북어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -83,6 +87,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Bukuh",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -93,6 +98,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Sangtae",
                 "menuname" to "생태",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -110,6 +116,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Sangtae",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -120,6 +127,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Salmon",
                 "menuname" to "연어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -137,6 +145,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Salmon",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -147,6 +156,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Boiledocto",
                 "menuname" to "삶은 문어살",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -164,6 +174,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Gapsquid",
                 "menuname" to "갑오징어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -181,6 +192,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Ggolddugi",
                 "menuname" to "꼴뚜기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -198,6 +210,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Jjukumi",
                 "menuname" to "쭈꾸미",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -215,6 +228,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Domi",
                 "menuname" to "도미",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -232,6 +246,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Domi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -242,6 +257,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Janmylchi",
                 "menuname" to "잔멸치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -259,6 +275,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Galchi",
                 "menuname" to "갈치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -276,6 +293,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Galchi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -286,6 +304,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Daegu",
                 "menuname" to "대구",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -303,6 +322,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Daegu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -313,6 +333,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Dongtae",
                 "menuname" to "동태",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -330,6 +351,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Dongtae",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -340,6 +362,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Junuh",
                 "menuname" to "전어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -357,6 +380,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Junuh",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -367,6 +391,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Maegi",
                 "menuname" to "메기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -384,6 +409,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Maegi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -394,6 +420,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Inguh",
                 "menuname" to "잉어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -411,6 +438,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Inguh",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -421,6 +449,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Songuh",
                 "menuname" to "송어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -438,6 +467,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Songuh",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -448,6 +478,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Agu",
                 "menuname" to "아구",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -465,6 +496,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Agu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -475,6 +507,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Jogi",
                 "menuname" to "조기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -492,6 +525,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Jogi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -502,6 +536,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Nakji",
                 "menuname" to "낙지",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -519,6 +554,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Nakji",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -529,6 +565,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Driedsquid",
                 "menuname" to "말린 오징어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -546,6 +583,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Chamchi",
                 "menuname" to "참치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -563,6 +601,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Chamchi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -573,6 +612,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Octopus",
                 "menuname" to "문어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -590,6 +630,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Ggongchi",
                 "menuname" to "꽁치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -607,6 +648,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Ggongchi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -617,6 +659,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Godung",
                 "menuname" to "고등어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -634,6 +677,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Godung",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -644,6 +688,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Hunjaesalmon",
                 "menuname" to "훈제연어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -661,6 +706,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Codari",
                 "menuname" to "코다리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -678,6 +724,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Codari",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -688,6 +735,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Gwanguh",
                 "menuname" to "광어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -705,6 +753,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Gwanguh",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -715,6 +764,7 @@ class FishActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Janguh",
                 "menuname" to "장어",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -732,6 +782,7 @@ class FishActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Janguh",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

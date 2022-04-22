@@ -22,6 +22,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Dang",
                 "menuname" to "당면",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Naeng",
                 "menuname" to "냉면",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -56,6 +58,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Kal",
                 "menuname" to "칼국수",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -73,6 +76,7 @@ class NoodleActivity : AppCompatActivity() {
                     "photo" to "noodle",
                     "id" to "Kal",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -83,6 +87,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Jjol",
                 "menuname" to "쫄면",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -100,6 +105,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Ssalguksu",
                 "menuname" to "쌀국수",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -126,6 +132,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Udong",
                 "menuname" to "우동",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -143,6 +150,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Spa",
                 "menuname" to "스파게티",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -160,6 +168,7 @@ class NoodleActivity : AppCompatActivity() {
                     "photo" to "noodle",
                     "id" to "Spa",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -169,6 +178,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Ramen",
                 "menuname" to "라면",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -186,6 +196,7 @@ class NoodleActivity : AppCompatActivity() {
                 "photo" to "noodle",
                 "id" to "Guksu",
                 "menuname" to "국수",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -203,6 +214,7 @@ class NoodleActivity : AppCompatActivity() {
                     "photo" to "noodle",
                     "id" to "Guksu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

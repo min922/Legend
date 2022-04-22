@@ -22,6 +22,7 @@ class BreadActivity : AppCompatActivity() {
                 "photo" to "bread",
                 "id" to "Gare",
                 "menuname" to "가래떡",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class BreadActivity : AppCompatActivity() {
                     "photo" to "bread",
                     "id" to "Gare",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -50,6 +52,7 @@ class BreadActivity : AppCompatActivity() {
                 "photo" to "bread",
                 "id" to "Dduckguk",
                 "menuname" to "떡국떡",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -67,6 +70,7 @@ class BreadActivity : AppCompatActivity() {
                     "photo" to "bread",
                     "id" to "Dduckguk",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -77,6 +81,7 @@ class BreadActivity : AppCompatActivity() {
                 "photo" to "bread",
                 "id" to "Dduckbokki",
                 "menuname" to "떡볶이떡",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -94,6 +99,7 @@ class BreadActivity : AppCompatActivity() {
                     "photo" to "bread",
                     "id" to "Dduckbokki",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -104,6 +110,7 @@ class BreadActivity : AppCompatActivity() {
                 "photo" to "bread",
                 "id" to "Baguette",
                 "menuname" to "바게트",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -121,6 +128,7 @@ class BreadActivity : AppCompatActivity() {
                 "photo" to "bread",
                 "id" to "Baegle",
                 "menuname" to "베이글",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -138,6 +146,7 @@ class BreadActivity : AppCompatActivity() {
                 "photo" to "bread",
                 "id" to "Shickbbang",
                 "menuname" to "식빵",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

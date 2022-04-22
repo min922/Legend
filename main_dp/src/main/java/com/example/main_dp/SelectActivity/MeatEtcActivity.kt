@@ -21,6 +21,7 @@ class MeatEtcActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Gopchang",
                 "menuname" to "곱창",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -38,6 +39,7 @@ class MeatEtcActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Rawmeat",
                 "menuname" to "육회",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

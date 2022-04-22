@@ -22,6 +22,7 @@ class CowActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Cowmeat",
                 "menuname" to "소고기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class CowActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Cowmeat",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -49,6 +51,7 @@ class CowActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Cowcut",
                 "menuname" to "다진소고기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -66,6 +69,7 @@ class CowActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Cowcut",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -75,6 +79,7 @@ class CowActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Cowtail",
                 "menuname" to "소꼬리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -92,6 +97,7 @@ class CowActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Cowanshim",
                 "menuname" to "소고기안심",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -109,6 +115,7 @@ class CowActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Cowanshim",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -119,6 +126,7 @@ class CowActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Cowdungshim",
                 "menuname" to "소고기등심",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -136,6 +144,7 @@ class CowActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Cowdungshim",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -146,6 +155,7 @@ class CowActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Cowhead",
                 "menuname" to "양지머리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -163,6 +173,7 @@ class CowActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Cowblood",
                 "menuname" to "선지",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

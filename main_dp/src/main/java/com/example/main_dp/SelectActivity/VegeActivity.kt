@@ -22,6 +22,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Kongnamul",
                 "menuname" to "콩나물",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Sukju",
                 "menuname" to "숙주",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -56,6 +58,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Sukju",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -66,6 +69,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Minari",
                 "menuname" to "미나리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -83,6 +87,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Greenonion",
                 "menuname" to "파",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -100,6 +105,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Greenonion",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -110,6 +116,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Doraji",
                 "menuname" to "도라지",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -127,6 +134,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Doraji",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -137,6 +145,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Gosari",
                 "menuname" to "고사리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -154,6 +163,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Gosari",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -164,6 +174,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Shigumchi",
                 "menuname" to "시금치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -181,6 +192,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Shigumchi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -191,6 +203,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Pyogo",
                 "menuname" to "표고",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -208,6 +221,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Pyogo",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -218,6 +232,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Yangsong",
                 "menuname" to "양송이버섯",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -235,6 +250,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Yangsong",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -245,6 +261,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Nutari",
                 "menuname" to "느타리버섯",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -262,6 +279,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Nutari",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -272,6 +290,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Moki",
                 "menuname" to "목이버섯",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -289,6 +308,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Moki",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -298,6 +318,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Saesong",
                 "menuname" to "새송이버섯",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -315,6 +336,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Saesong",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -325,6 +347,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Pange",
                 "menuname" to "팽이버섯",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -342,6 +365,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Pange",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -352,6 +376,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Aehobak",
                 "menuname" to "애호박",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -369,6 +394,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Aehobak",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -379,6 +405,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Hobak",
                 "menuname" to "호박",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -396,6 +423,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Hobak",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -406,6 +434,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Carrot",
                 "menuname" to "당근",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -423,6 +452,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Carrot",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -433,6 +463,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Buchu",
                 "menuname" to "부추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -450,6 +481,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Buchu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -460,6 +492,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Gochu",
                 "menuname" to "고추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -477,6 +510,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Gochu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -487,6 +521,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Garlic",
                 "menuname" to "마늘",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -504,6 +539,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Daechu",
                 "menuname" to "대추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -521,6 +557,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Potato",
                 "menuname" to "감자",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -538,6 +575,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Onion",
                 "menuname" to "양파",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -555,6 +593,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Onion",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -565,6 +604,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Pimang",
                 "menuname" to "피망",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -582,6 +622,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Pimang",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -592,6 +633,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Paprica",
                 "menuname" to "파프리카",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -609,6 +651,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Paprica",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -619,6 +662,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Cucumber",
                 "menuname" to "오이",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -646,6 +690,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Sangchu",
                 "menuname" to "상추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -663,6 +708,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Sangchu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -673,6 +719,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Ggatip",
                 "menuname" to "깻잎",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -690,6 +737,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Ggatip",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -700,6 +748,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Mu",
                 "menuname" to "무",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -717,6 +766,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Mu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -727,6 +777,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Brocoli",
                 "menuname" to "브로콜리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -744,6 +795,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Brocoli",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -754,6 +806,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Chunggyung",
                 "menuname" to "청경채",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -771,6 +824,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Bangto",
                 "menuname" to "방울토마토",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -788,6 +842,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Tomato",
                 "menuname" to "토마토",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -805,6 +860,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Tomato",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -815,6 +871,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Bam",
                 "menuname" to "밤",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -832,6 +889,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Bam",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -842,6 +900,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Baechu",
                 "menuname" to "배추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -859,6 +918,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Baechu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -869,6 +929,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Kimchi",
                 "menuname" to "김치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -886,6 +947,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Kimchi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -896,6 +958,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Yungeun",
                 "menuname" to "연근",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -913,6 +976,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Yangsangchu",
                 "menuname" to "양상추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -930,6 +994,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Yangbaechu",
                 "menuname" to "양배추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -947,6 +1012,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Yangbaechu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -957,6 +1023,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Goguma",
                 "menuname" to "고구마",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -974,6 +1041,7 @@ class VegeActivity : AppCompatActivity() {
                 "photo" to "cabbage",
                 "id" to "Oksusu",
                 "menuname" to "옥수수",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -991,6 +1059,7 @@ class VegeActivity : AppCompatActivity() {
                     "photo" to "cabbage",
                     "id" to "Oksusu",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

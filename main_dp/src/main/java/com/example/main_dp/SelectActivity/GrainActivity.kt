@@ -39,6 +39,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Ssal",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -66,6 +67,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Chapssal",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -110,6 +112,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Chajo",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -137,6 +140,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Junbun",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -215,6 +219,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Delggaegaru",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -242,6 +247,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Nokmalgaru",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -286,6 +292,7 @@ class GrainActivity : AppCompatActivity() {
                         "photo" to "rice",
                         "id" to "Jatgaru",
                         "menuname" to data_overlap[i],
+                        "display" to "0"
                     )
                     db.collection("UserSelect").add(data_over)
                 }
@@ -330,6 +337,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Kong",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -357,6 +365,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Pat",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -384,6 +393,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Hukimja",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -428,6 +438,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Peanut",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -455,6 +466,7 @@ class GrainActivity : AppCompatActivity() {
                     "photo" to "rice",
                     "id" to "Ggae",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

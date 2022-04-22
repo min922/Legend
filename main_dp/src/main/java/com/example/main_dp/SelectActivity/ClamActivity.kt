@@ -22,6 +22,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Honghap",
                 "menuname" to "홍합",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class ClamActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Honghap",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -49,6 +51,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Moshi",
                 "menuname" to "모시조개",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -66,6 +69,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Chamsora",
                 "menuname" to "참소라살",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -83,6 +87,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Garibi",
                 "menuname" to "가리비",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -100,6 +105,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Jaechup",
                 "menuname" to "재첩",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -117,6 +123,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Gul",
                 "menuname" to "굴",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -134,6 +141,7 @@ class ClamActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Gul",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -144,6 +152,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Bajirak",
                 "menuname" to "바지락",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -161,6 +170,7 @@ class ClamActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Bajirak",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -171,6 +181,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Golbang",
                 "menuname" to "골뱅이",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -188,6 +199,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Matclam",
                 "menuname" to "맛조개",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -205,6 +217,7 @@ class ClamActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Matclam",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -215,6 +228,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Clamsal",
                 "menuname" to "조갯살",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -232,6 +246,7 @@ class ClamActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Clamsal",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -242,6 +257,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Piclam",
                 "menuname" to "피조개",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -259,6 +275,7 @@ class ClamActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Piclam",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -269,6 +286,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Junbok",
                 "menuname" to "전복",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -286,6 +304,7 @@ class ClamActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Matsalclam",
                 "menuname" to "맛살조개",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -303,6 +322,7 @@ class ClamActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Matsalclam",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

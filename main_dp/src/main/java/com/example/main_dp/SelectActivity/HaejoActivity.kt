@@ -23,6 +23,7 @@ class HaejoActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Dashima",
                 "menuname" to "다시마",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -40,6 +41,7 @@ class HaejoActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Dashima",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -50,6 +52,7 @@ class HaejoActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Seaweed",
                 "menuname" to "미역",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -67,6 +70,7 @@ class HaejoActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Seaweed",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -77,6 +81,7 @@ class HaejoActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Gim",
                 "menuname" to "김",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -94,6 +99,7 @@ class HaejoActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Gim",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -104,6 +110,7 @@ class HaejoActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Parae",
                 "menuname" to "파래",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -121,6 +128,7 @@ class HaejoActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Haecho",
                 "menuname" to "해초",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -138,6 +146,7 @@ class HaejoActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Umuk",
                 "menuname" to "우묵",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

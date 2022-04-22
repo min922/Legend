@@ -22,6 +22,7 @@ class DairyActivity : AppCompatActivity() {
                 "photo" to "milk",
                 "id" to "Egg",
                 "menuname" to "계란",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class DairyActivity : AppCompatActivity() {
                     "photo" to "milk",
                     "id" to "Egg",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -49,6 +51,7 @@ class DairyActivity : AppCompatActivity() {
                 "photo" to "milk",
                 "id" to "Cheese",
                 "menuname" to "치즈",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -66,6 +69,7 @@ class DairyActivity : AppCompatActivity() {
                     "photo" to "milk",
                     "id" to "Cheese",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -76,6 +80,7 @@ class DairyActivity : AppCompatActivity() {
                 "photo" to "milk",
                 "id" to "Yogart",
                 "menuname" to "요거트",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -93,6 +98,7 @@ class DairyActivity : AppCompatActivity() {
                     "photo" to "milk",
                     "id" to "Yogart",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -103,6 +109,7 @@ class DairyActivity : AppCompatActivity() {
                 "photo" to "milk",
                 "id" to "Milk",
                 "menuname" to "우유",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

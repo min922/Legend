@@ -23,6 +23,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Oliveoil",
                 "menuname" to "올리브유",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -40,6 +41,7 @@ class OilActivity : AppCompatActivity() {
                     "photo" to "oil",
                     "id" to "Oliveoil",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -50,6 +52,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Chamoil",
                 "menuname" to "참기름",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -67,6 +70,7 @@ class OilActivity : AppCompatActivity() {
                     "photo" to "oil",
                     "id" to "Chamoil",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -76,6 +80,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Vegeoil",
                 "menuname" to "식물성기름",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -93,6 +98,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Gochuoil",
                 "menuname" to "고추기름",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -110,6 +116,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Fryoil",
                 "menuname" to "튀김기름",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -127,6 +134,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Yutoil",
                 "menuname" to "엿기름",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -144,6 +152,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Sikoil",
                 "menuname" to "식용유",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -161,6 +170,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Saladoil",
                 "menuname" to "샐러드오일",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -178,6 +188,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Podossioil",
                 "menuname" to "포도씨유",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -195,6 +206,7 @@ class OilActivity : AppCompatActivity() {
                     "photo" to "oil",
                     "id" to "Podossioil",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -204,6 +216,7 @@ class OilActivity : AppCompatActivity() {
                 "photo" to "oil",
                 "id" to "Duloil",
                 "menuname" to "들기름",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

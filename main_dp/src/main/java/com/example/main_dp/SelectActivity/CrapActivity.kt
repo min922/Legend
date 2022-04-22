@@ -22,6 +22,7 @@ class CrapActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Shirimp",
                 "menuname" to "새우",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class CrapActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Shirimp",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -49,6 +51,7 @@ class CrapActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Flowercarp",
                 "menuname" to "꽃게",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -66,6 +69,7 @@ class CrapActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Crap",
                 "menuname" to "게",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -83,6 +87,7 @@ class CrapActivity : AppCompatActivity() {
                     "photo" to "fish",
                     "id" to "Crap",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -93,6 +98,7 @@ class CrapActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Daeha",
                 "menuname" to "대하",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -110,6 +116,7 @@ class CrapActivity : AppCompatActivity() {
                 "photo" to "fish",
                 "id" to "Cocktailshirimp",
                 "menuname" to "칵테일새우",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

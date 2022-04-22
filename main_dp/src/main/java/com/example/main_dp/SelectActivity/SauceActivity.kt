@@ -22,6 +22,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Soysauce",
                 "menuname" to "간장",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Soysauce",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -49,6 +51,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Gochujang",
                 "menuname" to "고추장",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -66,6 +69,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Gochujang",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -76,6 +80,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Gochugaru",
                 "menuname" to "고추가루",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -93,6 +98,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Gochugaru",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -103,6 +109,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Salt",
                 "menuname" to "소금",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -120,6 +127,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Salt",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -130,6 +138,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Honey",
                 "menuname" to "꿀",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -147,6 +156,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Honey",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -157,6 +167,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Dajingarlic",
                 "menuname" to "다진마늘",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -174,6 +185,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Dajingarlic",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -184,6 +196,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Daonjang",
                 "menuname" to "된장",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -201,6 +214,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Daonjang",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -211,6 +225,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Mayonnaise",
                 "menuname" to "마요네즈",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -228,6 +243,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Mayonnaise",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -238,6 +254,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Mustard",
                 "menuname" to "머스타드",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -255,6 +272,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "Mustard",
                     "id" to "Soysauce",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -265,6 +283,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Mulyot",
                 "menuname" to "물엿",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -282,6 +301,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Butter",
                 "menuname" to "버터",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -299,6 +319,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Suger",
                 "menuname" to "설탕",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -316,6 +337,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Suger",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -326,6 +348,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Miwon",
                 "menuname" to "미원",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -343,6 +366,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Ssamjang",
                 "menuname" to "쌈장",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -360,6 +384,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Ssamjang",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -370,6 +395,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Dashida",
                 "menuname" to "쇠고기 다시다",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -387,6 +413,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Dashida",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -397,6 +424,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Vineger",
                 "menuname" to "식초",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -414,6 +442,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Oligodang",
                 "menuname" to "올리고당",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -431,6 +460,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Chungukjang",
                 "menuname" to "청국장",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -448,6 +478,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Chojang",
                 "menuname" to "초고추장",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -465,6 +496,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Chojang",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -475,6 +507,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Chunjang",
                 "menuname" to "춘장",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -492,6 +525,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Chilisauce",
                 "menuname" to "칠리소스",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -509,6 +543,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Ketchup",
                 "menuname" to "케첩",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -526,6 +561,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Ketchup",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -536,6 +572,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Pepper",
                 "menuname" to "후추",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -553,6 +590,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Pepper",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -563,6 +601,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Jutguk",
                 "menuname" to "젓국",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -580,6 +619,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Lemonjuice",
                 "menuname" to "레몬즙",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -597,6 +637,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Shirimpjut",
                 "menuname" to "새우젓",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -614,6 +655,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Shirimpjut",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -624,6 +666,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Driedshirimpgaru",
                 "menuname" to "건새우가루",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -641,6 +684,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Yusumulchi",
                 "menuname" to "육수용멸치",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -658,6 +702,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Yusumulchi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -668,6 +713,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Katsuobushi",
                 "menuname" to "가쓰오브시",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -685,6 +731,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Katsuobushi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -695,6 +742,7 @@ class SauceActivity : AppCompatActivity() {
                 "photo" to "salt",
                 "id" to "Driedshirimp",
                 "menuname" to "건새우",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -712,6 +760,7 @@ class SauceActivity : AppCompatActivity() {
                     "photo" to "salt",
                     "id" to "Driedshirimp",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

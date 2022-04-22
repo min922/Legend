@@ -22,6 +22,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Apple",
                 "menuname" to "사과",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -39,6 +40,7 @@ class FruitActivity : AppCompatActivity() {
                     "photo" to "fruit",
                     "id" to "Apple",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -49,6 +51,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Grapefruit",
                 "menuname" to "자몽",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -66,6 +69,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Strawberry",
                 "menuname" to "딸기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -83,6 +87,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Driedgrapefruit",
                 "menuname" to "건포도",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -100,6 +105,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Lemon",
                 "menuname" to "레몬",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -117,6 +123,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Grape",
                 "menuname" to "포도",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -134,6 +141,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Cherry",
                 "menuname" to "체리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -151,6 +159,7 @@ class FruitActivity : AppCompatActivity() {
                     "photo" to "fruit",
                     "id" to "Cherry",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -161,6 +170,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Avocado",
                 "menuname" to "아보카도",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -178,6 +188,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Banana",
                 "menuname" to "바나나",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -195,6 +206,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Orange",
                 "menuname" to "오렌지",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -212,6 +224,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Lime",
                 "menuname" to "라임",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -229,6 +242,7 @@ class FruitActivity : AppCompatActivity() {
                 "photo" to "fruit",
                 "id" to "Blueberry",
                 "menuname" to "건블루베리",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)

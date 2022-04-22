@@ -50,6 +50,7 @@ class PigActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Pigback",
                 "menuname" to "돼지등갈비",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -67,6 +68,7 @@ class PigActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Pigback",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -77,6 +79,7 @@ class PigActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Piganshim",
                 "menuname" to "돼지고기안심",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -94,6 +97,7 @@ class PigActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Piganshim",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -104,6 +108,7 @@ class PigActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Pigcut",
                 "menuname" to "다진돼지고기",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -121,6 +126,7 @@ class PigActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Pigcut",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }
@@ -131,6 +137,7 @@ class PigActivity : AppCompatActivity() {
                 "photo" to "meat",
                 "id" to "Piggalbi",
                 "menuname" to "돼지갈비",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -148,6 +155,7 @@ class PigActivity : AppCompatActivity() {
                     "photo" to "meat",
                     "id" to "Piggalbi",
                     "menuname" to data_overlap[i],
+                    "display" to "0"
                 )
                 db.collection("UserSelect").add(data_over)
             }

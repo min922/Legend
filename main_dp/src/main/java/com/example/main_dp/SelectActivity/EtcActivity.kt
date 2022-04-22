@@ -21,6 +21,7 @@ class EtcActivity : AppCompatActivity() {
             val data = hashMapOf(
                 "id" to "Dubu",
                 "menuname" to "두부",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -37,6 +38,7 @@ class EtcActivity : AppCompatActivity() {
             val data = hashMapOf(
                 "id" to "Sundubu",
                 "menuname" to "순두부",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -53,6 +55,7 @@ class EtcActivity : AppCompatActivity() {
             val data = hashMapOf(
                 "id" to "Kongbiji",
                 "menuname" to "콩비지",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
@@ -69,6 +72,7 @@ class EtcActivity : AppCompatActivity() {
             val data = hashMapOf(
                 "id" to "Yubu",
                 "menuname" to "유부",
+                "display" to "1"
             )
             db.collection("UserSelect")
                 .add(data)
