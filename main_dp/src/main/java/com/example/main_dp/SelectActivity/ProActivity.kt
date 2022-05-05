@@ -24,6 +24,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "게맛살",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -53,6 +54,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "장식용어묵",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -71,6 +73,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "햄",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -100,6 +103,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "베이컨",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -118,6 +122,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "프랑크소세지",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -136,6 +141,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "비엔나소세지",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -154,6 +160,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "골뱅이통조림",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -172,6 +179,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "꽁치통조림",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -190,6 +198,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "참치통조림",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -219,6 +228,7 @@ class ProActivity : AppCompatActivity() {
                 "menuname" to "과일통조림",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

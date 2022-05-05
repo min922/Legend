@@ -24,6 +24,7 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지고기",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -52,6 +53,7 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지등갈비",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -81,6 +83,7 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지고기안심",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -110,6 +113,7 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "다진돼지고기",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -139,6 +143,7 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지갈비",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

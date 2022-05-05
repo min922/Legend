@@ -24,6 +24,7 @@ class CrapActivity : AppCompatActivity() {
                 "menuname" to "새우",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -53,6 +54,7 @@ class CrapActivity : AppCompatActivity() {
                 "menuname" to "꽃게",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -71,6 +73,7 @@ class CrapActivity : AppCompatActivity() {
                 "menuname" to "게",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -100,6 +103,7 @@ class CrapActivity : AppCompatActivity() {
                 "menuname" to "대하",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -118,6 +122,7 @@ class CrapActivity : AppCompatActivity() {
                 "menuname" to "칵테일새우",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

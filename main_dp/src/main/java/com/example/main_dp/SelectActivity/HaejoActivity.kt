@@ -25,6 +25,7 @@ class HaejoActivity : AppCompatActivity() {
                 "menuname" to "다시마",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -54,6 +55,7 @@ class HaejoActivity : AppCompatActivity() {
                 "menuname" to "미역",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -83,6 +85,7 @@ class HaejoActivity : AppCompatActivity() {
                 "menuname" to "김",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -112,6 +115,7 @@ class HaejoActivity : AppCompatActivity() {
                 "menuname" to "파래",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -130,6 +134,7 @@ class HaejoActivity : AppCompatActivity() {
                 "menuname" to "해초",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -148,6 +153,7 @@ class HaejoActivity : AppCompatActivity() {
                 "menuname" to "우묵",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

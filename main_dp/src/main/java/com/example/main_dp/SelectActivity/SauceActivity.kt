@@ -24,6 +24,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "간장",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -53,6 +54,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "고추장",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -82,6 +84,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "고추가루",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -111,6 +114,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "소금",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -140,6 +144,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "꿀",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -169,6 +174,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "다진마늘",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -198,6 +204,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "된장",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -227,6 +234,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "마요네즈",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -256,6 +264,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "머스타드",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -285,6 +294,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "물엿",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -303,6 +313,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "버터",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -321,6 +332,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "설탕",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -350,6 +362,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "미원",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -368,6 +381,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "쌈장",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -397,6 +411,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "쇠고기 다시다",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -426,6 +441,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "식초",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -444,6 +460,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "올리고당",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -462,6 +479,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "청국장",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -480,6 +498,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "초고추장",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -509,6 +528,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "춘장",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -527,6 +547,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "칠리소스",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -545,6 +566,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "케첩",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -574,6 +596,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "후추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -603,6 +626,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "젓국",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -621,6 +645,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "레몬즙",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -639,6 +664,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "새우젓",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -668,6 +694,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "건새우가루",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -686,6 +713,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "육수용멸치",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -715,6 +743,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "가쓰오브시",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -744,6 +773,7 @@ class SauceActivity : AppCompatActivity() {
                 "menuname" to "건새우",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

@@ -23,6 +23,7 @@ class EtcActivity : AppCompatActivity() {
                 "menuname" to "두부",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -40,6 +41,7 @@ class EtcActivity : AppCompatActivity() {
                 "menuname" to "순두부",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -57,6 +59,7 @@ class EtcActivity : AppCompatActivity() {
                 "menuname" to "콩비지",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -74,6 +77,7 @@ class EtcActivity : AppCompatActivity() {
                 "menuname" to "유부",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

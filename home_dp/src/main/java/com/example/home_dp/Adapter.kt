@@ -15,7 +15,7 @@ class Adapter(val context: Context, val foodList: ArrayList<Food>):
         return Holder(view)
     }
     override fun onBindViewHolder(holder: Holder, position: Int) {
-        holder?.bind(foodList[position], context)
+        holder.bind(foodList[position], context)
     }
 
     override fun getItemCount(): Int {

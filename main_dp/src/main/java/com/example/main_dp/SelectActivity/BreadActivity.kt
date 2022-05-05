@@ -1,5 +1,6 @@
 package com.example.main_dp.SelectActivity
 
+
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
@@ -24,6 +25,8 @@ class BreadActivity : AppCompatActivity() {
                 "menuname" to "가래떡",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
+
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -42,9 +45,13 @@ class BreadActivity : AppCompatActivity() {
                     "menuname" to data_overlap[i],
                     "display" to "0"
                 )
-                db.collection("UserSelect").add(data_over)
+                db.collection("UserSelect")
+                    .add(data_over)
+                    .addOnFailureListener { exception ->
+                        // 실패할 경우
+                        Log.w("MainActivity", "Error getting documents: $exception")
+                    }
             }
-
         }
 
         DduckgukButton.setOnClickListener {
@@ -54,6 +61,7 @@ class BreadActivity : AppCompatActivity() {
                 "menuname" to "떡국떡",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -83,6 +91,7 @@ class BreadActivity : AppCompatActivity() {
                 "menuname" to "떡볶이떡",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -112,6 +121,7 @@ class BreadActivity : AppCompatActivity() {
                 "menuname" to "바게트",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -130,6 +140,7 @@ class BreadActivity : AppCompatActivity() {
                 "menuname" to "베이글",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -148,6 +159,7 @@ class BreadActivity : AppCompatActivity() {
                 "menuname" to "식빵",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

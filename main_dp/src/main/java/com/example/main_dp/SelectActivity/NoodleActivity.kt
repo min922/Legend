@@ -24,6 +24,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "당면",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -42,6 +43,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "냉면",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -60,6 +62,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "칼국수",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -89,6 +92,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "쫄면",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -107,6 +111,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "쌀국수",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -134,6 +139,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "우동",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -152,6 +158,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "스파게티",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -180,6 +187,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "라면",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -198,6 +206,7 @@ class NoodleActivity : AppCompatActivity() {
                 "menuname" to "국수",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

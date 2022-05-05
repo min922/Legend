@@ -25,6 +25,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "올리브유",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -54,6 +55,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "참기름",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -82,6 +84,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "식물성기름",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -100,6 +103,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "고추기름",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -118,6 +122,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "튀김기름",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -136,6 +141,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "엿기름",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -154,6 +160,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "식용유",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -172,6 +179,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "샐러드오일",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -190,6 +198,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "포도씨유",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -218,6 +227,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "들기름",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

@@ -24,6 +24,7 @@ class ChickActiviy : AppCompatActivity() {
                 "menuname" to "닭고기",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -52,6 +53,7 @@ class ChickActiviy : AppCompatActivity() {
                 "menuname" to "닭다리",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -81,6 +83,7 @@ class ChickActiviy : AppCompatActivity() {
                 "menuname" to "닭안심",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -110,6 +113,7 @@ class ChickActiviy : AppCompatActivity() {
                 "menuname" to "닭봉",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -139,6 +143,7 @@ class ChickActiviy : AppCompatActivity() {
                 "menuname" to "닭발",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

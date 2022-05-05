@@ -23,6 +23,7 @@ class MeatEtcActivity : AppCompatActivity() {
                 "menuname" to "곱창",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -41,6 +42,7 @@ class MeatEtcActivity : AppCompatActivity() {
                 "menuname" to "육회",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

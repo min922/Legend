@@ -24,6 +24,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "홍합",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -53,6 +54,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "모시조개",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -71,6 +73,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "참소라살",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -89,6 +92,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "가리비",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -107,6 +111,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "재첩",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -125,6 +130,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "굴",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -154,6 +160,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "바지락",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -183,6 +190,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "골뱅이",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -201,6 +209,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "맛조개",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -230,6 +239,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "조갯살",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -259,6 +269,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "피조개",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -288,6 +299,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "전복",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -306,6 +318,7 @@ class ClamActivity : AppCompatActivity() {
                 "menuname" to "맛살조개",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

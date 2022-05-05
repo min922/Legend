@@ -24,6 +24,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "콩나물",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -42,6 +43,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "숙주",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -71,6 +73,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "미나리",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -89,6 +92,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "파",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -118,6 +122,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "도라지",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -147,6 +152,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "고사리",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -176,6 +182,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "시금치",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -205,6 +212,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "표고",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -234,6 +242,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "양송이버섯",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -263,6 +272,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "느타리버섯",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -292,6 +302,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "목이버섯",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -320,6 +331,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "새송이버섯",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -349,6 +361,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "팽이버섯",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -378,6 +391,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "애호박",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -407,6 +421,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "호박",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -436,6 +451,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "당근",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -465,6 +481,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "부추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -494,6 +511,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "고추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -523,6 +541,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "마늘",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -541,6 +560,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "대추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -559,6 +579,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "감자",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -577,6 +598,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "양파",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -606,6 +628,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "피망",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -635,6 +658,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "파프리카",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -664,6 +688,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "오이",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -692,6 +717,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "상추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -721,6 +747,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "깻잎",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -750,6 +777,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "무",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -779,6 +807,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "브로콜리",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -808,6 +837,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "청경채",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -826,6 +856,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "방울토마토",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -844,6 +875,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "토마토",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -873,6 +905,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "밤",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -902,6 +935,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "배추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -931,6 +965,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "김치",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -960,6 +995,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "연근",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -978,6 +1014,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "양상추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -996,6 +1033,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "양배추",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -1025,6 +1063,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "고구마",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -1043,6 +1082,7 @@ class VegeActivity : AppCompatActivity() {
                 "menuname" to "옥수수",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

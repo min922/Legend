@@ -24,6 +24,7 @@ class DairyActivity : AppCompatActivity() {
                 "menuname" to "계란",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -53,6 +54,7 @@ class DairyActivity : AppCompatActivity() {
                 "menuname" to "치즈",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -82,6 +84,7 @@ class DairyActivity : AppCompatActivity() {
                 "menuname" to "요거트",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -111,6 +114,7 @@ class DairyActivity : AppCompatActivity() {
                 "menuname" to "우유",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {

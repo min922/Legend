@@ -24,6 +24,7 @@ class CowActivity : AppCompatActivity() {
                 "menuname" to "소고기",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -53,6 +54,7 @@ class CowActivity : AppCompatActivity() {
                 "menuname" to "다진소고기",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -81,6 +83,7 @@ class CowActivity : AppCompatActivity() {
                 "menuname" to "소꼬리",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -99,6 +102,7 @@ class CowActivity : AppCompatActivity() {
                 "menuname" to "소고기안심",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -128,6 +132,7 @@ class CowActivity : AppCompatActivity() {
                 "menuname" to "소고기등심",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -157,6 +162,7 @@ class CowActivity : AppCompatActivity() {
                 "menuname" to "양지머리",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
@@ -175,6 +181,7 @@ class CowActivity : AppCompatActivity() {
                 "menuname" to "선지",
                 "display" to "1"
             )
+            SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
                 .addOnSuccessListener {
