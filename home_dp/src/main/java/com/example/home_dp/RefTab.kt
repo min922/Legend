@@ -1,6 +1,7 @@
 package com.example.home_dp
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
@@ -17,24 +18,15 @@ import kotlinx.android.synthetic.main.fragment_ref_tab.*
 class RefTab : Fragment() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
     val MenuList = arrayListOf<Item>()
-    val mAdapter = getContext()?.let { MyAdapter(it, MenuList) }
-    lateinit var recyclerViewref: RecyclerView
+    val mAdapter = context?.let { MyAdapter(it, MenuList) }
+    private lateinit var recyclerViewref: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-//        val MenuList = arrayListOf<Item>(
-//            Item("1", "apple", "fruit", "사과","-","-","-"),
-//            Item("1", "apple", "fruit", "사과","-","-","-"),
-//            Item("1", "apple", "fruit", "사과","-","-","-"),
-//            Item("1", "apple", "fruit", "사과","-","-","-")
-//        )
-
         addData()
-        for (i in MenuList){Log.w("sfqrfed", "${i}아")}
         val rootView = inflater.inflate(R.layout.fragment_ref_tab, container, false)
-//        updateRecyclerData(MenuList)
         recyclerViewref = rootView.findViewById(R.id.recyclerView_ref) as RecyclerView
         recyclerViewref.layoutManager = GridLayoutManager(context, 3)
         recyclerViewref.adapter = context?.let { MyAdapter(it, MenuList) }
@@ -66,18 +58,17 @@ class RefTab : Fragment() {
                         }
                     }
                 }
-//                recyclerViewref.adapter = mAdapter
-                mAdapter?.notifyDataSetChanged()  // 리사이클러 뷰 갱신
-                for (i in MenuList){Log.w("sfqrfed", "${i.id}")}
-//                updateRecyclerData(MenuList)
+                updateRecyclerData(MenuList)
             }
             .addOnFailureListener { exception ->
                 // 실패할 경우
                 Log.w("Why", "Error getting documents: $exception")
             }
     }
-//    fun updateRecyclerData(itemList: ArrayList<Item>){
-//        mAdapter?.setData(itemList)
-//        mAdapter?.notifyDataSetChanged()
-//    }
+    fun updateRecyclerData(itemList: ArrayList<Item>){
+        val mAdapter = context?.let { MyAdapter(it, itemList) }
+        recyclerViewref.adapter = mAdapter
+        mAdapter?.setData(itemList)
+        mAdapter?.notifyDataSetChanged()
+    }
 }
