@@ -20,9 +20,19 @@ class MyAdapter(val context: Context, var itemList: ArrayList<Item>):
                 return Holder(view)
             }
 
-            override fun onBindViewHolder(holder: Holder, position: Int) {
-                holder?.bind(itemList[position], context)
-            }
+    override fun onBindViewHolder(holder: Holder, position: Int) {
+        holder.bind(itemList[position], context)
+        holder.itemView.setOnClickListener {
+            itemClickListener.onClick(it, position)
+        }
+    }
+    interface OnItemClickListener{
+        fun onClick(v: View, position: Int)
+    }
+    fun setItemClickListener(onItemClickListener: OnItemClickListener){
+        this.itemClickListener = onItemClickListener
+    }
+    private lateinit var itemClickListener : OnItemClickListener
 
             override fun getItemCount(): Int {
                 return itemList.size

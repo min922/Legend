@@ -1,8 +1,12 @@
 package com.example.myref
 
+import android.content.Context
+import android.database.sqlite.SQLiteDatabase
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
@@ -17,6 +21,15 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         addData()
+
+        mAdapter.setItemClickListener(object :MyAdapter.OnItemClickListener{
+            override fun onClick(v: View, position: Int) {
+    //                getContext()?.let { EditDate().editDate(MenuList[position].id, it) }
+                Toast.makeText(
+                    this@MainActivity, "${MenuList[position].id}", Toast.LENGTH_SHORT
+                ).show()
+            }
+        })
 
         val gm = GridLayoutManager(this, 3)
         recyclerView_ref.layoutManager = gm

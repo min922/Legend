@@ -26,10 +26,7 @@ class MeatEtcActivity : AppCompatActivity() {
             SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
-                .addOnSuccessListener {
-                    // 성공할 경우
-                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
-                }
+
                 .addOnFailureListener { exception ->
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")
@@ -45,10 +42,7 @@ class MeatEtcActivity : AppCompatActivity() {
             SaveDate().AddDate(data["id"].toString(), this)
             db.collection("UserSelect")
                 .add(data)
-                .addOnSuccessListener {
-                    // 성공할 경우
-                    Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
-                }
+
                 .addOnFailureListener { exception ->
                     // 실패할 경우
                     Log.w("MainActivity", "Error getting documents: $exception")

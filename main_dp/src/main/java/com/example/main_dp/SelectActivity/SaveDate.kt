@@ -7,6 +7,7 @@ import android.content.DialogInterface.BUTTON_NEGATIVE
 import android.util.Log
 import android.widget.Button
 import android.widget.DatePicker
+import android.widget.Toast
 import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
@@ -28,6 +29,10 @@ class SaveDate {
                 data_cal["day"] = dayOfmonth.toString()
                 db.collection("UserSelect")
                     .add(data_cal)
+                    .addOnSuccessListener {
+                        // 성공할 경우
+                        Toast.makeText(context, "재료가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                    }
                     .addOnFailureListener { exception ->
                         // 실패할 경우
                         Log.w("Date", "Error getting documents: $exception")
@@ -36,7 +41,7 @@ class SaveDate {
         }
 //        DatePickerDialog.BUTTON_NEGATIVE
         val builder = DatePickerDialog(context, date_listener, year, month, day)
-        builder.setTitle("선택한 식품의 유통기한을 입력해주세요.")
+        builder.setTitle("유통기한을 입력해주세요.")
         builder.setButton(DatePickerDialog.BUTTON_NEGATIVE,
             "다음에 입력하기",
             DialogInterface.OnClickListener { DatePickerDialog, i -> BUTTON_NEGATIVE

@@ -1,24 +1,19 @@
 package com.example.home_dp
 
-import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.fragment_bookmark_tab.view.*
-import kotlinx.android.synthetic.main.fragment_ref_tab.*
+
 
 class RefTab : Fragment() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
     val MenuList = arrayListOf<Item>()
-    val mAdapter = context?.let { MyAdapter(it, MenuList) }
     private lateinit var recyclerViewref: RecyclerView
 
     override fun onCreateView(
@@ -26,10 +21,12 @@ class RefTab : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         addData()
+
         val rootView = inflater.inflate(R.layout.fragment_ref_tab, container, false)
         recyclerViewref = rootView.findViewById(R.id.recyclerView_ref) as RecyclerView
         recyclerViewref.layoutManager = GridLayoutManager(context, 3)
         recyclerViewref.adapter = context?.let { MyAdapter(it, MenuList) }
+
         return rootView
     }
 
@@ -58,17 +55,27 @@ class RefTab : Fragment() {
                         }
                     }
                 }
-                updateRecyclerData(MenuList)
+                updateRecyclerData()
             }
             .addOnFailureListener { exception ->
                 // 실패할 경우
                 Log.w("Why", "Error getting documents: $exception")
             }
     }
-    fun updateRecyclerData(itemList: ArrayList<Item>){
-        val mAdapter = context?.let { MyAdapter(it, itemList) }
+    fun updateRecyclerData(){
+        val mAdapter = context?.let { MyAdapter(it, MenuList) }
         recyclerViewref.adapter = mAdapter
-        mAdapter?.setData(itemList)
+        mAdapter?.setData(MenuList)
         mAdapter?.notifyDataSetChanged()
+    }
+
+    fun Refresh(){
+//        val mAdapter = context?.let { MyAdapter(it, MenuList) }
+//        mAdapter?.setData(MenuList)
+//        mAdapter?.notifyDataSetChanged()
+//        val mainActivityView = (activity as MainActivity)
+//        val transaction = supportFragmentManager.beginTransaction()
+//        transaction.replace(R.id.tabContent, fragment)
+//        transaction.commit()
     }
 }
