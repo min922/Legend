@@ -5,7 +5,17 @@
       <map>
         <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/app/src/main/res/layout/activity_auth.xml" value="0.13360507246376813" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/app/src/main/res/layout/activity_main2.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/bookmark/src/main/res/layout/activity_main.xml" value="0.176" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/bookmark/src/main/res/layout/food_main.xml" value="0.4" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/bookmark/src/main/res/layout/photo.xml" value="0.11144883485309018" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/bookmark/src/main/res/layout/photo_main.xml" value="0.16799999999999998" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/ch/src/main/res/layout/activity_main.xml" value="0.10435663627152988" />
         <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/ch20_firebase/src/main/res/layout/activity_main2.xml" value="0.13360507246376813" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/ch7_layout/src/main/res/layout/activity_main.xml" value="0.11144883485309018" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/recipe_dt/src/main/res/layout/activity_main.xml" value="0.12" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/recipe_dt/src/main/res/layout/explain_recipe.xml" value="0.25364583333333335" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/recipe_dt/src/main/res/layout/recip_ingre.xml" value="0.1" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/AndroidLab/recipe_dt/src/main/res/layout/rep_menu.xml" value="0.18697916666666667" />
       </map>
     </option>
   </component>

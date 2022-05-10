@@ -10,3 +10,7 @@ rootProject.name = "AndroidLab"
 include ':app'
 include ':ch8_event'
 include ':ch20_firebase'
+include ':ch7_layout'
+include ':bookmark'
+include ':ch'
+include ':recipe_dt'
