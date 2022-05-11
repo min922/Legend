@@ -14,22 +14,22 @@ import java.util.*
 class RefTab : Fragment() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
     val MenuList = arrayListOf<Item>()
-    val mAdapter = context?.let { MyAdapter(it, MenuList) }
     private lateinit var recyclerViewref: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val mAdapter = context?.let { MyAdapter(it, MenuList) }
         addData()
 
         val rootView = inflater.inflate(R.layout.fragment_ref_tab, container, false)
         recyclerViewref = rootView.findViewById(R.id.recyclerView_ref) as RecyclerView
         recyclerViewref.layoutManager = GridLayoutManager(context, 3)
-        recyclerViewref.adapter = context?.let { MyAdapter(it, MenuList) }
+        recyclerViewref.adapter = mAdapter
 
-        mAdapter?.setItemClickListener(object :MyAdapter.onItemClickListener{
-            override fun onClick(itemView: View, position: Int) {
+        mAdapter?.setMyItemClickListener(object :MyAdapter.MyItemClickListener{
+            override fun onItemClick(position: Int) {
                 EditDate().editDate(MenuList[position].id, requireContext())
             }
         })
