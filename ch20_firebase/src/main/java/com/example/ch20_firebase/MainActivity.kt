@@ -14,7 +14,7 @@ import com.example.ch20_firebase.databinding.ActivityMainBinding
 
 
 
-class MainActivity : AppCompatActivity() {
+class .MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

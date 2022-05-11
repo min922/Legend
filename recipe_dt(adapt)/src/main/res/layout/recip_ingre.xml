@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ingre_root"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:showIn="@layout/activity_main"
+    android:layout_marginTop="300dp"
+    android:layout_width="130dp"
+    android:layout_height="130dp"
+    android:orientation="vertical"
+    android:padding="1dp"
+    android:layout_margin="8dp"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/ingreImg"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:background="#00ff0000"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+    <TextView
+        android:id="@+id/ingreName"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>
