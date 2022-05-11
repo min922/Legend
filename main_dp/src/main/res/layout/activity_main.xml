@@ -144,11 +144,11 @@
             <Button
                 android:id="@+id/etcButton"
                 android:text="기타"
-                android:textSize="40dp"
+                android:drawableTop="@drawable/etc"
+                android:autoSizeTextType="uniform"
                 android:textStyle="bold"
-                android:paddingTop="30dp"
                 android:textColor="@color/black"
-                android:background="#00ff0000"/>
+                android:background="#00FF0000"/>
         </GridLayout>
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

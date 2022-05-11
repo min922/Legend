@@ -7,10 +7,8 @@ import android.graphics.Color.rgb
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
-import android.widget.ImageButton
-import android.widget.TextView
-import android.widget.Toast
+import android.widget.*
+import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import java.security.AccessController.getContext
 
@@ -24,7 +22,17 @@ class MyAdapter(val context: Context, var itemList: ArrayList<Item>):
 
             override fun onBindViewHolder(holder: Holder, position: Int) {
                 holder.bind(itemList[position], context)
+                holder.itemView.setOnClickListener {
+                    itemClickListener.onClick(it, position)
+                }
             }
+    interface onItemClickListener{
+        fun onClick(itemView: View, position: Int)
+    }
+    fun setItemClickListener(onItemClickListener: onItemClickListener){
+        this.itemClickListener = onItemClickListener
+    }
+    private lateinit var itemClickListener: onItemClickListener
 
             override fun getItemCount(): Int {
                 return itemList.size
@@ -33,15 +41,23 @@ class MyAdapter(val context: Context, var itemList: ArrayList<Item>):
                 itemList = newitemList
             }
 
-            inner class Holder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
-                val menuPhoto = itemView?.findViewById<ImageButton>(R.id.menuPhotoImg)
-                val menuName = itemView?.findViewById<TextView>(R.id.menuText)
-                val itemDate = itemView?.findViewById<TextView>(R.id.dateText)
+            fun setContact(contacts: ArrayList<Item>) {
+                val diffResult = DiffUtil.calculateDiff(ContactDiffUtil(this.itemList, itemList), false)
+                diffResult.dispatchUpdatesTo(this)
+                this.itemList = itemList
+            }
+
+
+            class Holder(itemView: View): RecyclerView.ViewHolder(itemView){
+                val menuPhoto = itemView.findViewById<ImageView>(R.id.menuPhotoImg)
+                val menuName = itemView.findViewById<TextView>(R.id.menuText)
+                val itemDate = itemView.findViewById<TextView>(R.id.dateText)
 
                 fun bind(item:Item, context: Context){
-                    itemView.setOnClickListener {
-                        EditDate().editDate(itemList[position].id, context)
-                    }
+//                    itemView.setOnClickListener {
+//                        RefTab().editDate(itemList[position].id, context)
+//                    }
+
                     if (item.photo != "") {
                         val resourceId = context.resources.getIdentifier(item.photo, "drawable", context.packageName)
                         menuPhoto?.setImageResource(resourceId)
@@ -50,7 +66,6 @@ class MyAdapter(val context: Context, var itemList: ArrayList<Item>):
                     }
                     /* 나머지 TextView와 String 데이터를 연결한다. */
                     menuName?.text = item.menuname
-//                    itemDate?.text = item.year
                     itemDate?.text = "${item.year}년 ${item.month}월 ${item.day}일 까지"
 //                    if (item.id == "Apple") {
 //                        menuPhoto?.setBackgroundColor(Color.rgb(178, 204, 255))

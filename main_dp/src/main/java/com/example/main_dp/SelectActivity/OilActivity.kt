@@ -4,14 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
 import com.example.main_dp.R
+import com.example.main_dp.SaveDate
+import com.example.main_dp.exist_indata
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_oil.*
-import kotlinx.android.synthetic.main.activity_sauce.*
 
 class OilActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
+    var data_overlap = listOf<String>("0")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,25 +26,8 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "올리브유",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("올리브오일")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "oil",
-                    "id" to "Oliveoil",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("올리브오일")
+            exist_indata().existdata(data, data_overlap, this)
         }
         ChamoilButton.setOnClickListener {
             val data = hashMapOf(
@@ -52,24 +36,8 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "참기름",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("식용유/소금/참기름/잣가루")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "oil",
-                    "id" to "Chamoil",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
+            data_overlap = listOf("식용유/소금/참기름/잣가루")
+            exist_indata().existdata(data, data_overlap, this)
         }
         VegeoilButton.setOnClickListener {
             val data = hashMapOf(
@@ -78,14 +46,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "식물성기름",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         GochuoilButton.setOnClickListener {
             val data = hashMapOf(
@@ -94,14 +55,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "고추기름",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         FryoilButton.setOnClickListener {
             val data = hashMapOf(
@@ -110,14 +64,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "튀김기름",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         YutoilButton.setOnClickListener {
             val data = hashMapOf(
@@ -126,14 +73,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "엿기름",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         SikoilButton.setOnClickListener {
             val data = hashMapOf(
@@ -142,14 +82,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "식용유",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         SaladoilButton.setOnClickListener {
             val data = hashMapOf(
@@ -158,14 +91,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "샐러드오일",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         PodossioilButton.setOnClickListener {
             val data = hashMapOf(
@@ -174,24 +100,8 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "포도씨유",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("참빛고운포도씨유")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "oil",
-                    "id" to "Podossioil",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
+            data_overlap = listOf("참빛고운포도씨유")
+            exist_indata().existdata(data, data_overlap, this)
         }
         DuloilButton.setOnClickListener {
             val data = hashMapOf(
@@ -200,14 +110,7 @@ class OilActivity : AppCompatActivity() {
                 "menuname" to "들기름",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

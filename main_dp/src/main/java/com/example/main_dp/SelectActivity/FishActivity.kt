@@ -4,13 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
 import com.example.main_dp.R
+import com.example.main_dp.SaveDate
+import com.example.main_dp.exist_indata
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_fish.*
 
 class FishActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
+    var data_overlap = listOf<String>("0")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,14 +26,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "멸치",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         SquidButton.setOnClickListener {
             val data = hashMapOf(
@@ -40,25 +35,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "오징어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("마른오징어", "오징어채")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Squid",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("마른오징어", "오징어채")
+            exist_indata().existdata(data, data_overlap, this)
         }
         BukuhButton.setOnClickListener {
             val data = hashMapOf(
@@ -67,25 +45,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "북어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("통북어", "생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Bukuh",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("통북어", "생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         SangtaeButton.setOnClickListener {
             val data = hashMapOf(
@@ -94,25 +55,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "생태",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Sangtae",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
+            exist_indata().existdata(data, data_overlap, this)
         }
         SalmonButton.setOnClickListener {
             val data = hashMapOf(
@@ -121,25 +65,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "연어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "연어살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Salmon",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "연어살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         BoiledoctoButton.setOnClickListener {
             val data = hashMapOf(
@@ -148,14 +75,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "삶은 문어살",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         GapsquidButton.setOnClickListener {
             val data = hashMapOf(
@@ -164,14 +84,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "갑오징어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         GgolddugiButton.setOnClickListener {
             val data = hashMapOf(
@@ -180,14 +93,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "꼴뚜기",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         JjukumiButton.setOnClickListener {
             val data = hashMapOf(
@@ -196,14 +102,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "쭈꾸미",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         DomiButton.setOnClickListener {
             val data = hashMapOf(
@@ -212,25 +111,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "도미",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Domi",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
+            exist_indata().existdata(data, data_overlap, this)
         }
         JanmylchiButton.setOnClickListener {
             val data = hashMapOf(
@@ -239,14 +121,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "잔멸치",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         GalchiButton.setOnClickListener {
             val data = hashMapOf(
@@ -255,25 +130,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "갈치",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Galchi",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         DaeguButton.setOnClickListener {
             val data = hashMapOf(
@@ -282,25 +140,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "대구",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("대구살", "생선살", "흰살생선", "흰살 생선", "생대구")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Daegu",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("대구살", "생선살", "흰살생선", "흰살 생선", "생대구")
+            exist_indata().existdata(data, data_overlap, this)
         }
         DongtaeButton.setOnClickListener {
             val data = hashMapOf(
@@ -309,25 +150,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "동태",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "흰살생선", "흰살 생선", "동태살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Dongtae",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "흰살생선", "흰살 생선", "동태살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         JunuhButton.setOnClickListener {
             val data = hashMapOf(
@@ -336,25 +160,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "전어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Junuh",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         MaegiButton.setOnClickListener {
             val data = hashMapOf(
@@ -363,25 +170,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "메기",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Maegi",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
+            exist_indata().existdata(data, data_overlap, this)
         }
         InguhButton.setOnClickListener {
             val data = hashMapOf(
@@ -390,25 +180,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "잉어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Inguh",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         SonguhButton.setOnClickListener {
             val data = hashMapOf(
@@ -417,25 +190,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "송어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Songuh",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         AguButton.setOnClickListener {
             val data = hashMapOf(
@@ -444,25 +200,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "아구",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("아귀", "생선살", "흰살생선", "흰살 생선")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Agu",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("아귀", "생선살", "흰살생선", "흰살 생선")
+            exist_indata().existdata(data, data_overlap, this)
         }
         JogiButton.setOnClickListener {
             val data = hashMapOf(
@@ -471,25 +210,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "조기",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Jogi",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
+            exist_indata().existdata(data, data_overlap, this)
         }
         NakjiButton.setOnClickListener {
             val data = hashMapOf(
@@ -498,25 +220,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "낙지",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("낙지다리")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Nakji",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("낙지다리")
+            exist_indata().existdata(data, data_overlap, this)
         }
         DriedsquidButton.setOnClickListener {
             val data = hashMapOf(
@@ -525,14 +230,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "말린 오징어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         ChamchiButton.setOnClickListener {
             val data = hashMapOf(
@@ -541,25 +239,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "참치",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Chamchi",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         OctopusButton.setOnClickListener {
             val data = hashMapOf(
@@ -568,14 +249,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "문어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         GgongchiButton.setOnClickListener {
             val data = hashMapOf(
@@ -584,25 +258,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "꽁치",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Ggongchi",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         GodungButton.setOnClickListener {
             val data = hashMapOf(
@@ -611,25 +268,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "고등어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Godung",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         HunjaesalmonButton.setOnClickListener {
             val data = hashMapOf(
@@ -638,14 +278,7 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "훈제연어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
+            exist_indata().existdata(data, data_overlap, this)
         }
         CodariButton.setOnClickListener {
             val data = hashMapOf(
@@ -654,25 +287,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "코다리",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Codari",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         GwanguhButton.setOnClickListener {
             val data = hashMapOf(
@@ -681,25 +297,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "광어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Gwanguh",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "흰살생선", "흰살 생선")
+            exist_indata().existdata(data, data_overlap, this)
         }
         JanguhButton.setOnClickListener {
             val data = hashMapOf(
@@ -708,25 +307,8 @@ class FishActivity : AppCompatActivity() {
                 "menuname" to "장어",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("생선살", "장어대리", "장어뼈")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "fish",
-                    "id" to "Janguh",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("생선살", "장어대리", "장어뼈")
+            exist_indata().existdata(data, data_overlap, this)
         }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {

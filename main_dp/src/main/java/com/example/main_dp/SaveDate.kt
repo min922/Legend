@@ -11,7 +11,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import java.util.*
 
 class SaveDate {
-    fun AddDate(id: String, context:Context) {
+    fun AddDate(id:String, context:Context) {
         val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
 
         var calendar = Calendar.getInstance()

@@ -14,6 +14,8 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.location.*
 import android.Manifest.permission.*
+import android.location.Geocoder
+import android.widget.SearchView
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContextCompat.checkSelfPermission
 import com.google.android.gms.common.ConnectionResult
@@ -23,7 +25,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.tasks.OnSuccessListener
 import kotlinx.android.synthetic.main.activity_maps.*
-
 
 class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     OnConnectionFailedListener, OnMapReadyCallback {
@@ -39,8 +40,21 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         mapfun()
 
         Mylocbtn.setOnClickListener {
-            mapfun()
+            onConnected(Bundle())
         }
+
+        mapSearch.setOnQueryTextListener(object :SearchView.OnQueryTextListener,
+            androidx.appcompat.widget.SearchView.OnQueryTextListener {
+            override fun onQueryTextChange(query: String?): Boolean {
+                return false
+            }
+            override fun onQueryTextSubmit(newText: String?): Boolean {
+                val geocoder = Geocoder(this@MapsActivity)
+                val cor = geocoder.getFromLocationName(newText, 1)
+                moveMap(cor[0].latitude, cor[0].longitude)
+                return false
+            }
+        })
     }
 
     fun mapfun(){
@@ -89,7 +103,7 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         val markerOptions = MarkerOptions()
         markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE))
         markerOptions.position(latLng)
-        markerOptions.title("MyLocation")
+        markerOptions.title("현 위치")
 
         googleMap?.addMarker(markerOptions)
     }

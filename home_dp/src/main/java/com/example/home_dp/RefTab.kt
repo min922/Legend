@@ -2,18 +2,19 @@ package com.example.home_dp
 
 import android.os.Bundle
 import android.util.Log
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-
+import java.util.*
 
 class RefTab : Fragment() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
     val MenuList = arrayListOf<Item>()
+    val mAdapter = context?.let { MyAdapter(it, MenuList) }
     private lateinit var recyclerViewref: RecyclerView
 
     override fun onCreateView(
@@ -26,6 +27,12 @@ class RefTab : Fragment() {
         recyclerViewref = rootView.findViewById(R.id.recyclerView_ref) as RecyclerView
         recyclerViewref.layoutManager = GridLayoutManager(context, 3)
         recyclerViewref.adapter = context?.let { MyAdapter(it, MenuList) }
+
+        mAdapter?.setItemClickListener(object :MyAdapter.onItemClickListener{
+            override fun onClick(itemView: View, position: Int) {
+                EditDate().editDate(MenuList[position].id, requireContext())
+            }
+        })
 
         return rootView
     }
@@ -66,10 +73,22 @@ class RefTab : Fragment() {
         val mAdapter = context?.let { MyAdapter(it, MenuList) }
         recyclerViewref.adapter = mAdapter
         mAdapter?.setData(MenuList)
-        mAdapter?.notifyDataSetChanged()
+        mAdapter?.setContact(mAdapter.itemList)
     }
 
-    fun Refresh(){
+//    fun Refresh(){
+//        val mAdapter = context?.let { MyAdapter(it, MenuList) }
+////        val inflater = LayoutInflater.from(activity)
+//        val fm: FragmentManager = requireActivity().supportFragmentManager
+//        fm.beginTransaction()
+//        val rootView = getLayoutInflater().inflate(R.layout.fragment_ref_tab, recyclerView_ref)
+////        val rootView = inflater.inflate(R.layout.fragment_ref_tab, recyclerView_ref, false)
+//        recyclerViewref = rootView.findViewById(R.id.recyclerView_ref)
+//        recyclerViewref.adapter = mAdapter
+//        mAdapter?.setData(MenuList)
+//        if (mAdapter != null) {
+//            mAdapter.setContact(mAdapter.itemList)
+//        }
 //        val mAdapter = context?.let { MyAdapter(it, MenuList) }
 //        mAdapter?.setData(MenuList)
 //        mAdapter?.notifyDataSetChanged()
@@ -77,5 +96,5 @@ class RefTab : Fragment() {
 //        val transaction = supportFragmentManager.beginTransaction()
 //        transaction.replace(R.id.tabContent, fragment)
 //        transaction.commit()
-    }
+//    }
 }

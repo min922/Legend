@@ -19,35 +19,35 @@
             <Button
                 android:id="@+id/DubuButton"
                 android:text="두부"
-                android:textSize="40dp"
+                android:drawableTop="@drawable/etc"
+                android:autoSizeTextType="uniform"
                 android:textStyle="bold"
-                android:paddingTop="30dp"
                 android:textColor="@color/black"
-                android:background="#00ff0000"/>
+                android:background="#00FF0000"/>
             <Button
                 android:id="@+id/SundubuButton"
                 android:text="순두부"
-                android:textSize="40dp"
+                android:drawableTop="@drawable/etc"
+                android:autoSizeTextType="uniform"
                 android:textStyle="bold"
-                android:paddingTop="30dp"
                 android:textColor="@color/black"
-                android:background="#00ff0000"/>
+                android:background="#00FF0000"/>
             <Button
                 android:id="@+id/KongbijiButton"
                 android:text="콩비지"
-                android:textSize="40dp"
+                android:drawableTop="@drawable/etc"
+                android:autoSizeTextType="uniform"
                 android:textStyle="bold"
-                android:paddingTop="30dp"
                 android:textColor="@color/black"
-                android:background="#00ff0000"/>
+                android:background="#00FF0000"/>
             <Button
                 android:id="@+id/YubuButton"
                 android:text="유부"
-                android:textSize="40dp"
+                android:drawableTop="@drawable/etc"
+                android:autoSizeTextType="uniform"
                 android:textStyle="bold"
-                android:paddingTop="30dp"
                 android:textColor="@color/black"
-                android:background="#00ff0000" />
+                android:background="#00FF0000" />
         </GridLayout>
     </LinearLayout>
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton

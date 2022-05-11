@@ -4,13 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.MenuItem
-import android.widget.Toast
 import com.example.main_dp.R
+import com.example.main_dp.SaveDate
+import com.example.main_dp.exist_indata
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_pig.*
 
 class PigActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
+    var data_overlap = listOf<String>("0")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -24,24 +26,8 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지고기",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("돼기고기", "돼지 볼살")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "meat",
-                    "id" to "Pigmeat",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
+            data_overlap = listOf("돼기고기", "돼지 볼살")
+            exist_indata().existdata(data, data_overlap, this)
         }
         PigbackButton.setOnClickListener {
             val data = hashMapOf(
@@ -50,25 +36,8 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지등갈비",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("갈비", "돼기고기")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "meat",
-                    "id" to "Pigback",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("갈비", "돼기고기")
+            exist_indata().existdata(data, data_overlap, this)
         }
         PiganshimButton.setOnClickListener {
             val data = hashMapOf(
@@ -77,25 +46,8 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지고기안심",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("안심", "돼기고기")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "meat",
-                    "id" to "Piganshim",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("안심", "돼기고기")
+            exist_indata().existdata(data, data_overlap, this)
         }
         PigcutButton.setOnClickListener {
             val data = hashMapOf(
@@ -104,25 +56,8 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "다진돼지고기",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("돼기고기", "다짐육", "다짐육(돼지고기)")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "meat",
-                    "id" to "Pigcut",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("돼기고기", "다짐육", "다짐육(돼지고기)")
+            exist_indata().existdata(data, data_overlap, this)
         }
         PiggalbiButton.setOnClickListener {
             val data = hashMapOf(
@@ -131,25 +66,8 @@ class PigActivity : AppCompatActivity() {
                 "menuname" to "돼지갈비",
                 "display" to "1"
             )
-            SaveDate().AddDate(data["id"].toString(), this)
-            db.collection("UserSelect")
-                .add(data)
-
-                .addOnFailureListener { exception ->
-                    // 실패할 경우
-                    Log.w("MainActivity", "Error getting documents: $exception")
-                }
-            val data_overlap = listOf("갈비", "돼기고기")
-            for (i in data_overlap.indices){
-                val data_over = hashMapOf(
-                    "photo" to "meat",
-                    "id" to "Piggalbi",
-                    "menuname" to data_overlap[i],
-                    "display" to "0"
-                )
-                db.collection("UserSelect").add(data_over)
-            }
-
+            data_overlap = listOf("갈비", "돼기고기")
+            exist_indata().existdata(data, data_overlap, this)
         }
     }
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
