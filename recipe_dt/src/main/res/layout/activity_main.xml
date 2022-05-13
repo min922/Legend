@@ -78,7 +78,7 @@
     <!--원래스크롤뷰위치-->
     <androidx.core.widget.NestedScrollView
         android:layout_width="400dp"
-        android:layout_height="1000dp"
+        android:layout_height="750dp"
         android:fillViewport="true">
 
 

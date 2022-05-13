@@ -1,7 +1,7 @@
 package com.example.recipe_dt
 
 import android.os.Bundle
-import android.widget.Button
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.android.synthetic.main.recipe_main.*
@@ -16,17 +16,16 @@ class RecipeActivity : AppCompatActivity() {
         )
 
 
-
-
     override fun onCreate(savedInstanceState : Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.recipe_main)
 
-        val backBtn = findViewById<Button>(R.id.moveBack)
-        //버튼 클릭시 상세페이지에서 다시 원래 화면으로 돌아감
-        backBtn.setOnClickListener {
-            finish()
-        }
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+//        val backBtn = findViewById<Button>(R.id.moveBack)
+//        //버튼 클릭시 상세페이지에서 다시 원래 화면으로 돌아감
+//        backBtn.setOnClickListener {
+//            finish()
+//        }
 
 
         val rAdapter = RecipeAdapter(this, explainlist)
@@ -37,4 +36,17 @@ class RecipeActivity : AppCompatActivity() {
         recyclerView_explain.setHasFixedSize(true)
 
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item?.itemId){
+            android.R.id.home -> {
+                finish()
+                return true
+            }
+            else -> {
+                return super.onOptionsItemSelected(item)
+            }
+        }
+    }
+
 }
