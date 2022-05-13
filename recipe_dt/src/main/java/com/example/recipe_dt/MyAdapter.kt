@@ -1,87 +1,38 @@
 package com.example.recipe_dt
 
-import android.util.Log
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageButton
 import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-
-class MyAdapter(private val list: List<Model>) :
-    RecyclerView.Adapter<RecyclerView.ViewHolder>() {
-
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view : View?
-        return when (viewType) {
-            Model.RECIP_INGRE -> {
-                view = LayoutInflater.from(parent.context).inflate(R.layout.recip_ingre, parent, false)
-                IngreTypeViewHolder(view)
-            }
-            Model.REP_MENU -> {
-                view = LayoutInflater.from(parent.context).inflate(R.layout.activity_main, parent, false)
-                MenuTypeViewHolder(view)
-            }
-            Model.EXPLAIN_RECIPE -> {
-                view = LayoutInflater.from(parent.context)
-                    .inflate(R.layout.explain_recipe, parent, false)
-                ExplainTypeViewHolder(view)
-            }
-            else -> throw RuntimeException("알 수 없는 뷰 타입 에러")
-        }
+class MyAdapter(val context: Context, val list: ArrayList<Ingre>):
+    RecyclerView.Adapter<MyAdapter.Holder>() {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
+        val view = LayoutInflater.from(context).inflate(R.layout.recip_ingre, parent, false)
+        return Holder(view)
+    }
+    override fun onBindViewHolder(holder: Holder, position: Int) {
+        holder?.bind(list[position], context)
     }
 
     override fun getItemCount(): Int {
         return list.size
     }
+    inner class Holder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
+        val ingrePhoto = itemView?.findViewById<ImageView>(R.id.ingreImg)
 
-    override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-//        Log.d("Adapter", "Hi, onBindViewHolder")
-        val obj = list[position]
-        when (obj.type) {
-            Model.RECIP_INGRE -> {
-                (holder as IngreTypeViewHolder).ingreName.text = obj.text
-                holder.ingrePhoto.setImageResource(obj.data)
-                holder.ingreName.text = obj.contentString
-            }
-            Model.REP_MENU -> {
-                (holder as MenuTypeViewHolder).menuName.text = obj.text
-                holder.menuPhoto.setImageResource(obj.data)
-                holder.menuName.text = obj.contentString
-            }
-            Model.EXPLAIN_RECIPE -> {
-                (holder as ExplainTypeViewHolder).explainText.text = obj.text
-                holder.explainPhoto.setImageResource(obj.data)
-                holder.explainText.text = obj.contentString
+        fun bind(ingre: Ingre, context: Context){
+            if (ingre.photo != "") {
+                val resourceId = context.resources.getIdentifier(ingre.photo, "drawable", context.packageName)
+                ingrePhoto?.setImageResource(resourceId)
+//                val resourceId2 = context.resources.getIdentifier(food.bookmark, "drawable", context.packageName)
+//                starButton?.setImageResource(resourceId2)
+            } else {
+                ingrePhoto?.setImageResource(R.mipmap.ic_launcher)
+//                starButton?.setImageResource(R.mipmap.ic_launcher)
             }
         }
     }
-
-    // 여기서 받는 position은 데이터의 index다.
-    override fun getItemViewType(position: Int): Int {
-        Log.d("Adapter", "Hi, getItemViewType")
-        return list[position].type
-    }
-
-    inner class IngreTypeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val ingrePhoto: ImageButton = itemView.findViewById(R.id.ingreImg)
-        val ingreName: TextView = itemView.findViewById(R.id.ingreName)
-    }
-
-    inner class MenuTypeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val menuPhoto: ImageView = itemView.findViewById(R.id.menuImage)
-        val menuName: TextView = itemView.findViewById(R.id.menuName)
-    }
-
-    inner class ExplainTypeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val explainPhoto: ImageView = itemView.findViewById(R.id.courseImg)
-        val explainText: TextView = itemView.findViewById(R.id.courseExp)
-    }
-
 }
-
-
-
-//}

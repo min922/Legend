@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/explainmain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".RecipeActivity">
+
+    <Button
+        android:id="@+id/moveBack"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="100dp"
+        android:text="돌아가기" />
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <!--원래스크롤뷰위치-->
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="400dp"
+            android:layout_height="1000dp"
+            android:fillViewport="true">
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView_explain"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="50dp"
+                android:nestedScrollingEnabled="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</FrameLayout>
