@@ -14,13 +14,13 @@ import java.security.AccessController.getContext
 
 class MyAdapter(val context: Context, var itemList: ArrayList<Item>):
     RecyclerView.Adapter<MyAdapter.Holder>(){
-    interface MyItemClickListener{
-        fun onItemClick(position: Int)
-    }
-    private lateinit var mItemClickListener: MyItemClickListener
-    fun setMyItemClickListener(itemClickListener: MyItemClickListener){
-        mItemClickListener = itemClickListener
-    }
+//    interface MyItemClickListener{
+//        fun onItemClick(position: Int)
+//    }
+//    private lateinit var mItemClickListener: MyItemClickListener
+//    fun setMyItemClickListener(itemClickListener: MyItemClickListener){
+//        mItemClickListener = itemClickListener
+//    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         val view = LayoutInflater.from(context).inflate(R.layout.item_main, parent, false)
@@ -45,20 +45,20 @@ class MyAdapter(val context: Context, var itemList: ArrayList<Item>):
     }
 
     inner class Holder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
-        init {
-            itemView?.setOnClickListener {
-                mItemClickListener.onItemClick(adapterPosition)
-            }
-        }
+//        init {
+//            itemView?.setOnClickListener {
+//                mItemClickListener.onItemClick(adapterPosition)
+//            }
+//        }
 
         val menuPhoto = itemView?.findViewById<ImageView>(R.id.menuPhotoImg)
         val menuName = itemView?.findViewById<TextView>(R.id.menuText)
         val itemDate = itemView?.findViewById<TextView>(R.id.dateText)
 
         fun bind(item:Item, context: Context){
-//            itemView.setOnClickListener {
-//                EditDate().editDate(itemList[position].id, context)
-//            }
+            itemView.setOnClickListener {
+                EditDate().editDate(itemList[position].id, context)
+            }
             if (item.photo != "") {
                 val resourceId = context.resources.getIdentifier(item.photo, "drawable", context.packageName)
                 menuPhoto?.setImageResource(resourceId)

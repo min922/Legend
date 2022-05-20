@@ -14,7 +14,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface ApiInterface{
-    @GET("인증키/" //api인증키
+    @GET("c41ba7a35737e92228906457385f7542b47a6f0549b1b90cfeabaf363c070e9e/" //api인증키
             + "json/Grid_20151128000000000315_1/{startRow}/{endRow}")
     fun GetPrice(
         @Path("startRow", encoded = true) startRow:Int,

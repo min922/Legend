@@ -73,7 +73,7 @@ class EditDate {
                                 }
 //                            RefTab().Refresh()
 //                            MainActivity().refresh_frag(RefTab())
-                            RefTab().updateRecyclerData()
+//                            RefTab().updateRecyclerData()
 //                            val transaction = supportFragmentManager().beginTransaction()
 //                            transaction().beginTransaction().detach(RefTab()).attach(RefTab()).commit()
                             Toast.makeText(context, "유통기한이 삭제되었습니다.", Toast.LENGTH_SHORT).show()

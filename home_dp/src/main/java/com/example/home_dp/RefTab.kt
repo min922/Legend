@@ -20,19 +20,19 @@ class RefTab : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val mAdapter = context?.let { MyAdapter(it, MenuList) }
         addData()
+
+        val mAdapter = context?.let { MyAdapter(it, MenuList) }
+//        mAdapter?.setMyItemClickListener(object :MyAdapter.MyItemClickListener{
+//            override fun onItemClick(position: Int) {
+//                EditDate().editDate(MenuList[position].id, requireContext())
+//            }
+//        })
 
         val rootView = inflater.inflate(R.layout.fragment_ref_tab, container, false)
         recyclerViewref = rootView.findViewById(R.id.recyclerView_ref) as RecyclerView
         recyclerViewref.layoutManager = GridLayoutManager(context, 3)
         recyclerViewref.adapter = mAdapter
-
-        mAdapter?.setMyItemClickListener(object :MyAdapter.MyItemClickListener{
-            override fun onItemClick(position: Int) {
-                EditDate().editDate(MenuList[position].id, requireContext())
-            }
-        })
 
         return rootView
     }
