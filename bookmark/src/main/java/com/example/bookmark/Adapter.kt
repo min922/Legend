@@ -24,15 +24,18 @@ class Adapter(val context: Context, val foodList: ArrayList<Food>):
     inner class Holder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
         val foodPhoto = itemView?.findViewById<ImageView>(R.id.foodPhotoImg)
         val foodName = itemView?.findViewById<TextView>(R.id.foodName)
-//        val foodStar = itemView?.findViewById<TextView>(R.id.foodStar)
         val foodTime = itemView?.findViewById<TextView>(R.id.foodTime)
+//        val starButton = itemView?.findViewById<ImageButton>(R.id.starbutton)
 
         fun bind(food: Food, context: Context){
             if (food.photo != "") {
                 val resourceId = context.resources.getIdentifier(food.photo, "drawable", context.packageName)
                 foodPhoto?.setImageResource(resourceId)
+//                val resourceId2 = context.resources.getIdentifier(food.bookmark, "drawable", context.packageName)
+//                starButton?.setImageResource(resourceId2)
             } else {
                 foodPhoto?.setImageResource(R.mipmap.ic_launcher)
+//                starButton?.setImageResource(R.mipmap.ic_launcher)
             }
             /* 나머지 TextView와 String 데이터를 연결한다. */
             foodName?.text = food.name

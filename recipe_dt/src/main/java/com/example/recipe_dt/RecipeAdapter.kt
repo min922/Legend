@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 
 class RecipeAdapter(val context: Context, val explainlist: ArrayList<Recipe>):
     RecyclerView.Adapter<RecipeAdapter.Holder>() {
@@ -25,17 +26,33 @@ class RecipeAdapter(val context: Context, val explainlist: ArrayList<Recipe>):
         val recipePhoto = itemView?.findViewById<ImageView>(R.id.courseImg)
         val courseExp = itemView?.findViewById<TextView>(R.id.courseExp)
 
-        fun bind(recipe: Recipe, context: Context){
-            if (recipe.photo != "") {
-                val resourceId = context.resources.getIdentifier(recipe.photo, "drawable", context.packageName)
-                recipePhoto?.setImageResource(resourceId)
-
-            } else {
-                recipePhoto?.setImageResource(R.mipmap.ic_launcher)
-//                starButton?.setImageResource(R.mipmap.ic_launcher)
-            }
+        fun bind(recipe: Recipe, context: Context) {
+//            if (recipe.photo != "") {
+//                val resourceId = context.resources.getIdentifier(recipe.photo, "drawable", context.packageName)
+//                recipePhoto?.setImageResource(resourceId)
+//
+//            } else {
+//                recipePhoto?.setImageResource(R.mipmap.ic_launcher)
+////                starButton?.setImageResource(R.mipmap.ic_launcher)
+//            }
             /* 나머지 TextView와 String 데이터를 연결한다. */
             courseExp?.text = recipe.explain
+
+            try {
+                Glide.with(itemView).load(recipe.photo).into(recipePhoto!!)
+            } catch (e: NullPointerException) {
+                recipePhoto?.setImageResource(R.mipmap.ic_launcher)
+            }
+
+//            if (recipePhoto != null) {
+//                Glide.with(itemView).load(recipe.photo).into(recipePhoto)
+//            } else {
+//                recipePhoto?.setImageResource(R.mipmap.ic_launcher)
+//
+//
+//            }
+
+
         }
     }
 }

@@ -18,4 +18,9 @@
         android:background="#00ff0000"
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/menuName"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
 </LinearLayout>
