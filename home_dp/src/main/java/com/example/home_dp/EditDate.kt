@@ -39,10 +39,14 @@ class EditDate {
                                             && "day" in document
                                         ) {
                                             var editid = document.id
-                                            db.collection("UserSelect").document(editid).update(mapOf("year" to yearedit,
-                                                "month" to monthedit, "day" to dayedit))
+                                            db.collection("UserSelect")
+                                                .document(editid)
+                                                .update(mapOf("year" to yearedit,
+                                                    "month" to monthedit,
+                                                    "day" to dayedit))
                                         }
                                     }
+                                    Toast.makeText(context, "유통기한이 수정되었습니다.", Toast.LENGTH_SHORT).show()
                                 }
                                 .addOnFailureListener { exception ->
                                     // 실패할 경우
@@ -66,6 +70,7 @@ class EditDate {
                                                 "month" to "-", "day" to "-"))
                                         }
                                     }
+                                    Toast.makeText(context, "유통기한이 삭제되었습니다.", Toast.LENGTH_SHORT).show()
                                 }
                                 .addOnFailureListener { exception ->
                                     // 실패할 경우
@@ -76,7 +81,6 @@ class EditDate {
 //                            RefTab().updateRecyclerData()
 //                            val transaction = supportFragmentManager().beginTransaction()
 //                            transaction().beginTransaction().detach(RefTab()).attach(RefTab()).commit()
-                            Toast.makeText(context, "유통기한이 삭제되었습니다.", Toast.LENGTH_SHORT).show()
                         }
                     )
                     builder.show() //달력 다이얼로그 띄우기
@@ -91,12 +95,12 @@ class EditDate {
                                     db.collection("UserSelect").document(editid).delete()
                                 }
                             }
+                            Toast.makeText(context, "재료가 삭제되었습니다.", Toast.LENGTH_SHORT).show()
                         }
                         .addOnFailureListener { exception ->
                             // 실패할 경우
                             Log.w("Date", "Error getting documents: $exception")
                         }
-                    Toast.makeText(context, "재료가 삭제되었습니다.", Toast.LENGTH_SHORT).show()
                 }
             })
         builder_first.show()

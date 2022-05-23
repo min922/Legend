@@ -38,7 +38,6 @@ class SaveDate {
                     }
             }
         }
-//        DatePickerDialog.BUTTON_NEGATIVE
         val builder = DatePickerDialog(context, date_listener, year, month, day)
         builder.setTitle("유통기한을 입력해주세요.")
         builder.setButton(DatePickerDialog.BUTTON_NEGATIVE,

@@ -14,13 +14,11 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.location.*
 import android.Manifest.permission.*
+import android.annotation.SuppressLint
 import android.location.Geocoder
-import android.os.Build
-import android.widget.Button
 import android.widget.SearchView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat.checkSelfPermission
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
@@ -29,10 +27,6 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.tasks.OnSuccessListener
 import kotlinx.android.synthetic.main.activity_maps.*
-import org.w3c.dom.Document
-import org.w3c.dom.Element
-import org.w3c.dom.Node
-import org.w3c.dom.NodeList
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -41,10 +35,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
 import java.text.SimpleDateFormat
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 import java.util.*
-import javax.xml.parsers.DocumentBuilderFactory
 import kotlin.collections.ArrayList
 
 
@@ -54,16 +45,21 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     lateinit var providerClient: FusedLocationProviderClient
     lateinit var apiClient: GoogleApiClient
     var googleMap: GoogleMap? = null
+    var itemcode: String = "0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
 
+        itemcode = "111" //itemcode 여기서 넣어주기
+
         //지도 출력
         mapfun()
 
         Mylocbtn.setOnClickListener {
+//            LoadingDialog(this).show()
             onConnected(Bundle())
+//            LoadingDialog(this).dismiss()
         } //플로팅 버튼으로 현위치로 지도 옮기기
 
         mapSearch.setOnQueryTextListener(object :SearchView.OnQueryTextListener,
@@ -75,7 +71,7 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
                 val geocoder = Geocoder(this@MapsActivity)
                 val cor = geocoder.getFromLocationName(newText, 1)
                 try{
-                    moveMap(cor[0].latitude, cor[0].longitude)
+                    moveMap(cor[0].latitude, cor[0].longitude, itemcode)
                 } catch (e: IndexOutOfBoundsException){
                     Log.d("Map_location","오류")
                     Toast.makeText(this@MapsActivity, "검색 결과가 없습니다.", Toast.LENGTH_LONG).show()
@@ -120,33 +116,10 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         }
     }
 
-    private fun moveMap(latitude: Double, longitude: Double){
+    private fun moveMap(latitude: Double, longitude: Double, itemcode: String){
         Log.d("Map_location","$latitude, $longitude")
 
-        //오늘날짜
-        var calendar = Calendar.getInstance()
-        var date = calendar.get(Calendar.DAY_OF_WEEK)
-        var Strnow: String
-        if (date == 1){
-            calendar.add(Calendar.DAY_OF_YEAR, -2)
-            var TimeToDate = calendar.time
-            var formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        } //일요일이면 이틀 빼기
-        else if(date == 7){
-            calendar.add(Calendar.DAY_OF_YEAR, -1)
-            var TimeToDate = calendar.time
-            var formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        } //토요일이면 하루 빼기
-        else{
-            calendar.add(Calendar.DAY_OF_YEAR, 0)
-            var TimeToDate = calendar.time
-            var formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        }
-
-        checkEnd(Strnow, "654", latitude,  longitude)
+        checkEnd(now_day(), itemcode, latitude,  longitude)
 
         val latLng = LatLng(latitude, longitude)
         val position: CameraPosition = CameraPosition.Builder()
@@ -174,7 +147,7 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
                             val latitude = p0.latitude
                             val longitude = p0.longitude
                             Log.d("map_location","$latitude, $longitude")
-                            moveMap(latitude, longitude)
+                            moveMap(latitude, longitude, itemcode)
                         }
                     }
                 }
@@ -195,6 +168,45 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         googleMap = p0
     }
 
+    //API 출력 할 날짜 받아오는 함수
+    fun now_day(): String {
+        //오늘날짜
+        val calendar = Calendar.getInstance()
+        val date = calendar.get(Calendar.DAY_OF_WEEK)
+        val time = calendar.get(Calendar.HOUR_OF_DAY)
+        val Strnow: String
+        if (date == 1){ //일요일이면 이틀 빼기
+            calendar.add(Calendar.DAY_OF_YEAR, -2)
+            val TimeToDate = calendar.time
+            val formatter  = SimpleDateFormat("yyyyMMdd")
+            Strnow = formatter.format(TimeToDate)
+        }
+        else if(date == 7){ //토요일이면 하루 빼기
+            calendar.add(Calendar.DAY_OF_YEAR, -1)
+            val TimeToDate = calendar.time
+            val formatter  = SimpleDateFormat("yyyyMMdd")
+            Strnow = formatter.format(TimeToDate)
+        }
+        else if(date in (3 .. 6) && time < 18){ //화~금 & 18시 이전이면 전날(몇시 업데이트인지 확인하고 고치기)
+            calendar.add(Calendar.DAY_OF_YEAR, -1)
+            val TimeToDate = calendar.time
+            val formatter  = SimpleDateFormat("yyyyMMdd")
+            Strnow = formatter.format(TimeToDate)
+        }
+        else if(date == 2 && time < 18){ //월요일 & 18시 이전이면 3일전
+            calendar.add(Calendar.DAY_OF_YEAR, -3)
+            val TimeToDate = calendar.time
+            val formatter  = SimpleDateFormat("yyyyMMdd")
+            Strnow = formatter.format(TimeToDate)
+        }
+        else{
+            calendar.add(Calendar.DAY_OF_YEAR, 0)
+            val TimeToDate = calendar.time
+            val formatter  = SimpleDateFormat("yyyyMMdd")
+            Strnow = formatter.format(TimeToDate)
+        }
+        return Strnow
+    }
 
     ///API///
     data class loca(
@@ -206,11 +218,15 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     )
     fun checkEnd(searchday: String, itemcode: String, search_lati: Double, search_logi: Double){
         val call = ApiObject.retrofitService.GetPrice(1, 1, searchday, itemcode)
-        call.enqueue(object :retrofit2.Callback<DataClasses.MarketInfo>{
+        call.enqueue(object :retrofit2.Callback<DataClasses.MarketInfo>{ //맨 끝 찾아서 맨 끝 값 callapi함수에 넣어주기
             override fun onResponse(call: Call<DataClasses.MarketInfo>, response: Response<DataClasses.MarketInfo>) {
                 if (response.isSuccessful){
-                    val end_row = response.body()?.wrap!!.totalCnt.toInt()
-                    callApi(1, end_row, searchday, itemcode, search_lati, search_logi)
+                    if (response.body()?.wrap!!.totalCnt == 0){
+                        info.text = "검색 결과가 없습니다."
+                    } else{
+                        val end_row = response.body()?.wrap!!.totalCnt
+                        callApi(1, end_row, searchday, itemcode, search_lati, search_logi)
+                    }
                 }
             }
             override fun onFailure(call: Call<DataClasses.MarketInfo>, t: Throwable) {
@@ -226,10 +242,13 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         search_lati: Double,
         search_logi: Double
     ){
+//        LoadingDialog(this).show()
         val market_loc_lati = ArrayList<loca>()
         val call = ApiObject.retrofitService.GetPrice(start, end, searchday, itemcode)
         call.enqueue(object :retrofit2.Callback<DataClasses.MarketInfo>{
+            @SuppressLint("SetTextI18n")
             override fun onResponse(call: Call<DataClasses.MarketInfo>, response: Response<DataClasses.MarketInfo>) {
+
                 if (response.isSuccessful){
                     val market_location = ArrayList<String>() //표준시장명
                     val market_location_sub = ArrayList<String>() //조사가격시장명
@@ -245,75 +264,78 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
                         }
                     } //시장명 리스트에 저장
                     val geocoder = Geocoder(this@MapsActivity)
-                    for (i in market_location.indices){
+                    for (i in market_location.indices){ //조사한 시장들 경, 위도 저장
                         try{ //표준시장명으로 먼저 넣어보고 오류나면 조사가격시장명으로 넣어봄
-                            val cor = geocoder.getFromLocationName(market_location[i], 1)
+                            val geo_cor = geocoder.getFromLocationName(market_location[i], 10)
                             val item = loca()
                             item.idx = i
                             item.name = market_location[i]
-                            item.lati = cor[0].latitude.toString()
-                            item.longi = cor[0].longitude.toString()
+                            val cor = geo_cor.get(0)
+                            item.lati = cor.latitude.toString()
+                            item.longi = cor.longitude.toString()
                             market_loc_lati.add(item)
 //                            Log.d("efklanrg","$i 번째 : $item")
                         } catch (e: IndexOutOfBoundsException){
                             try{
-                                val cor = geocoder.getFromLocationName(market_location_sub[i], 1)
+                                val cor = geocoder.getFromLocationName(market_location_sub[i], 10)
                                 val item = loca()
                                 item.idx = i
                                 item.name = market_location_sub[i]
-                                item.lati = cor[0].latitude.toString()
-                                item.longi = cor[0].longitude.toString()
+                                val addr = cor.get(0)
+                                item.lati = addr.latitude.toString()
+                                item.longi = addr.longitude.toString()
                                 market_loc_lati.add(item)
 //                                Log.d("efklanrg","$i 번째 : $item")
                             }catch (e: IndexOutOfBoundsException){
-                                Log.d("efklanrg","오류!!!")
+                                Log.d("efklanrg","${market_location[i]}, ${market_location_sub[i]} 오류!!!")
                             }
                         }
-                    } //조사한 시장들 경, 위도 저장
-//                    Marketlist().marketldist()
+                    }
 //                    Log.d("qrekjfrf", market_loc_lati.toString())
                 }
 
                 val ex_day = response.body()?.wrap?.row!![0].EXAMIN_DE
                 val ex_item = response.body()?.wrap?.row!![0].EXAMIN_PRDLST_NM
-                info.text = "${ex_day.substring(0 until 4)}년 ${ex_day.substring(4 until 6)}월 ${ex_day.substring(6 until 8)}일에 내 주변 ${ex_item}의 가격은?"
+                val printyear = ex_day.substring(0 until 4)
+                val printmonth = ex_day.substring(4 until 6)
+                val printday = ex_day.substring(6 until 8)
+                info.text = """${printyear}년 ${printmonth}월 ${printday}일 기준 내 주변 ${ex_item}의 가격은?"""
 
-//                tmp_list = Marketlist().marketdist(market_loc_lati, 37.5444, 126.9645)
-                var tmp_list = Marketlist().marketdist(market_loc_lati, search_lati, search_logi)
+                val tmp_list = Marketlist().marketdist(market_loc_lati, search_lati, search_logi)
                 //거리순으로 정렬된 리스트 받음
                 val geocoder = Geocoder(this@MapsActivity)
 
 //                Log.d("wefjn", market_loc_lati.toString())
-                Log.d("wefjn", tmp_list.toString())
+//                Log.d("wefjn", tmp_list.toString())
 //                Log.d("wefjn", response.body()?.wrap?.row.toString())
 
                 val marketname_list :List<TextView> = listOf(marketname1,marketname2,marketname3,marketname4,marketname5)
                 val address_list : List<TextView> = listOf(address1,address2,address3,address4,address5)
                 val price_list :List<TextView> = listOf(price1,price2,price3,price4,price5)
                 val weight_list :List<TextView> = listOf(weight1,weight2,weight3,weight4,weight5)
-                for (i in 0 until 5){
+                for (i in 0 until 5){ //textview에 받은 데이터들 넣어주기
                     val tmp_idx = tmp_list[i].idx
                     marketname_list[i].text = response.body()?.wrap?.row!![tmp_idx].STD_MRKT_NM
                     address_list[i].text = geocoder.getFromLocation(tmp_list[i].lati.toDouble(), tmp_list[i].longi.toDouble(), 10)
                         .get(0).getAddressLine(0).toString()
-                    price_list[i].text = response.body()?.wrap?.row!![tmp_idx].TODAY_PRIC.toString() + "원"
+                    price_list[i].text = """${response.body()?.wrap?.row!![tmp_idx].TODAY_PRIC}원"""
                     weight_list[i].text = response.body()?.wrap?.row!![tmp_idx].EXAMIN_UNIT_NM
                 }
-
-//                Log.d("qoweifhnqowe", tmp_list.toString())
+//                LoadingDialog(this@MapsActivity).dismiss()
             }
             override fun onFailure(call: Call<DataClasses.MarketInfo>, t: Throwable) {
                 Log.d("안된다", t.message.toString())
             }
         })
-
+//        LoadingDialog(this).dismiss()
     }
 }
 
 
+
 ///API///
 interface ApiInterface{
-    @GET("c41ba7a35737e92228906457385f7542b47a6f0549b1b90cfeabaf363c070e9e/" //api인증키
+    @GET("api인증키/" //api인증키
             + "json/Grid_20151128000000000315_1/{startRow}/{endRow}")
     fun GetPrice(
         @Path("startRow", encoded = true) startRow:Int,
@@ -331,4 +353,5 @@ object ApiObject {
     val retrofitService: ApiInterface by lazy {
         retrofit.create(ApiInterface::class.java)
     }
+
 }
