@@ -3,7 +3,7 @@
 
 ### main_dp : 재료 선택 화면
 > * exist_indata : data가 DB에 있는지 확인 후 addData실행(메인에서 불러서 씀)
-> * addData : SaveDate를 이용하여 유통기한을 받은 후 그 data를 DB에 저장
+> * addData : SaveDate를 이용하여 유통기한을 받은 후 유통기한과 재료 data를 DB에 저장
 > * SaveDate : 유통기한 입력
 
 
