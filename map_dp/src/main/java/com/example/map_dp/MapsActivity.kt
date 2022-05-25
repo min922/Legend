@@ -16,9 +16,12 @@ import com.google.android.gms.location.*
 import android.Manifest.permission.*
 import android.annotation.SuppressLint
 import android.location.Geocoder
+import android.os.Build
+import android.view.View
 import android.widget.SearchView
 import android.widget.TextView
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat.checkSelfPermission
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
@@ -27,6 +30,7 @@ import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
 import com.google.android.gms.tasks.OnSuccessListener
 import kotlinx.android.synthetic.main.activity_maps.*
+import kotlinx.android.synthetic.main.dialog_loading.*
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
@@ -57,12 +61,11 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         mapfun()
 
         Mylocbtn.setOnClickListener {
-//            LoadingDialog(this).show()
             onConnected(Bundle())
-//            LoadingDialog(this).dismiss()
         } //플로팅 버튼으로 현위치로 지도 옮기기
 
-        mapSearch.setOnQueryTextListener(object :SearchView.OnQueryTextListener,
+        mapSearch.setOnQueryTextListener(
+        object :SearchView.OnQueryTextListener,
             androidx.appcompat.widget.SearchView.OnQueryTextListener {
             override fun onQueryTextChange(query: String?): Boolean {
                 return false
@@ -76,7 +79,7 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
                     Log.d("Map_location","오류")
                     Toast.makeText(this@MapsActivity, "검색 결과가 없습니다.", Toast.LENGTH_LONG).show()
                 }
-                return false
+                return true
             }
         }) //검색해서 지도 옮기기
     }
@@ -242,7 +245,8 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         search_lati: Double,
         search_logi: Double
     ){
-//        LoadingDialog(this).show()
+        val dialog = LoadingDialog(this@MapsActivity)
+        dialog.show()
         val market_loc_lati = ArrayList<loca>()
         val call = ApiObject.retrofitService.GetPrice(start, end, searchday, itemcode)
         call.enqueue(object :retrofit2.Callback<DataClasses.MarketInfo>{
@@ -321,13 +325,12 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
                     price_list[i].text = """${response.body()?.wrap?.row!![tmp_idx].TODAY_PRIC}원"""
                     weight_list[i].text = response.body()?.wrap?.row!![tmp_idx].EXAMIN_UNIT_NM
                 }
-//                LoadingDialog(this@MapsActivity).dismiss()
+                dialog.dismiss()
             }
             override fun onFailure(call: Call<DataClasses.MarketInfo>, t: Throwable) {
                 Log.d("안된다", t.message.toString())
             }
         })
-//        LoadingDialog(this).dismiss()
     }
 }
 
@@ -335,7 +338,7 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
 
 ///API///
 interface ApiInterface{
-    @GET("api인증키/" //api인증키
+    @GET("API인증키/" //api인증키
             + "json/Grid_20151128000000000315_1/{startRow}/{endRow}")
     fun GetPrice(
         @Path("startRow", encoded = true) startRow:Int,
