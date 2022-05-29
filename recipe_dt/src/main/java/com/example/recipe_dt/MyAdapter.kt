@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class MyAdapter(val context: Context, val list: ArrayList<Ingre>):
@@ -22,6 +23,7 @@ class MyAdapter(val context: Context, val list: ArrayList<Ingre>):
     }
     inner class Holder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
         val ingrePhoto = itemView?.findViewById<ImageView>(R.id.ingreImg)
+        val ingreName = itemView?.findViewById<TextView>(R.id.ingreName)
 
         fun bind(ingre: Ingre, context: Context){
             if (ingre.photo != "") {
@@ -33,6 +35,8 @@ class MyAdapter(val context: Context, val list: ArrayList<Ingre>):
                 ingrePhoto?.setImageResource(R.mipmap.ic_launcher)
 //                starButton?.setImageResource(R.mipmap.ic_launcher)
             }
+            /* 나머지 TextView와 String 데이터를 연결한다. */
+            ingreName?.text = ingre.name
         }
     }
 }

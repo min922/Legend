@@ -5,7 +5,7 @@
     tools:showIn="@layout/activity_main"
     android:id="@+id/ingre_root"
     android:layout_width="130dp"
-    android:layout_height="130dp"
+    android:layout_height="170dp"
     android:orientation="vertical"
     android:padding="1dp"
     tools:context=".MainActivity">
@@ -19,8 +19,9 @@
         tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
 
     <TextView
-        android:id="@+id/menuName"
-        android:layout_width="100dp"
-        android:layout_height="100dp" />
+        android:id="@+id/ingreName"
+        android:layout_width="130dp"
+        android:layout_height="20dp"
+        android:textSize="15dp"/>
 
 </LinearLayout>
