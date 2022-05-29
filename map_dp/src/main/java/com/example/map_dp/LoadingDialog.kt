@@ -12,8 +12,10 @@ class LoadingDialog(context: Context) : Dialog(context){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.dialog_loading)
 
+        //밖에 눌러도 취소 안되게
         setCancelable(false)
 
+        //배경색 투명
         window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
     }
 }
