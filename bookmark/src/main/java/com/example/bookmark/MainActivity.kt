@@ -3,6 +3,7 @@ package com.example.bookmark
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_main.*
 
 
@@ -48,6 +49,25 @@ class MainActivity : AppCompatActivity() {
         val gm = GridLayoutManager(this, 1)
         recyclerView.layoutManager = gm
         recyclerView.setHasFixedSize(true)
+        
+        
+//        파이어스토어 북마크 id, img_url 받기
+        val db_firestore = FirebaseFirestore.getInstance() //Firestore 인스턴스 선언
+        val db_sqlite = DataBaseHelper(this).readableDatabase
+        var receiveId :String
+
+        db_firestore.collection("UserBookmark")
+            .get()
+            .addOnSuccessListener { result ->
+                for (id in result){
+                    receiveId = id.data["RECIPE_ID"].toString()
+                    println("id : ${receiveId}")
+
+                    val sql = "SELECT info.RECIPE_NM_KO, info.IMG_URL\n"+
+                            "FROM recipe_information info\n"+
+                            "WHERE info.RECIPE_ID ="
+                }
+            }
 
 
     }
