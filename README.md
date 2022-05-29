@@ -16,7 +16,7 @@
 
 
 
-### map_de : 지도 & 가격 화면
+### map_dp : 지도 & 가격 화면
 > * MapsActivity : 메인 화면(지도랑 가격화면)
 > * Marketlist : api를 이용해 받은 시장의 위, 경도가 들어있는 리스트와 현위치를 입력받아 거리를 계산해서 거리가 짧은 순으로 리스트를 정렬해서 출력
 > * DataClasses : api출력용 class
