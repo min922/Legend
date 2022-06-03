@@ -37,9 +37,6 @@
             android:name=".SelectActivity.ClamActivity"
             android:exported="false" />
         <activity
-            android:name=".SelectActivity.ClamActivity"
-            android:exported="false" />
-        <activity
             android:name=".SelectActivity.FishActivity"
             android:exported="false" />
         <activity
@@ -84,6 +81,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name="com.example.home_dp.RefMainActivity" />
+
     </application>
 
 </manifest>

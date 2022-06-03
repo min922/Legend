@@ -1,45 +1,40 @@
 package com.example.map_dp
 
+import android.Manifest.permission.*
 import android.content.pm.PackageManager
+import android.location.Geocoder
 import android.location.Location
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.widget.Toast
-import com.google.android.gms.maps.CameraUpdateFactory
-import com.google.android.gms.maps.GoogleMap
-import com.google.android.gms.maps.OnMapReadyCallback
-import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.MarkerOptions
-import com.google.android.gms.location.*
-import android.Manifest.permission.*
-import android.annotation.SuppressLint
-import android.location.Geocoder
-import android.os.Build
-import android.text.TextUtils.replace
-import android.view.View
 import android.widget.SearchView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.annotation.RequiresApi
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat.checkSelfPermission
 import com.google.android.gms.common.ConnectionResult
 import com.google.android.gms.common.api.GoogleApiClient
 import com.google.android.gms.common.api.GoogleApiClient.*
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
+import com.google.android.gms.maps.CameraUpdateFactory
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.CameraPosition
+import com.google.android.gms.maps.model.LatLng
+import com.google.android.gms.maps.model.MarkerOptions
 import com.google.android.gms.tasks.OnSuccessListener
 import kotlinx.android.synthetic.main.activity_maps.*
-import kotlinx.android.synthetic.main.dialog_loading.*
 import retrofit2.Call
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.*
+import retrofit2.http.GET
+import retrofit2.http.Path
 import java.text.SimpleDateFormat
 import java.util.*
-import kotlin.collections.ArrayList
 
 
 class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
@@ -49,12 +44,15 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     lateinit var apiClient: GoogleApiClient
     var googleMap: GoogleMap? = null
     var itemname: String = "0"
+    var searchday: String = "0"
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_maps)
 
         itemname = "사과" //itemname 여기서 넣어주기
+
+        searchday = getMonth()
 
         //지도 출력
         mapfun()
@@ -79,9 +77,23 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
                         Log.d("Map_location", "오류")
                         Toast.makeText(this@MapsActivity, "검색 결과가 없습니다.", Toast.LENGTH_LONG).show()
                     }
+                    mapSearch.setQuery("", false) //검색창 초기화
+                    mapSearch.clearFocus() //키보드 내리기
                     return true
                 }
             }) //검색해서 지도 옮기기
+    }
+
+    fun getMonth(): String {
+        val calendar = Calendar.getInstance()
+        calendar.add(Calendar.DAY_OF_WEEK, -1)
+        calendar.firstDayOfWeek = Calendar.SUNDAY
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY)
+        val TimeToDate = calendar.time
+        val formatter  = SimpleDateFormat("yyyy-MM")
+        val Strnow = formatter.format(TimeToDate)
+
+        return Strnow
     }
 
     //지도
@@ -123,13 +135,18 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     private fun moveMap(latitude: Double, longitude: Double, itemname: String) {
         Log.d("Map_location", "$latitude, $longitude")
 
-        val dist_list = Marketlist().marketdist(this@MapsActivity, latitude, longitude).first
-        val for_addr = Marketlist().marketdist(this@MapsActivity, latitude, longitude).second
+//        val dialog = LoadingDialog(this@MapsActivity)
+//        dialog.show()
+        val tmp = Marketlist().marketdist(this@MapsActivity, latitude, longitude)
+//        dialog.dismiss()
+
+        val dist_list = tmp.first
+        val for_addr = tmp.second
         val address_list : List<TextView> = listOf(address1,address2,address3,address4,address5)
         val geocoder = Geocoder(this@MapsActivity)
 
         for (i in dist_list.indices){
-            checkEnd(dist_list[i], itemname, "2022-05", i)
+            checkEnd(dist_list[i], itemname, searchday, i)
             address_list[i].text = geocoder.getFromLocation(for_addr[i].lati.toDouble(), for_addr[i].longi.toDouble(), 10)
                 .get(0).getAddressLine(0).toString()
         }
@@ -181,46 +198,6 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
         googleMap = p0
     }
 
-    //API 출력 할 날짜 받아오는 함수
-    fun now_day(): String {
-        //오늘날짜
-        val calendar = Calendar.getInstance()
-        val date = calendar.get(Calendar.DAY_OF_WEEK)
-        val time = calendar.get(Calendar.HOUR_OF_DAY)
-        val Strnow: String
-        if (date == 1){ //일요일이면 이틀 빼기
-            calendar.add(Calendar.DAY_OF_YEAR, -2)
-            val TimeToDate = calendar.time
-            val formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        }
-        else if(date == 7){ //토요일이면 하루 빼기
-            calendar.add(Calendar.DAY_OF_YEAR, -1)
-            val TimeToDate = calendar.time
-            val formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        }
-        else if(date in (3 .. 6) && time < 18){ //화~금 & 18시 이전이면 전날(몇시 업데이트인지 확인하고 고치기)
-            calendar.add(Calendar.DAY_OF_YEAR, -1)
-            val TimeToDate = calendar.time
-            val formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        }
-        else if(date == 2 && time < 18){ //월요일 & 18시 이전이면 3일전
-            calendar.add(Calendar.DAY_OF_YEAR, -3)
-            val TimeToDate = calendar.time
-            val formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        }
-        else{
-            calendar.add(Calendar.DAY_OF_YEAR, 0)
-            val TimeToDate = calendar.time
-            val formatter  = SimpleDateFormat("yyyyMMdd")
-            Strnow = formatter.format(TimeToDate)
-        }
-        return Strnow
-    }
-
     ///API///
     fun checkEnd(marketname: String, itemname: String, searchday: String, idx:Int) {
         val tmp_name = marketname.replace(" ", "") //띄어쓰기 없애기
@@ -253,8 +230,6 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     }
 
     fun callApi(start: Int, end: Int, marketname: String, itemname: String, searchday: String, idx:Int){
-        val dialog = LoadingDialog(this@MapsActivity)
-        dialog.show()
 
         val tmp_name = marketname.replace(" ", "") //띄어쓰기 없애기
 
@@ -274,7 +249,6 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
                         weight_list[idx].text = response.body()!!.ListNecessariesPricesService.row[0].A_UNIT
 //                        Log.d("된다", response.body().toString())
                     }
-                    dialog.dismiss()
                 }
                 override fun onFailure(call: Call<DataClass.market>, t: Throwable) {
                     Log.d("안된다", t.message.toString())

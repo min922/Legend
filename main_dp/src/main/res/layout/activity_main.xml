@@ -96,13 +96,13 @@
             <Button
                 android:id="@+id/proButton"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="141dp"
                 android:autoSizeTextType="uniform"
+                android:background="#00ff0000"
                 android:drawableTop="@drawable/sausage"
                 android:text="가공식품"
-                android:textStyle="bold"
                 android:textColor="@color/black"
-                android:background="#00ff0000"/>
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/sauceButton"

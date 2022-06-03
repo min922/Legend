@@ -1,5 +1,6 @@
 plugins {
-    id 'com.android.application'
+//    id 'com.android.application'
+    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
@@ -9,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.home_dp"
+//        applicationId "com.example.home_dp"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -49,4 +50,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-common-ktx:20.1.0'
     implementation 'com.google.firebase:firebase-auth:21.0.3'
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
+
+//    implementation project(":main_dp")
 }

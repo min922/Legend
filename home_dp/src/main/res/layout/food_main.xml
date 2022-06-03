@@ -9,7 +9,7 @@
     android:layout_marginVertical="0dp"
     android:orientation="vertical"
     android:layout_gravity="center_horizontal"
-    tools:context=".MainActivity">
+    tools:context=".RefMainActivity">
 
         <ImageButton
             android:id="@+id/foodPhotoImg"

@@ -36,7 +36,12 @@ class Marketlist() {
     val market_loc_lati = ArrayList<loca>()
 
     fun marketdist(context: Context, search_lati: Double, search_logi: Double): Pair<ArrayList<String>, ArrayList<tmp_lati_logi>> {
+        val dialog = LoadingDialog(context)
+        dialog.show()
+        //여기가 오래걸려서 여기서 다이얼로그보여줘야할거같은데,,
+
         val geocoder = Geocoder(context)
+        var secname =""
         for(i in unionmarket.indices){
             try {
                 val geo_cor = geocoder.getFromLocationName(unionmarket[i], 10)
@@ -47,8 +52,26 @@ class Marketlist() {
                 item.longi = cor.longitude.toString()
                 market_loc_lati.add(item)
             } catch (e: IndexOutOfBoundsException){
-                try{
-                    val geo_cor = geocoder.getFromLocationName(unionmarket[i]+" 본점", 10)
+                if (unionmarket[i] == "신세계백화점"){
+                    secname = "신세계백화점 본점"
+                } //안되는거 오류처리
+                else if (unionmarket[i] == "농협하나로마트 신촌점"){
+                    secname = "농협하나로클럽 신촌점"
+                }
+                else if (unionmarket[i] == "남구로시장"){
+                    secname = "남구로 시장"
+                }
+//                else if (unionmarket[i] == "원당종합시장"){
+//                    secname = "원당 종합시장"
+//                }
+                else if (unionmarket[i] == "노룬산골목시장"){
+                    secname = "노룬산시장"
+                }
+//                else if (unionmarket[i] == "롯데백화점"){
+//                    secname = "롯데백화점 본점"
+//                }
+                try {
+                    val geo_cor = geocoder.getFromLocationName(secname, 10)
                     val item = loca()
                     val cor = geo_cor.get(0)
                     item.idx = i
@@ -69,7 +92,7 @@ class Marketlist() {
             val tmp_loc = Location("")
             tmp_loc.latitude = market_loc_lati[i].lati.toDouble()
             tmp_loc.longitude = market_loc_lati[i].longi.toDouble()
-            val tmp_dist = now_loc.distanceTo(tmp_loc) / 1000 //km로 변환
+            val tmp_dist = now_loc.distanceTo(tmp_loc)
             market_loc_lati[i].dist = tmp_dist
         }
 
@@ -82,6 +105,7 @@ class Marketlist() {
             tmp_fifth.add(tmp_lati_logi(market_loc_lati[i].lati, market_loc_lati[i].longi))
         }
 
+        dialog.dismiss()
         return Pair(result_list, tmp_fifth)
     }
 }

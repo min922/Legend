@@ -1,10 +1,13 @@
 package com.example.main_dp
 
+import android.content.ComponentName
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.home_dp.RefMainActivity
 import com.example.main_dp.SelectActivity.*
 import kotlinx.android.synthetic.main.activity_main.*
+
 
 class MainActivity : AppCompatActivity() {
         override fun onCreate(savedInstanceState: Bundle?) {
@@ -57,6 +60,13 @@ class MainActivity : AppCompatActivity() {
                 }
                 etcButton.setOnClickListener {
                         val intent = Intent(this, EtcActivity::class.java)
+                        startActivity(intent)
+                }
+
+                TorefButton.setOnClickListener {
+                        val intent = Intent()
+//                        val intent = Intent(this, Class.forName("com.example.home_dp.RefMainActivity"))
+                        intent.setComponent(ComponentName("com.example.home_dp", "com.example.home_dp.RefMainActivity"))
                         startActivity(intent)
                 }
         }
