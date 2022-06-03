@@ -7,7 +7,7 @@
 
     android:id="@+id/mainlayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -114,9 +114,8 @@
     <!--원래스크롤뷰위치-->
     <androidx.core.widget.NestedScrollView
         android:layout_width="400dp"
-        android:layout_height="750dp"
+        android:layout_height="match_parent"
         android:fillViewport="true">
-
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_ingre"

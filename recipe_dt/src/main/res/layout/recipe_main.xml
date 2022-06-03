@@ -25,7 +25,7 @@
     <!--원래스크롤뷰위치-->
         <androidx.core.widget.NestedScrollView
             android:layout_width="400dp"
-            android:layout_height="1000dp"
+            android:layout_height="match_parent"
             android:fillViewport="true">
 
 
@@ -39,7 +39,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
         </androidx.core.widget.NestedScrollView>
-
     </RelativeLayout>
 
     <FrameLayout
@@ -54,11 +53,11 @@
             android:id="@+id/minTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="150dp"
+            android:layout_marginStart="170dp"
             android:layout_marginTop="420dp"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="80sp" />
+            android:textSize="30dp" />
 
         <TextView
             android:id="@+id/secTextView"
@@ -68,7 +67,7 @@
             android:layout_marginTop="420dp"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
-            android:textSize="80sp" />
+            android:textSize="30dp" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/milliTextView"-->
@@ -90,18 +89,18 @@
             app:layout_constraintTop_toTopOf="parent" >
             <EditText
                 android:id="@+id/inputEditText"
-                android:layout_marginStart="50dp"
-                android:layout_width="wrap_content"
+                android:layout_marginStart="100dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:hint="초"
+                android:hint="분"
                 android:singleLine="true"
                 android:imeOptions="actionDone"
                 android:inputType="number" />
             <Button
                 android:id="@+id/timerSettingButton"
-                android:layout_marginStart="300dp"
+                android:layout_marginStart="250dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"

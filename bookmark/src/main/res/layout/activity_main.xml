@@ -38,6 +38,8 @@
         app:layout_constraintStart_toEndOf="@+id/imageButton4"
         app:layout_constraintTop_toTopOf="parent" />
 
+
+
     </LinearLayout>
 
     <LinearLayout
@@ -77,13 +79,14 @@
 
         <ScrollView
             android:layout_width="wrap_content"
-            android:layout_height="500dp"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
             tools:ignore="MissingConstraints">
             <androidx.recyclerview.widget.RecyclerView
                 xmlns:android="http://schemas.android.com/apk/res/android"
                 android:id="@+id/recyclerView"
                 android:layout_width="400dp"
-                android:layout_height="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

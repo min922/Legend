@@ -5,17 +5,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="240dp"
+    android:layout_height="250dp"
     android:layout_marginVertical="0dp"
     android:orientation="vertical"
+    android:paddingBottom="10dp"
     android:layout_gravity="center_horizontal"
     tools:context=".MainActivity">
 
         <ImageButton
             android:id="@+id/foodPhotoImg"
-            android:layout_width="411dp"
+            android:layout_width="match_parent"
             android:layout_height="200dp"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription"
+            android:layout_gravity="center_horizontal"
+            android:background="#00FF0000"/>
 
         <ImageButton
             android:id="@+id/starbutton"
@@ -23,7 +26,7 @@
             android:layout_marginStart="350dp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:background="@drawable/icon_star"/>
+            android:background="@drawable/btn_star"/>
 
     <LinearLayout
         android:layout_width="400dp"
@@ -34,19 +37,33 @@
 
         <TextView
             android:id="@+id/foodName"
-            android:layout_width="100dp"
-            android:layout_height="20dp"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="10dp" />
+            android:layout_marginTop="10dp"
+            android:textSize="25dp"
+            android:fontFamily="@font/maruburi"
+            android:textColor="@color/black"/>
 
         <TextView
             android:id="@+id/foodTime"
             android:layout_width="100dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="40dp"
             android:layout_marginTop="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:drawablePadding="8dp"
+            android:textSize="25dp"
+            android:textColor="@color/black"
+            android:drawableLeft="@drawable/icon_time"/>
+        <TextView
+            android:id="@+id/foodId"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="10dp"
+            android:visibility="gone"/>
 
     </LinearLayout>
 

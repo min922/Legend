@@ -56,12 +56,12 @@ class RecipeActivity : AppCompatActivity() {
     timerSettingButton.setOnClickListener{
         if(inputEditText.text.toString().toInt() != 0) {
             //timer(타이머)
-            time = inputEditText.text.toString().toInt()*100
+            time = inputEditText.text.toString().toInt()*60
             timerTask = timer(period = 1000) {
                 //워커스레드 (UI조작 불가)
                 time--
-                var min = time / 100
-                var sec = time % 100
+                var min = time / 60
+                var sec = time % 60
 
                 runOnUiThread { //메인스레드 (UI조작 가능)
                     //"특정 동작을 UI스레드에서 동작하도록

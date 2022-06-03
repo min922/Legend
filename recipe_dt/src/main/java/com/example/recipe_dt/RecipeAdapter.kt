@@ -52,7 +52,6 @@ class RecipeAdapter(val context: Context, val explainlist: ArrayList<Recipe>):
 //
 //            }
 
-
         }
     }
 }
