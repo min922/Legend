@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="240dp"
+    android:layout_marginVertical="0dp"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".RefMainActivity">
+
+        <ImageButton
+            android:id="@+id/foodPhotoImg"
+            android:layout_width="411dp"
+            android:layout_height="200dp"
+            tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:layout_gravity="left">
+
+        <TextView
+            android:id="@+id/foodName"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp" />
+
+
+        <!--    <ImageButton-->
+        <!--        android:id="@+id/foodStar"-->
+        <!--        android:layout_width="30dp"-->
+        <!--        android:layout_height="30dp"-->
+        <!--        android:layout_marginStart="350dp"-->
+        <!--        android:layout_marginTop="650dp"-->
+        <!--        app:layout_constraintStart_toStartOf="parent"-->
+        <!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--        <ScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0dp"-->
+<!--            android:layout_weight="1"-->
+<!--            tools:ignore="MissingConstraints">-->
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--                    android:id="@+id/recyclerView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="0dp"-->
+<!--                    app:layout_constraintTop_toTopOf="parent"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    android:nestedScrollingEnabled="true"/>-->
+<!--        </ScrollView>-->
+
+        <TextView
+            android:id="@+id/foodTime"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
