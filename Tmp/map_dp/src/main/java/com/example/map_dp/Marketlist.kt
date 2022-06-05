@@ -35,11 +35,11 @@ class Marketlist() {
     ) //시장 위, 경도, 거리 저장할 class
     val market_loc_lati = ArrayList<loca>()
 
-    fun marketdist(context: Context, search_lati: Double, search_logi: Double): Pair<ArrayList<String>, ArrayList<tmp_lati_logi>> {
-        val dialog = LoadingDialog(context)
-        dialog.show()
-        //여기가 오래걸려서 여기서 다이얼로그보여줘야할거같은데,,
-
+    fun marketdist(
+        context: Context,
+        search_lati: Double,
+        search_logi: Double
+    ): Pair<ArrayList<String>, ArrayList<tmp_lati_logi>> {
         val geocoder = Geocoder(context)
         var secname =""
         for(i in unionmarket.indices){
@@ -105,7 +105,7 @@ class Marketlist() {
             tmp_fifth.add(tmp_lati_logi(market_loc_lati[i].lati, market_loc_lati[i].longi))
         }
 
-        dialog.dismiss()
+//        dialog.dismiss()
         return Pair(result_list, tmp_fifth)
     }
 }

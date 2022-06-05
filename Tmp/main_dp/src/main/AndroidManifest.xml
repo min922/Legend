@@ -73,7 +73,7 @@
             android:name=".SelectActivity.MeatMidActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".SelectMainActivity"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

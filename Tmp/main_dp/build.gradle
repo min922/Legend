@@ -1,6 +1,6 @@
 plugins {
-//    id 'com.android.library'
-    id 'com.android.application'
+    id 'com.android.library'
+//    id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
@@ -10,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.example.main_dp"
+//        applicationId "com.example.main_dp"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -53,7 +53,5 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
 
-
-    implementation(project(path: ":home_dp"))
-//    implementation(project(path: ":map_dp"))
+//    implementation(project(path: ":home_dp"))
 }

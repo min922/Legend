@@ -87,11 +87,12 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     fun getMonth(): String {
         val calendar = Calendar.getInstance()
         calendar.add(Calendar.DAY_OF_WEEK, -1)
-        calendar.firstDayOfWeek = Calendar.SUNDAY
-        calendar.set(Calendar.DAY_OF_WEEK, Calendar.SUNDAY)
+        calendar.firstDayOfWeek = Calendar.SATURDAY
+        calendar.set(Calendar.DAY_OF_WEEK, Calendar.SATURDAY)
         val TimeToDate = calendar.time
         val formatter  = SimpleDateFormat("yyyy-MM")
         val Strnow = formatter.format(TimeToDate)
+        Log.d("날짜확인", SimpleDateFormat("yyyyMMdd").format(TimeToDate))
 
         return Strnow
     }
@@ -137,11 +138,11 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
 
 //        val dialog = LoadingDialog(this@MapsActivity)
 //        dialog.show()
-        val tmp = Marketlist().marketdist(this@MapsActivity, latitude, longitude)
+        val distance_list = Marketlist().marketdist(this@MapsActivity, latitude, longitude)
 //        dialog.dismiss()
 
-        val dist_list = tmp.first
-        val for_addr = tmp.second
+        val dist_list = distance_list.first
+        val for_addr = distance_list.second
         val address_list : List<TextView> = listOf(address1,address2,address3,address4,address5)
         val geocoder = Geocoder(this@MapsActivity)
 
@@ -260,7 +261,6 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
     interface ApiInterface {
         @GET("61514f6b616d6a6d37354141456f4d/" //api인증키
                     + "json/ListNecessariesPricesService/{startRow}/{endRow}/{Mname}/{Pname}/{yearmonth}")
-        //http://openapi.seoul.go.kr:8088/61514f6b616d6a6d37354141456f4d/xml/ListNecessariesPricesService/1/1000/{가게이름}/{품목이름}/2022-05
         fun GetPrice(
             @Path("startRow", encoded = true) startRow: Int,
             @Path("endRow", encoded = true) endRow: Int,

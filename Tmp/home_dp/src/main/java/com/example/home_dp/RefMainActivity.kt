@@ -3,14 +3,14 @@ package com.example.home_dp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
-import com.example.home_dp.R.layout.activity_main
+import com.example.home_dp.R.layout.activity_main_ref
+import com.example.main_dp.SelectMainActivity
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayout.Tab
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.activity_main_ref.*
 import com.example.home_dp.R.id.tabContent as refTabcontent
-import kotlinx.android.synthetic.main.activity_main.tabs
+import kotlinx.android.synthetic.main.activity_main_ref.tabs
 
 
 class RefMainActivity : AppCompatActivity() {
@@ -19,7 +19,7 @@ class RefMainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(activity_main)
+        setContentView(activity_main_ref)
 
         refTab = RefTab()
         bookmarkTab = BookmarkTab()
@@ -63,11 +63,8 @@ class RefMainActivity : AppCompatActivity() {
         })
 
         plus.setOnClickListener {
-//            val intent = Intent(this, TestActivity::class.java)
-//            intent.putExtra("key1", "intent")
-//            startActivity(intent)
-//            val intent = Intent(this, MainActivity::class.java)
-//            startActivity(intent)
+            val intent = Intent(this, SelectMainActivity::class.java)
+            startActivity(intent)
         }
     }
     fun refresh_frag(fragment: Fragment){

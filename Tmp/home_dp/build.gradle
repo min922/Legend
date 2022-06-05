@@ -1,6 +1,6 @@
 plugins {
-//    id 'com.android.application'
-    id 'com.android.library'
+    id 'com.android.application'
+//    id 'com.android.library'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-android-extensions'
     id 'com.google.gms.google-services'
@@ -10,7 +10,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-//        applicationId "com.example.home_dp"
+        applicationId "com.example.home_dp"
         minSdk 21
         targetSdk 32
         versionCode 1
@@ -52,5 +52,8 @@ dependencies {
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
     implementation "androidx.coordinatorlayout:coordinatorlayout:1.2.0"
 
-//    implementation project(":main_dp")
+    implementation 'com.github.bumptech.glide:glide:4.12.0'            //glide 사용
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'    //glide 사용
+
+    implementation project(":main_dp")
 }

@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.*
 
 class RefTab : Fragment() {
     val db = FirebaseFirestore.getInstance()   // Firestore 인스턴스 선언
@@ -20,11 +19,9 @@ class RefTab : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        Log.d("enlfkna", "reftab")
-
         addData()
 
-        val mAdapter = context?.let { MyAdapter(it, MenuList) }
+        val mAdapter = context?.let { RefAdapter(it, MenuList) }
 //        mAdapter?.setMyItemClickListener(object :MyAdapter.MyItemClickListener{
 //            override fun onItemClick(position: Int) {
 //                EditDate().editDate(MenuList[position].id, requireContext())
@@ -72,7 +69,7 @@ class RefTab : Fragment() {
             }
     }
     fun updateRecyclerData(){
-        val mAdapter = context?.let { MyAdapter(it, MenuList) }
+        val mAdapter = context?.let { RefAdapter(it, MenuList) }
         recyclerViewref.adapter = mAdapter
         mAdapter?.setData(MenuList)
         mAdapter?.setContact(mAdapter.itemList)
