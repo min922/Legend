@@ -59,6 +59,13 @@
                 android:fontFamily="@font/maruburi"
                 android:textStyle="bold"
                 android:textSize="40dp"/>
+            <TextView
+                android:id="@+id/foodId"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"/>
 
 
 <!--            메뉴 대표사진과 함께 보여질 국가/소요시간/난이도/칼로리 text-->
