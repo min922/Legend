@@ -21,7 +21,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="600dp">
     <!--원래스크롤뷰위치-->
         <androidx.core.widget.NestedScrollView
             android:layout_width="400dp"
@@ -53,8 +53,8 @@
             android:id="@+id/minTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="300dp"
-            android:layout_marginTop="420dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="600dp"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="30dp" />
@@ -63,8 +63,8 @@
             android:id="@+id/secTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="350dp"
-            android:layout_marginTop="420dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="600dp"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="30dp" />
@@ -81,7 +81,7 @@
         <FrameLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="520dp"
+            android:layout_marginTop="600dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

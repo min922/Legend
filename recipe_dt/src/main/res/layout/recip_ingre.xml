@@ -22,7 +22,7 @@
         android:id="@+id/ingreName"
         android:layout_width="130dp"
         android:layout_height="20dp"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
         android:textColor="@color/black"
         android:fontFamily="@font/maruburi"
         android:textSize="15dp"/>

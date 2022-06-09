@@ -46,7 +46,7 @@ class MyAdapter(val context: Context, val list: ArrayList<Ingre>):
         val db_firestore = FirebaseFirestore.getInstance()
         val foodId = itemView?.findViewById<TextView>(R.id.foodId)
 
-        //        스타버튼
+//        //        스타버튼
 //        init{
 //            //북마크 기능(별 클릭시 별 UI가 바뀌면서 파이어스토어로 RECIPE_ID가 올라감)
 //            starButton!!.setOnClickListener{
@@ -77,8 +77,8 @@ class MyAdapter(val context: Context, val list: ArrayList<Ingre>):
 //                        }
 //                        .addOnFailureListener { Toast.makeText(context, ":(", Toast.LENGTH_SHORT).show()}
 //                }
-
-            }
-        }
-//    }
-//}
+//
+//            }
+//        }
+    }
+}
