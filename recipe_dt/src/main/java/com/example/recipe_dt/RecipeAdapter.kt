@@ -43,15 +43,6 @@ class RecipeAdapter(val context: Context, val explainlist: ArrayList<Recipe>):
             } catch (e: NullPointerException) {
                 recipePhoto?.setImageResource(R.mipmap.ic_launcher)
             }
-
-//            if (recipePhoto != null) {
-//                Glide.with(itemView).load(recipe.photo).into(recipePhoto)
-//            } else {
-//                recipePhoto?.setImageResource(R.mipmap.ic_launcher)
-//
-//
-//            }
-
         }
     }
 }

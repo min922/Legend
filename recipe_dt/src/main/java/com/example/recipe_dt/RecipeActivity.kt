@@ -114,7 +114,6 @@ class RecipeActivity : AppCompatActivity() {
         val filtermenu = "select RECIPE_ID, COOKING_DC, stre_step_image_url from recipe_description where RECIPE_ID in ('94');"
 //    select RECIPE_ID, COOKING_DC, stre_step_image_url from recipe_description where RECIPE_ID in ('9');
 
-//        "select RECIPE_ID, COOKING_DC from recipe_description where RECIPE_ID in ('4', '9');"
 
         val courseImg = findViewById<ImageView>(R.id.courseImg)
         val defaultImage = R.drawable.icon_carrot

@@ -5,7 +5,7 @@
     android:id="@+id/explain_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:showIn="@layout/activity_main"
-    android:layout_width="400dp"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:padding="1dp"
@@ -15,11 +15,11 @@
 
 <LinearLayout
     android:orientation="vertical"
-    android:layout_width="400dp"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/courseImg"
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         tools:ignore="ContentDescription" />
@@ -27,9 +27,9 @@
 
     <TextView
         android:id="@+id/courseExp"
-        android:layout_width="300dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
+        android:layout_gravity="center"
         android:textColor="@color/black"
         android:textSize="15dp"/>
 </LinearLayout>

@@ -7,7 +7,7 @@
 
     android:id="@+id/mainlayout"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -36,18 +36,9 @@
             <ImageView
                 android:id="@+id/menuImage"
                 android:scaleType = "fitXY"
-                android:layout_width="411dp"
+                android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:alpha="0.5"/>
-
-
-            <ImageButton
-                android:id="@+id/starbutton"
-                android:layout_marginTop="20dp"
-                android:layout_marginStart="340dp"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:background="@drawable/btn_star"/>
 
             <TextView
                 android:id="@+id/menuName"
@@ -59,13 +50,22 @@
                 android:fontFamily="@font/maruburi"
                 android:textStyle="bold"
                 android:textSize="40dp"/>
+
             <TextView
                 android:id="@+id/foodId"
-                android:layout_width="100dp"
-                android:layout_height="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_marginStart="60dp"
                 android:layout_marginTop="10dp"
                 android:visibility="gone"/>
+
+            <ImageButton
+                android:id="@+id/starbutton"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="340dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/btn_star"/>
 
 
 <!--            메뉴 대표사진과 함께 보여질 국가/소요시간/난이도/칼로리 text-->
@@ -80,7 +80,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textSize="30dp"
-                    android:layout_marginStart="10dp"
                     android:textColor="@color/black"
                     android:layout_weight="1"
                     android:fontFamily="@font/maruburi"/>
@@ -117,22 +116,23 @@
     </LinearLayout>
 
 
-
     <!--원래스크롤뷰위치-->
     <androidx.core.widget.NestedScrollView
-        android:layout_width="400dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="350dp"
         android:fillViewport="true">
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_ingre"
-            android:layout_width="400dp"
+            android:layout_width="match_parent"
             android:layout_height="800dp"
-            android:layout_marginTop="350dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:nestedScrollingEnabled="true"/>
 
     </androidx.core.widget.NestedScrollView>
+
+
 </FrameLayout>
