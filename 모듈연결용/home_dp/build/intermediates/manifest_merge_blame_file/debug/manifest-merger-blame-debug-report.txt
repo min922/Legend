@@ -1,0 +1,354 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.home_dp"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml
+10
+11    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+12    <!-- <uses-sdk android:minSdkVersion="14" /> -->
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:13:5-79
+13-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:13:22-76
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:14:5-67
+14-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:14:22-64
+15
+16    <application
+16-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:5:5-21:19
+17        android:allowBackup="true"
+17-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:6:9-35
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.7.0] C:\Users\mjmj9\.gradle\caches\transforms-3\eb433f90ece2b094496c69f692a36091\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:7:9-43
+21        android:label=""
+21-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:8:9-25
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:9:9-54
+23        android:supportsRtl="true"
+23-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:10:9-35
+24        android:testOnly="true"
+25        android:theme="@style/Theme.AndroidLab"
+25-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:12:9-48
+26        android:usesCleartextTraffic="true" >
+26-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:11:9-44
+27        <activity
+27-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:13:9-20:20
+28            android:name="com.example.home_dp.RefMainActivity"
+28-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:14:13-63
+29            android:exported="true" >
+29-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:15:13-36
+30            <intent-filter>
+30-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:16:13-19:29
+31                <action android:name="android.intent.action.MAIN" />
+31-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:17:17-69
+31-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:17:25-66
+32
+33                <category android:name="android.intent.category.LAUNCHER" />
+33-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:18:17-77
+33-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:18:27-74
+34            </intent-filter>
+35        </activity>
+36        <activity
+36-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:16:9-18:40
+37            android:name="com.example.main_dp.SelectActivity.NoodleActivity"
+37-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:17:13-77
+38            android:exported="false" />
+38-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:18:13-37
+39        <activity
+39-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:19:9-21:40
+40            android:name="com.example.main_dp.SelectActivity.OilActivity"
+40-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:20:13-74
+41            android:exported="false" />
+41-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:21:13-37
+42        <activity
+42-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:22:9-24:40
+43            android:name="com.example.main_dp.SelectActivity.EtcActivity"
+43-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:23:13-74
+44            android:exported="false" />
+44-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:24:13-37
+45        <activity
+45-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:25:9-27:40
+46            android:name="com.example.main_dp.SelectActivity.SauceActivity"
+46-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:26:13-76
+47            android:exported="false" />
+47-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:27:13-37
+48        <activity
+48-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:28:9-30:40
+49            android:name="com.example.main_dp.SelectActivity.ProActivity"
+49-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:29:13-74
+50            android:exported="false" />
+50-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:30:13-37
+51        <activity
+51-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:31:9-33:40
+52            android:name="com.example.main_dp.SelectActivity.FishEtcActivity"
+52-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:32:13-78
+53            android:exported="false" />
+53-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:33:13-37
+54        <activity
+54-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:34:9-36:40
+55            android:name="com.example.main_dp.SelectActivity.HaejoryuActivity"
+55-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:35:13-79
+56            android:exported="false" />
+56-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:36:13-37
+57        <activity
+57-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:37:9-39:40
+58            android:name="com.example.main_dp.SelectActivity.CrapActivity"
+58-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:38:13-75
+59            android:exported="false" />
+59-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:39:13-37
+60        <activity
+60-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:40:9-42:40
+61            android:name="com.example.main_dp.SelectActivity.ClamActivity"
+61-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:41:13-75
+62            android:exported="false" />
+62-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:42:13-37
+63        <activity
+63-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:43:9-45:40
+64            android:name="com.example.main_dp.SelectActivity.FishActivity"
+64-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:44:13-75
+65            android:exported="false" />
+65-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:45:13-37
+66        <activity
+66-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:46:9-48:40
+67            android:name="com.example.main_dp.SelectActivity.FishMidActivity"
+67-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:47:13-78
+68            android:exported="false" />
+68-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:48:13-37
+69        <activity
+69-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:49:9-51:40
+70            android:name="com.example.main_dp.SelectActivity.GrainActivity"
+70-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:50:13-76
+71            android:exported="false" />
+71-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:51:13-37
+72        <activity
+72-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:52:9-54:40
+73            android:name="com.example.main_dp.SelectActivity.BreadActivity"
+73-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:53:13-76
+74            android:exported="false" />
+74-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:54:13-37
+75        <activity
+75-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:55:9-57:40
+76            android:name="com.example.main_dp.SelectActivity.DairyActivity"
+76-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:56:13-76
+77            android:exported="false" />
+77-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:57:13-37
+78        <activity
+78-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:58:9-60:40
+79            android:name="com.example.main_dp.SelectActivity.FruitActivity"
+79-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:59:13-76
+80            android:exported="false" />
+80-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:60:13-37
+81        <activity
+81-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:61:9-63:40
+82            android:name="com.example.main_dp.SelectActivity.VegeActivity"
+82-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:62:13-75
+83            android:exported="false" />
+83-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:63:13-37
+84        <activity
+84-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:64:9-66:40
+85            android:name="com.example.main_dp.SelectActivity.MeatEtcActivity"
+85-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:65:13-78
+86            android:exported="false" />
+86-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:66:13-37
+87        <activity
+87-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:67:9-69:40
+88            android:name="com.example.main_dp.SelectActivity.ChickActiviy"
+88-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:68:13-75
+89            android:exported="false" />
+89-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:69:13-37
+90        <activity
+90-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:70:9-72:40
+91            android:name="com.example.main_dp.SelectActivity.CowActivity"
+91-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:71:13-74
+92            android:exported="false" />
+92-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:72:13-37
+93        <activity
+93-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:73:9-75:40
+94            android:name="com.example.main_dp.SelectActivity.PigActivity"
+94-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:74:13-74
+95            android:exported="false" />
+95-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:75:13-37
+96        <activity
+96-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:76:9-78:40
+97            android:name="com.example.main_dp.SelectActivity.MeatMidActivity"
+97-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:77:13-78
+98            android:exported="false" />
+98-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:78:13-37
+99        <activity
+99-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:79:9-87:20
+100            android:name="com.example.main_dp.SelectMainActivity"
+100-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:80:13-66
+101            android:exported="true" >
+101-->[:main_dp] C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\build\intermediates\merged_manifest\debug\AndroidManifest.xml:81:13-36
+102            <intent-filter>
+102-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:16:13-19:29
+103                <action android:name="android.intent.action.MAIN" />
+103-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:17:17-69
+103-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:17:25-66
+104
+105                <category android:name="android.intent.category.LAUNCHER" />
+105-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:18:17-77
+105-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\home_dp\src\main\AndroidManifest.xml:18:27-74
+106            </intent-filter>
+107        </activity>
+108
+109        <service
+109-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:17:9-23:19
+110            android:name="com.google.firebase.components.ComponentDiscoveryService"
+110-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:18:13-84
+111            android:directBootAware="true"
+111-->[com.google.firebase:firebase-common:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\c75d5bd9ec6dfd72d5cae376d8ca85c5\transformed\firebase-common-20.1.0\AndroidManifest.xml:35:13-43
+112            android:exported="false" >
+112-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:19:13-37
+113            <meta-data
+113-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:20:13-22:85
+114                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+114-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:21:17-111
+115                android:value="com.google.firebase.components.ComponentRegistrar" />
+115-->[com.google.firebase:firebase-firestore:21.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\833980a4d74103b412a7d162d25335a3\transformed\firebase-firestore-21.4.0\AndroidManifest.xml:22:17-82
+116            <meta-data
+116-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\8a890602f140e1a130a9b701513141c1\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:15:13-17:85
+117                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+117-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\8a890602f140e1a130a9b701513141c1\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:16:17-113
+118                android:value="com.google.firebase.components.ComponentRegistrar" />
+118-->[com.google.firebase:firebase-common-ktx:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\8a890602f140e1a130a9b701513141c1\transformed\firebase-common-ktx-20.1.0\AndroidManifest.xml:17:17-82
+119            <meta-data
+119-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:67:13-69:85
+120                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+120-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:68:17-109
+121                android:value="com.google.firebase.components.ComponentRegistrar" />
+121-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:69:17-82
+122        </service>
+123
+124        <activity
+124-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:27:9-44:20
+125            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+125-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:28:13-80
+126            android:excludeFromRecents="true"
+126-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:29:13-46
+127            android:exported="true"
+127-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:30:13-36
+128            android:launchMode="singleTask"
+128-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:31:13-44
+129            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+129-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:32:13-72
+130            <intent-filter>
+130-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:33:13-43:29
+131                <action android:name="android.intent.action.VIEW" />
+131-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:34:17-69
+131-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:34:25-66
+132
+133                <category android:name="android.intent.category.DEFAULT" />
+133-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:36:17-76
+133-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:36:27-73
+134                <category android:name="android.intent.category.BROWSABLE" />
+134-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:37:17-78
+134-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:37:27-75
+135
+136                <data
+136-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:39:17-42:51
+137                    android:host="firebase.auth"
+137-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:40:21-49
+138                    android:path="/"
+138-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:41:21-37
+139                    android:scheme="genericidp" />
+139-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:42:21-48
+140            </intent-filter>
+141        </activity>
+142        <activity
+142-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:45:9-62:20
+143            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+143-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:46:13-79
+144            android:excludeFromRecents="true"
+144-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:47:13-46
+145            android:exported="true"
+145-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:48:13-36
+146            android:launchMode="singleTask"
+146-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:49:13-44
+147            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+147-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:50:13-72
+148            <intent-filter>
+148-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:51:13-61:29
+149                <action android:name="android.intent.action.VIEW" />
+149-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:34:17-69
+149-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:34:25-66
+150
+151                <category android:name="android.intent.category.DEFAULT" />
+151-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:36:17-76
+151-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:36:27-73
+152                <category android:name="android.intent.category.BROWSABLE" />
+152-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:37:17-78
+152-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:37:27-75
+153
+154                <data
+154-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:39:17-42:51
+155                    android:host="firebase.auth"
+155-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:40:21-49
+156                    android:path="/"
+156-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:41:21-37
+157                    android:scheme="recaptcha" />
+157-->[com.google.firebase:firebase-auth:21.0.3] C:\Users\mjmj9\.gradle\caches\transforms-3\9e8421f7a2022b722c3af001cbe25050\transformed\firebase-auth-21.0.3\AndroidManifest.xml:42:21-48
+158            </intent-filter>
+159        </activity>
+160
+161        <provider
+161-->[com.google.firebase:firebase-common:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\c75d5bd9ec6dfd72d5cae376d8ca85c5\transformed\firebase-common-20.1.0\AndroidManifest.xml:26:9-31:39
+162            android:name="com.google.firebase.provider.FirebaseInitProvider"
+162-->[com.google.firebase:firebase-common:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\c75d5bd9ec6dfd72d5cae376d8ca85c5\transformed\firebase-common-20.1.0\AndroidManifest.xml:27:13-77
+163            android:authorities="com.example.home_dp.firebaseinitprovider"
+163-->[com.google.firebase:firebase-common:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\c75d5bd9ec6dfd72d5cae376d8ca85c5\transformed\firebase-common-20.1.0\AndroidManifest.xml:28:13-72
+164            android:directBootAware="true"
+164-->[com.google.firebase:firebase-common:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\c75d5bd9ec6dfd72d5cae376d8ca85c5\transformed\firebase-common-20.1.0\AndroidManifest.xml:29:13-43
+165            android:exported="false"
+165-->[com.google.firebase:firebase-common:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\c75d5bd9ec6dfd72d5cae376d8ca85c5\transformed\firebase-common-20.1.0\AndroidManifest.xml:30:13-37
+166            android:initOrder="100" />
+166-->[com.google.firebase:firebase-common:20.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\c75d5bd9ec6dfd72d5cae376d8ca85c5\transformed\firebase-common-20.1.0\AndroidManifest.xml:31:13-36
+167
+168        <activity
+168-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\35c07cf092cadb7820762759b39fc43f\transformed\play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+169            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+169-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\35c07cf092cadb7820762759b39fc43f\transformed\play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+170            android:exported="false"
+170-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\35c07cf092cadb7820762759b39fc43f\transformed\play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+171            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+171-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\mjmj9\.gradle\caches\transforms-3\35c07cf092cadb7820762759b39fc43f\transformed\play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+172
+173        <meta-data
+173-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\4ec57a03a9e633dfcdd223ecbf921c23\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+174            android:name="com.google.android.gms.version"
+174-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\4ec57a03a9e633dfcdd223ecbf921c23\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+175            android:value="@integer/google_play_services_version" />
+175-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\4ec57a03a9e633dfcdd223ecbf921c23\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+176
+177        <provider
+177-->[androidx.emoji2:emoji2:1.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\f88fc36869ef2976595a35b2a62794fc\transformed\emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+178            android:name="androidx.startup.InitializationProvider"
+178-->[androidx.emoji2:emoji2:1.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\f88fc36869ef2976595a35b2a62794fc\transformed\emoji2-1.0.0\AndroidManifest.xml:27:13-67
+179            android:authorities="com.example.home_dp.androidx-startup"
+179-->[androidx.emoji2:emoji2:1.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\f88fc36869ef2976595a35b2a62794fc\transformed\emoji2-1.0.0\AndroidManifest.xml:28:13-68
+180            android:exported="false" >
+180-->[androidx.emoji2:emoji2:1.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\f88fc36869ef2976595a35b2a62794fc\transformed\emoji2-1.0.0\AndroidManifest.xml:29:13-37
+181            <meta-data
+181-->[androidx.emoji2:emoji2:1.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\f88fc36869ef2976595a35b2a62794fc\transformed\emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+182                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+182-->[androidx.emoji2:emoji2:1.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\f88fc36869ef2976595a35b2a62794fc\transformed\emoji2-1.0.0\AndroidManifest.xml:32:17-75
+183                android:value="androidx.startup" />
+183-->[androidx.emoji2:emoji2:1.0.0] C:\Users\mjmj9\.gradle\caches\transforms-3\f88fc36869ef2976595a35b2a62794fc\transformed\emoji2-1.0.0\AndroidManifest.xml:33:17-49
+184            <meta-data
+184-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\0d18f248e654977c5cb513d0f30b6cd8\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+185                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+185-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\0d18f248e654977c5cb513d0f30b6cd8\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+186                android:value="androidx.startup" />
+186-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\mjmj9\.gradle\caches\transforms-3\0d18f248e654977c5cb513d0f30b6cd8\transformed\lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+187        </provider>
+188    </application>
+189
+190</manifest>

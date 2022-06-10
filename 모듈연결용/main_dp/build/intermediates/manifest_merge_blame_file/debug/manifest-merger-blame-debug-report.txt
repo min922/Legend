@@ -1,0 +1,170 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.main_dp" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="21"
+6-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml
+7        android:targetSdkVersion="32" />
+7-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml
+8
+9    <application
+9-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:5:5-84:19
+10        android:allowBackup="true"
+10-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:6:9-35
+11        android:icon="@mipmap/ic_launcher"
+11-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:7:9-43
+12        android:label=""
+12-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:8:9-25
+13        android:roundIcon="@mipmap/ic_launcher_round"
+13-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:9:9-54
+14        android:supportsRtl="true"
+14-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:10:9-35
+15        android:theme="@style/Theme.AndroidLab" >
+15-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:11:9-48
+16        <activity
+16-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:12:9-14:40
+17            android:name="com.example.main_dp.SelectActivity.NoodleActivity"
+17-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:13:13-58
+18            android:exported="false" />
+18-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:14:13-37
+19        <activity
+19-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:15:9-17:40
+20            android:name="com.example.main_dp.SelectActivity.OilActivity"
+20-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:16:13-55
+21            android:exported="false" />
+21-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:17:13-37
+22        <activity
+22-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:18:9-20:40
+23            android:name="com.example.main_dp.SelectActivity.EtcActivity"
+23-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:19:13-55
+24            android:exported="false" />
+24-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:20:13-37
+25        <activity
+25-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:21:9-23:40
+26            android:name="com.example.main_dp.SelectActivity.SauceActivity"
+26-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:22:13-57
+27            android:exported="false" />
+27-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:23:13-37
+28        <activity
+28-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:24:9-26:40
+29            android:name="com.example.main_dp.SelectActivity.ProActivity"
+29-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:25:13-55
+30            android:exported="false" />
+30-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:26:13-37
+31        <activity
+31-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:27:9-29:40
+32            android:name="com.example.main_dp.SelectActivity.FishEtcActivity"
+32-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:28:13-59
+33            android:exported="false" />
+33-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:29:13-37
+34        <activity
+34-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:30:9-32:40
+35            android:name="com.example.main_dp.SelectActivity.HaejoryuActivity"
+35-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:31:13-60
+36            android:exported="false" />
+36-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:32:13-37
+37        <activity
+37-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:33:9-35:40
+38            android:name="com.example.main_dp.SelectActivity.CrapActivity"
+38-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:34:13-56
+39            android:exported="false" />
+39-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:35:13-37
+40        <activity
+40-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:36:9-38:40
+41            android:name="com.example.main_dp.SelectActivity.ClamActivity"
+41-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:37:13-56
+42            android:exported="false" />
+42-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:38:13-37
+43        <activity
+43-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:39:9-41:40
+44            android:name="com.example.main_dp.SelectActivity.FishActivity"
+44-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:40:13-56
+45            android:exported="false" />
+45-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:41:13-37
+46        <activity
+46-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:42:9-44:40
+47            android:name="com.example.main_dp.SelectActivity.FishMidActivity"
+47-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:43:13-59
+48            android:exported="false" />
+48-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:44:13-37
+49        <activity
+49-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:45:9-47:40
+50            android:name="com.example.main_dp.SelectActivity.GrainActivity"
+50-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:46:13-57
+51            android:exported="false" />
+51-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:47:13-37
+52        <activity
+52-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:48:9-50:40
+53            android:name="com.example.main_dp.SelectActivity.BreadActivity"
+53-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:49:13-57
+54            android:exported="false" />
+54-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:50:13-37
+55        <activity
+55-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:51:9-53:40
+56            android:name="com.example.main_dp.SelectActivity.DairyActivity"
+56-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:52:13-57
+57            android:exported="false" />
+57-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:53:13-37
+58        <activity
+58-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:54:9-56:40
+59            android:name="com.example.main_dp.SelectActivity.FruitActivity"
+59-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:55:13-57
+60            android:exported="false" />
+60-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:56:13-37
+61        <activity
+61-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:57:9-59:40
+62            android:name="com.example.main_dp.SelectActivity.VegeActivity"
+62-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:58:13-56
+63            android:exported="false" />
+63-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:59:13-37
+64        <activity
+64-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:60:9-62:40
+65            android:name="com.example.main_dp.SelectActivity.MeatEtcActivity"
+65-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:61:13-59
+66            android:exported="false" />
+66-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:62:13-37
+67        <activity
+67-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:63:9-65:40
+68            android:name="com.example.main_dp.SelectActivity.ChickActiviy"
+68-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:64:13-56
+69            android:exported="false" />
+69-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:65:13-37
+70        <activity
+70-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:66:9-68:40
+71            android:name="com.example.main_dp.SelectActivity.CowActivity"
+71-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:67:13-55
+72            android:exported="false" />
+72-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:68:13-37
+73        <activity
+73-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:69:9-71:40
+74            android:name="com.example.main_dp.SelectActivity.PigActivity"
+74-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:70:13-55
+75            android:exported="false" />
+75-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:71:13-37
+76        <activity
+76-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:72:9-74:40
+77            android:name="com.example.main_dp.SelectActivity.MeatMidActivity"
+77-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:73:13-59
+78            android:exported="false" />
+78-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:74:13-37
+79        <activity
+79-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:75:9-83:20
+80            android:name="com.example.main_dp.SelectMainActivity"
+80-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:76:13-47
+81            android:exported="true" >
+81-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:77:13-36
+82            <intent-filter>
+82-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:78:13-82:29
+83                <action android:name="android.intent.action.MAIN" />
+83-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:79:17-69
+83-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:79:25-66
+84
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:81:17-77
+85-->C:\Users\mjmj9\AndroidStudioProjects\AndroidLab\main_dp\src\main\AndroidManifest.xml:81:27-74
+86            </intent-filter>
+87        </activity>
+88    </application>
+89
+90</manifest>
