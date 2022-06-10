@@ -1,0 +1,10 @@
+com/example/recipe_dt/databinding/IngreMainBinding.java
+ com.example.recipe_dt.databinding.IngreMainBinding
+com/example/recipe_dt/BuildConfig.java
+ com.example.recipe_dt.BuildConfig
+com/example/recipe_dt/databinding/RecipeMainBinding.java
+ com.example.recipe_dt.databinding.RecipeMainBinding
+com/example/recipe_dt/databinding/RecipIngreBinding.java
+ com.example.recipe_dt.databinding.RecipIngreBinding
+com/example/recipe_dt/databinding/ExplainRecipeBinding.java
+ com.example.recipe_dt.databinding.ExplainRecipeBinding
