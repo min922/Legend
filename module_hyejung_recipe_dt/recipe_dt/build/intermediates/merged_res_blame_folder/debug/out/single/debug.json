@@ -1,0 +1,210 @@
+[
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_bread.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\bread.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_carrot.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_carrot.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_onion.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_onion.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_vegetable.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\vegetable.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_cook.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_cook.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_star.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_star.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_cabbage.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_cabbage.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_rice.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\rice.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_ricenoodle.jpeg.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\ricenoodle.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\layout_recipe_main.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\recipe_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_basket.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\basket.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_eggs.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\eggs.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_noodle.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\noodle.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_oil.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\oil.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\font_maruburi.otf.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\font\\maruburi.otf"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_ingbas.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\ingbas.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_cabbage.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\cabbage.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_bacon.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_bacon.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_ricecake.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_ricecake.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_salt.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\salt.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_icon_starblack.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\icon_starblack.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_sausage.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\sausage.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_fish.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\fish.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\layout_recip_ingre.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\recip_ingre.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_tteokbokki.jpg.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\tteokbokki.jpg"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_icon_star.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable-xxxhdpi\\icon_star.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_btn_star.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable-xxxhdpi\\btn_star.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_etc.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\etc.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\font_maruburibold.otf.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\font\\maruburibold.otf"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_fruit.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\fruit.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_milk.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\milk.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_icon_starblack.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable-xxxhdpi\\icon_starblack.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_portcutlet.jpeg.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\portcutlet.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_braised_chicken.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\braised_chicken.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_jajangmyeon.jpeg.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\jajangmyeon.jpeg"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\drawable_meat.png.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\drawable\\meat.png"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\layout_explain_recipe.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\explain_recipe.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\merged_res\\debug\\layout_ingre_main.xml.flat",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\ingre_main.xml"
+    }
+]

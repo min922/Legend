@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\ingre_main.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\ingre_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\explain_recipe.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\explain_recipe.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\recipe_main.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\recipe_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\recip_ingre.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\recipe_dt\\src\\main\\res\\layout\\recip_ingre.xml"
+    }
+]
