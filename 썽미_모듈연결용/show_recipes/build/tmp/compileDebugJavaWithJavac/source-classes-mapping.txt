@@ -1,0 +1,6 @@
+com/example/show_recipes/BuildConfig.java
+ com.example.show_recipes.BuildConfig
+com/example/show_recipes/databinding/ActivityMainRecommendBinding.java
+ com.example.show_recipes.databinding.ActivityMainRecommendBinding
+com/example/show_recipes/databinding/ActivityRecipesAddMenuBinding.java
+ com.example.show_recipes.databinding.ActivityRecipesAddMenuBinding

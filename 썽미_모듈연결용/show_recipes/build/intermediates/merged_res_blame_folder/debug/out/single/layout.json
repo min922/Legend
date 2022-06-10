@@ -1,0 +1,14 @@
+[
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_recipes_add_menu.xml",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\layout\\activity_recipes_add_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main_recommend.xml",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\layout\\activity_main_recommend.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]
