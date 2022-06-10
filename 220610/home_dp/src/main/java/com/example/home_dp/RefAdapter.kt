@@ -1,0 +1,79 @@
+package com.example.home_dp
+
+import android.content.Context
+import android.graphics.Color
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.*
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.RecyclerView
+
+class RefAdapter(val context: Context, var itemList: ArrayList<Item>):
+    RecyclerView.Adapter<RefAdapter.Holder>(){
+//    interface MyItemClickListener{
+//        fun onItemClick(position: Int)
+//    }
+//    private lateinit var mItemClickListener: MyItemClickListener
+//    fun setMyItemClickListener(itemClickListener: MyItemClickListener){
+//        mItemClickListener = itemClickListener
+//    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
+        val view = LayoutInflater.from(context).inflate(R.layout.item_main, parent, false)
+        return Holder(view)
+    }
+
+    override fun onBindViewHolder(holder: Holder, position: Int) {
+        holder.bind(itemList[position], context)
+    }
+
+    override fun getItemCount(): Int {
+        return itemList.size
+    }
+    fun setData(newitemList:ArrayList<Item>){
+        itemList = newitemList
+    }
+
+    fun setContact(contacts: ArrayList<Item>){
+        val diffResult = DiffUtil.calculateDiff(ContactDiffUtil(this.itemList, itemList), false)
+        diffResult.dispatchUpdatesTo(this)
+        this.itemList = itemList
+    }
+
+    inner class Holder(itemView: View?): RecyclerView.ViewHolder(itemView!!){
+//        init {
+//            itemView?.setOnClickListener {
+//                mItemClickListener.onItemClick(adapterPosition)
+//            }
+//        }
+        val menuPhoto = itemView?.findViewById<ImageView>(R.id.menuPhotoImg)
+        val menuName = itemView?.findViewById<TextView>(R.id.menuText)
+        val itemDate = itemView?.findViewById<TextView>(R.id.dateText)
+
+        fun bind(item:Item, context: Context){
+            itemView.setOnClickListener {
+                EditDate().editDate(itemList[position].id, context)
+            }
+            if (item.photo != "") {
+                val resourceId = context.resources.getIdentifier(item.photo, "drawable", context.packageName)
+                menuPhoto?.setImageResource(resourceId)
+            } else {
+                menuPhoto?.setImageResource(R.mipmap.ic_launcher)
+            }
+            /* 나머지 TextView와 String 데이터를 연결한다. */
+            menuName?.text = item.menuname
+//                    itemDate?.text = item.year
+            itemDate?.text = "${item.year}년 ${item.month}월 ${item.day}일 까지"
+            if(item.date == "여유"){
+                menuPhoto?.setBackgroundColor(Color.rgb(98, 225, 79))
+            }
+            else if(item.date == "보통"){
+                menuPhoto?.setBackgroundColor(Color.rgb(244, 225, 84))
+            }
+            else if(item.date == "급함"){
+                menuPhoto?.setBackgroundColor(Color.rgb(236, 78, 78))
+            }
+        }
+    }
+}
