@@ -1,0 +1,142 @@
+[
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_btn_star_normal.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable-xxxhdpi\\btn_star_normal.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_date_white.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\date_white.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_icon_starblack.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\icon_starblack.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\layout_activity_recipes_add_menu.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\layout\\activity_recipes_add_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_recipies_country.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\recipies_country.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_recipies_left_country.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\recipies_left_country.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_recipies_left_level.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\recipies_left_level.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_date_green.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\date_green.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_recipies_level.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\recipies_level.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_recipies_time.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\recipies_time.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable-v23_recipies_left_country.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable-v23\\recipies_left_country.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_date_red.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\date_red.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-mdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_icon_star.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\icon_star.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_date_black.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\date_black.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_app_icon.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-xxhdpi\\app_icon.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\layout_activity_main_recommend.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\layout\\activity_main_recommend.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_btn_star_pressed.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable-xxxhdpi\\btn_star_pressed.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_date_yellow.png.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\date_yellow.png"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable-xxxhdpi_btn_star.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable-xxxhdpi\\btn_star.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\font_maruburi.otf.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\font\\maruburi.otf"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\drawable_recipies_left_time.xml.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\drawable\\recipies_left_time.xml"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\build\\intermediates\\merged_res\\debug\\mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\nabi4\\AndroidStudioProjects\\AndroidLab\\show_recipes\\src\\main\\res\\mipmap-hdpi\\ic_launcher.webp"
+    }
+]

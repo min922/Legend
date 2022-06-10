@@ -1,0 +1,22 @@
+[
+    {
+        "merged": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_bookmark_tab.xml",
+        "source": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\src\\main\\res\\layout\\fragment_bookmark_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\item_main.xml",
+        "source": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\src\\main\\res\\layout\\item_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main_ref.xml",
+        "source": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\src\\main\\res\\layout\\activity_main_ref.xml"
+    },
+    {
+        "merged": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_ref_tab.xml",
+        "source": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\src\\main\\res\\layout\\fragment_ref_tab.xml"
+    },
+    {
+        "merged": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\food_main_bookmark.xml",
+        "source": "C:\\Users\\mjmj9\\AndroidStudioProjects\\AndroidLab\\home_dp\\src\\main\\res\\layout\\food_main_bookmark.xml"
+    }
+]

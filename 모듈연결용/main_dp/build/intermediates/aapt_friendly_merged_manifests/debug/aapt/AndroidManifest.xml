@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.main_dp" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="32" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidLab" >
+        <activity
+            android:name="com.example.main_dp.SelectActivity.NoodleActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.OilActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.EtcActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.SauceActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.ProActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.FishEtcActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.HaejoryuActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.CrapActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.ClamActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.FishActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.FishMidActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.GrainActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.BreadActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.DairyActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.FruitActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.VegeActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.MeatEtcActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.ChickActiviy"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.CowActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.PigActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectActivity.MeatMidActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.example.main_dp.SelectMainActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
