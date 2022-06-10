@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+    <ImageButton
+        android:id="@+id/imageButton4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="60dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_person" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:text="김눈송"
+        android:textSize="40dp"
+        app:layout_constraintStart_toEndOf="@+id/imageButton4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="400dp"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:text="냉장고"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="북마크"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    </LinearLayout>
+<!--    <LinearLayout-->
+<!--        android:layout_width="400dp"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_gravity="center">-->
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fillViewport="true"
+            tools:ignore="MissingConstraints">
+            <androidx.recyclerview.widget.RecyclerView
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/recyclerView"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:nestedScrollingEnabled="true"/>
+        </ScrollView>
+
+    </LinearLayout>
