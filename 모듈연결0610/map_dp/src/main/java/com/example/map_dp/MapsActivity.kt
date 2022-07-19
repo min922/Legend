@@ -272,7 +272,7 @@ class MapsActivity : AppCompatActivity(), ConnectionCallbacks,
 
     ///API///
     interface ApiInterface {
-        @GET("61514f6b616d6a6d37354141456f4d/" //api인증키
+        @GET("API인증키/" //api인증키
                     + "json/ListNecessariesPricesService/{startRow}/{endRow}/{Mname}/{Pname}/{yearmonth}")
         fun GetPrice(
             @Path("startRow", encoded = true) startRow: Int,
