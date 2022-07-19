@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ingre_main)
 
-
         val mAdapter = MyAdapter(this, list)
         recyclerView_ingre.adapter = mAdapter
 
@@ -63,35 +62,45 @@ class MainActivity : AppCompatActivity() {
 //        var ingPhoto_info = arrayListOf<Ingre>()
 //        var templist = arrayListOf<Ingre>()
 
+//        val ing_list = arrayListOf<String>()     ///IngPhoto 에서 받은 ing 이름들 리스트
+
         //IngPhoto 데이터 받기
         db_firestore.collection("IngPhoto") //작업할 컬렉션
             .get() //문서 가져오기
             .addOnSuccessListener { result_IngPhoto -> //성공할 경우
 
+                //UserSelect 데이터 받기
+//                db_firestore.collection("UserSelect") //작업할 컬렉션
+//                    .get() //문서 가져오기
+//                    .addOnSuccessListener { result_UserSelect -> //성공할 경우
+
 //                    기존 배열리스트가 존재하지 않게 초기화
-                list.clear()
+                        list.clear()
 
 //                var IngId = "0"
 
-                for (i in recipe_ing) {
-                    var IngName = i
-                    var IngPhoto = "ingbas"
-                    var ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
+                        for (i in recipe_ing) {
+                            var IngName = i
+                            var IngPhoto = "ingbas"
+                            var ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
 
-                    for (document_ing in result_IngPhoto) {
-                        Log.w("test_for문", i)
+                            for (document_ing in result_IngPhoto) {
+                                Log.w("test_for문", i)
+                                    if (i == document_ing.data["menuname"]) {
+                                    Log.w("test_들어왔니..?", i)
+                                    IngPhoto = document_ing.data["photo"] as String
+                                    Log.w("test_photo", IngPhoto)
+                                    IngId = document_ing.data["id"] as String
+                                    ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
 
-                        if (i == document_ing.data["menuname"]) {
-                            Log.w("test_들어왔니..?", i)
-                            IngPhoto = document_ing.data["photo"] as String
-                            Log.w("test_photo", IngPhoto)
-                            IngId = document_ing.data["id"] as String
-                            ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
+
+                                }
+                            }
+                            list.add(ingPhoto_list)
+//                            ing_list.add(i)
                         }
-                    }
-                    list.add(ingPhoto_list)
-                }
-                mAdapter.notifyDataSetChanged()
+                        mAdapter.notifyDataSetChanged()
+
             }
 
 
@@ -184,7 +193,6 @@ class MainActivity : AppCompatActivity() {
                                 Log.w("레시피_COOKING_TIME : ", COOKING_TIME)
 
 
-
                                 starbutton.setOnClickListener(View.OnClickListener {
                                     Toast.makeText(
                                         this@MainActivity,
@@ -232,28 +240,7 @@ class MainActivity : AppCompatActivity() {
                                                 ).show()
                                             }
                                     }
-//                                    else {
-//                                        val recipes_id_star = foodId?.text.toString()
-//                                        val star_menu_id =
-//                                            hashMapOf("RECIPE_ID" to recipes_id_star) //파이어스토어에 올리기
-//
-//                                        db_firestore.collection("UserBookmark")
-//                                            .add(star_menu_id)
-//                                            .addOnSuccessListener {
-//                                                Toast.makeText(
-//                                                    this@MainActivity,
-//                                                    "북마크에 추가되었습니다:)",
-//                                                    Toast.LENGTH_SHORT
-//                                                ).show()
-//                                            }
-//                                            .addOnFailureListener {
-//                                                Toast.makeText(
-//                                                    this@MainActivity,
-//                                                    ":(",
-//                                                    Toast.LENGTH_SHORT
-//                                                ).show()
-//                                            }
-//                                    }
+
 
 
                                 })
@@ -263,49 +250,7 @@ class MainActivity : AppCompatActivity() {
                     }
                 }
             }
-        //////// Firestore 사용자 데이터 받기///////////////////////////////////////////////////////////
 
-//UserSelect컬렉션(사용자 냉장고 재료 데이터)
-//        var user_refrigerator_name = ArrayList<Ingre>() //사용자 냉장고 재료 이름
-//
-////        //UserSelect 데이터 받기
-//        db_firestore.collection("UserSelect") //작업할 컬렉션
-//            .get() //문서 가져오기
-//            .addOnSuccessListener { result_UserSelect -> //성공할 경우
-//
-//                //Step1. 식재료 유통기한 & 이름 받기
-//                for (document_ref in result_UserSelect) {
-//
-//                    //user_refrigerator_name 채우기(id & 재료 이름)
-//                    if ("menuname" in document_ref) {
-//                        val user_refrigerator_name_list =
-//                            Ingre(
-//                                document_ref.data["photo"].toString(),
-//                                document_ref.data["menuname"].toString(),
-//                                document_ref.data["id"].toString(),
-////                                document_ref.data["display"].toString()
-//                            )
-//                        user_refrigerator_name.add(user_refrigerator_name_list)
-//                    }
-//
-//                    println("user_refrigerator_name.size : ${user_refrigerator_name.size}")
-//                    //println("user_refrigerator_name : ${user_refrigerator_name}")
-//
-//                    for (ing_cnt: Int in 0..user_refrigerator_name.size - 1) {
-//                        println("user_refrigerator_name : ${user_refrigerator_name[ing_cnt].name}")
-//                    }
-//
-//                    //////////////////////////////////// 사용자가 재료 가지고 있으면 배경 색 변화  /////////////////////////
-//                    val ref_menu = document_ref.data["menuname"].toString()
-//
-////                    if (ref_menu != null && IngName != null && ref_menu == IngName) {
-////                        Log.w("1111111: ", IngName)
-////                        Log.w("1111111: ", ref_menu)
-//                    if(ref_menu != null && ref_menu == "다진파")
-//                        Ingre(IngPhoto, ref_menu, IngId).photo
-//                            .setBackgroundColor(Color.rgb(255, 153, 153))
-//                    }
-//                }
             }
     }
 
