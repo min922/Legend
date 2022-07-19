@@ -1,0 +1,6 @@
+com/example/bookmark/BuildConfig.java
+ com.example.bookmark.BuildConfig
+com/example/bookmark/databinding/ActivityMainBinding.java
+ com.example.bookmark.databinding.ActivityMainBinding
+com/example/bookmark/databinding/FoodMainBinding.java
+ com.example.bookmark.databinding.FoodMainBinding

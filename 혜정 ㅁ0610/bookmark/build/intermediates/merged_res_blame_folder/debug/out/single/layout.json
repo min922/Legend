@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\bookmark\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\food_main.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\bookmark\\src\\main\\res\\layout\\food_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\bookmark\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",
+        "source": "C:\\Users\\user\\AndroidStudioProjects\\AndroidLab\\bookmark\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]
