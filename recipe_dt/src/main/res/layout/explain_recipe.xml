@@ -4,7 +4,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/explain_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    tools:showIn="@layout/ingre_main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -16,6 +15,7 @@
 <LinearLayout
     android:orientation="vertical"
     android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
     android:layout_height="match_parent">
     <ImageView
         android:id="@+id/courseImg"
@@ -27,7 +27,7 @@
 
     <TextView
         android:id="@+id/courseExp"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:textColor="@color/black"

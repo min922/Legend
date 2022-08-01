@@ -3,7 +3,6 @@ package com.example.recipe_dt
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
-import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -17,12 +16,12 @@ class MainActivity : AppCompatActivity() {
 
     //    list 만들어서 Activity에 보이는지 처음 테스트용
     var list = arrayListOf<Ingre>()
+    var IngId = "0"
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.ingre_main)
-
 
         val mAdapter = MyAdapter(this, list)
         recyclerView_ingre.adapter = mAdapter
@@ -31,9 +30,12 @@ class MainActivity : AppCompatActivity() {
         recyclerView_ingre.layoutManager = gm
         recyclerView_ingre.setHasFixedSize(true)
 
-
         ///////////////////////// SQLite 데이터 받기
         val db_sqlite = DataBaseHelper(this).readableDatabase //sql 인스턴스 선언
+
+
+        val dialog = LoadingDialog(this)
+        dialog.show()
 
         // RECIPE_ID예시로 선택한다음 레시피에 들어가는 재료 받기 & 메뉴 대표 사진 받기
         val choiceingre =
@@ -63,35 +65,46 @@ class MainActivity : AppCompatActivity() {
 //        var ingPhoto_info = arrayListOf<Ingre>()
 //        var templist = arrayListOf<Ingre>()
 
+//        val ing_list = arrayListOf<String>()     ///IngPhoto 에서 받은 ing 이름들 리스트
+
         //IngPhoto 데이터 받기
         db_firestore.collection("IngPhoto") //작업할 컬렉션
             .get() //문서 가져오기
             .addOnSuccessListener { result_IngPhoto -> //성공할 경우
 
+                //UserSelect 데이터 받기
+//                db_firestore.collection("UserSelect") //작업할 컬렉션
+//                    .get() //문서 가져오기
+//                    .addOnSuccessListener { result_UserSelect -> //성공할 경우
+
 //                    기존 배열리스트가 존재하지 않게 초기화
-                list.clear()
+                        list.clear()
 
-                var IngId = "0"
+//                var IngId = "0"
 
-                for (i in recipe_ing) {
-                    var IngName = i
-                    var IngPhoto = "ingbas"
-                    var ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
+                        for (i in recipe_ing) {
+                            var IngName = i
+                            var IngPhoto = "ingbas"
+                            var ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
 
-                    for (document_ing in result_IngPhoto) {
-                        Log.w("test_for문", i)
+                            for (document_ing in result_IngPhoto) {
+                                Log.w("test_for문", i)
+                                    if (i == document_ing.data["menuname"]) {
+                                    Log.w("test_들어왔니..?", i)
+                                    IngPhoto = document_ing.data["photo"] as String
+                                    Log.w("test_photo", IngPhoto)
+                                    IngId = document_ing.data["id"] as String
+                                    ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
 
-                        if (i == document_ing.data["menuname"]) {
-                            Log.w("test_들어왔니..?", i)
-                            IngPhoto = document_ing.data["photo"] as String
-                            Log.w("test_photo", IngPhoto)
-                            IngId = document_ing.data["id"] as String
-                            ingPhoto_list = Ingre(IngPhoto, IngName, IngId)
+
+                                }
+                            }
+                            list.add(ingPhoto_list)
+//                            ing_list.add(i)
                         }
-                    }
-                    list.add(ingPhoto_list)
-                }
-                mAdapter.notifyDataSetChanged()
+                        mAdapter.notifyDataSetChanged()
+                dialog.dismiss()
+
             }
 
 
@@ -184,84 +197,200 @@ class MainActivity : AppCompatActivity() {
                                 Log.w("레시피_COOKING_TIME : ", COOKING_TIME)
 
 
+                                var const = 0 //북마크가 이미 되어있는지 체크하는 변수
 
-                                starbutton.setOnClickListener(View.OnClickListener {
-                                    Toast.makeText(
-                                        this@MainActivity,
-                                        "Toast Start",
-                                        Toast.LENGTH_LONG
-                                    ).show()
-                                    starbutton?.isSelected =
-                                        starbutton?.isSelected != true //북마크 별 클릭시 모양 변환
+                                //북마크 UI
+                                db_firestore.collection("UserBookmark")
+                                    .get()
+                                    .addOnSuccessListener { bookmark_selected ->
+                                        for (document_id in bookmark_selected) {
 
+                                            if (starbutton != null) {
+                                                if (document_id.data["RECIPE_ID"] == RECIPE_ID) {
+                                                    println("if")
+                                                    println(RECIPE_ID)
+                                                    starbutton.setSelected(true)
 
-                                    if (starbutton?.isSelected == true) {
-                                        Log.w("dkdk_11", RECIPE_ID)
+                                                } else {
+                                                    println("else")
+                                                    println(RECIPE_ID)
 
-                                        //북마크 클릭 시 파이어스토어 "UserBookmark" 컬렉션에 레시피 id 삭제함
-                                        val recipes_id_star = foodId?.text.toString()//파이어스토어에 올릴 값
-
-                                        db_firestore.collection("UserBookmark")
-                                            .get()
-                                            .addOnSuccessListener { bookmark_id ->
-                                                for (document_id in bookmark_id) {
-                                                    Log.w("dkdk_222555", RECIPE_ID)
-                                                    Log.w("document_id", document_id.data["RECIPE_ID"].toString())
-                                                    if (RECIPE_ID in document_id.data["RECIPE_ID"].toString() && RECIPE_ID == document_id.data["RECIPE_ID"].toString()) {
-                                                        Log.w("dkdk3333", RECIPE_ID)
-                                                        var edit_bookmark =
-                                                            document_id.id //파이어스토어 문서 ID명
-                                                        db_firestore.collection("UserBookmark")
-                                                            .document(edit_bookmark).delete()
-                                                    }
+                                                    continue
                                                 }
-                                                Toast.makeText(
-                                                    this@MainActivity,
-                                                    "북마크에서 해제되었습니다:)",
-                                                    Toast.LENGTH_SHORT
-                                                ).show()
                                             }
-                                            .addOnFailureListener {
-                                                Toast.makeText(
-                                                    this@MainActivity,
-                                                    ":(",
-                                                    Toast.LENGTH_SHORT
-                                                ).show()
-                                            }
+
+                                        }
                                     }
-//                                    else {
-//                                        val recipes_id_star = foodId?.text.toString()
-//                                        val star_menu_id =
-//                                            hashMapOf("RECIPE_ID" to recipes_id_star) //파이어스토어에 올리기
-//
-//                                        db_firestore.collection("UserBookmark")
-//                                            .add(star_menu_id)
-//                                            .addOnSuccessListener {
-//                                                Toast.makeText(
-//                                                    this@MainActivity,
-//                                                    "북마크에 추가되었습니다:)",
-//                                                    Toast.LENGTH_SHORT
-//                                                ).show()
-//                                            }
-//                                            .addOnFailureListener {
-//                                                Toast.makeText(
-//                                                    this@MainActivity,
-//                                                    ":(",
-//                                                    Toast.LENGTH_SHORT
-//                                                ).show()
-//                                            }
-//                                    }
+                                    .addOnFailureListener {
+                                        Toast.makeText(this@MainActivity, "북마크 데이터를 불러오는데 실패했습니다.", Toast.LENGTH_SHORT).show()
+                                    }
+                                //
+
+                                //북마크 기능(별 클릭시 별 UI가 바뀌면서 파이어스토어로 RECIPE_ID가 올라감)
+                                    if (starbutton?.isSelected == true) { //북마크가 되어있는 경우(클릭 시 : 북마크에서 삭제, 한 번 더 :북마크에 추가 )
+                                        starbutton!!.setOnClickListener {
+                                            val recipes_id_star =
+                                                RECIPE_ID?.toString()//파이어스토어에 올릴 값
+                                            val star_menu_id =
+                                                hashMapOf("RECIPE_ID" to recipes_id_star) //파이어스토어에 올리기
+
+                                            starbutton?.isSelected =
+                                                starbutton?.isSelected != true //북마크 별 클릭시 모양 변환
+
+                                            if (starbutton?.isSelected == true) {
+
+                                                db_firestore.collection("UserBookmark")
+                                                    .get()
+                                                    .addOnSuccessListener { bookmark_id ->
+                                                        for (document_id in bookmark_id) {
+                                                            if (document_id.data["RECIPE_ID"] == recipes_id_star) {
+                                                                var edit_bookmark =
+                                                                    document_id.id //파이어스토어 문서 ID명
+                                                                db_firestore.collection("UserBookmark")
+                                                                    .document(edit_bookmark)
+                                                                    .delete()
+                                                            }
+                                                        }
+                                                        Toast.makeText(
+                                                            this@MainActivity,
+                                                            "북마크에서 해제되었습니다:)",
+                                                            Toast.LENGTH_SHORT
+                                                        ).show()
+                                                    }
+                                                    .addOnFailureListener {
+                                                        Toast.makeText(
+                                                            this@MainActivity,
+                                                            ":(",
+                                                            Toast.LENGTH_SHORT
+                                                        ).show()
+                                                    }
 
 
-                                })
+                                            } else {//북마크 해제 시 파이어스토어 "UserBookmark" 컬렉션에 레시피 id 삭제함
+                                                db_firestore.collection("UserBookmark")
+                                                    .get()
+                                                    .addOnSuccessListener { bookmark_selected ->
+                                                        for (document_id in bookmark_selected) {
+                                                            if (document_id.data["RECIPE_ID"] == recipes_id_star) {
+                                                                Toast.makeText(
+                                                                    this@MainActivity,
+                                                                    "이미 북마크에 있습니다.",
+                                                                    Toast.LENGTH_SHORT
+                                                                )
+                                                                    .show()
+                                                                const = 1
+                                                            }
+                                                        }
+                                                        if (const == 0) {
+                                                            db_firestore.collection("UserBookmark")
+                                                                .add(star_menu_id)
+                                                                .addOnSuccessListener {
+                                                                    Toast.makeText(
+                                                                        this@MainActivity,
+                                                                        "북마크에 추가되었습니다:)",
+                                                                        Toast.LENGTH_SHORT
+                                                                    ).show()
+                                                                }
+                                                                .addOnFailureListener {
+                                                                    Toast.makeText(
+                                                                        this@MainActivity,
+                                                                        ":(",
+                                                                        Toast.LENGTH_SHORT
+                                                                    ).show()
+                                                                }
+                                                        }
+                                                    }
 
-                            }
+                                            }
+
+                                        }
+                                    } else {//북마크가 안 되어있는 경우(클릭 시 : 북마크에 추가, 한 번 더 : 북마크에서 삭제)
+                                        starbutton!!.setOnClickListener {
+                                            val recipes_id_star =
+                                                RECIPE_ID?.toString()//파이어스토어에 올릴 값
+                                            val star_menu_id =
+                                                hashMapOf("RECIPE_ID" to recipes_id_star) //파이어스토어에 올리기
+
+                                            starbutton?.isSelected =
+                                                starbutton?.isSelected != true //북마크 별 클릭시 모양 변환
+
+                                            if (starbutton?.isSelected == true) {
+                                                //북마크 클릭 시 파이어스토어 "UserBookmark" 컬렉션에 레시피 id 올라감
+
+                                                db_firestore.collection("UserBookmark")
+                                                    .get()
+                                                    .addOnSuccessListener { bookmark_selected ->
+                                                        for (document_id in bookmark_selected) {
+                                                            if (document_id.data["RECIPE_ID"] == recipes_id_star) {
+                                                                Toast.makeText(this@MainActivity,
+                                                                    "이미 북마크에 있습니다.",
+                                                                    Toast.LENGTH_SHORT
+                                                                )
+                                                                    .show()
+                                                                const = 1
+                                                            }
+                                                        }
+                                                        if (const == 0) {
+                                                            db_firestore.collection("UserBookmark")
+                                                                .add(star_menu_id)
+                                                                .addOnSuccessListener {
+                                                                    Toast.makeText(
+                                                                        this@MainActivity,
+                                                                        "북마크에 추가되었습니다:)",
+                                                                        Toast.LENGTH_SHORT
+                                                                    ).show()
+                                                                }
+                                                                .addOnFailureListener {
+                                                                    Toast.makeText(
+                                                                        this@MainActivity,
+                                                                        ":(",
+                                                                        Toast.LENGTH_SHORT
+                                                                    ).show()
+                                                                }
+                                                        }
+                                                    }
+                                            } else {//북마크 해제 시 파이어스토어 "UserBookmark" 컬렉션에 레시피 id 삭제함
+
+                                                db_firestore.collection("UserBookmark")
+                                                    .get()
+                                                    .addOnSuccessListener { bookmark_id ->
+                                                        for (document_id in bookmark_id) {
+                                                            if (document_id.data["RECIPE_ID"] == recipes_id_star) {
+                                                                var edit_bookmark =
+                                                                    document_id.id //파이어스토어 문서 ID명
+                                                                db_firestore.collection("UserBookmark")
+                                                                    .document(edit_bookmark)
+                                                                    .delete()
+                                                            }
+                                                        }
+                                                        Toast.makeText(
+                                                            this@MainActivity,
+                                                            "북마크에서 해제되었습니다:)",
+                                                            Toast.LENGTH_SHORT
+                                                        ).show()
+                                                    }
+                                                    .addOnFailureListener {
+                                                        Toast.makeText(this@MainActivity,
+                                                            ":(",
+                                                            Toast.LENGTH_SHORT
+                                                        ).show()
+                                                    }
+                                            }
+
+                                        }
+
+                                    }
+
+                                }
+
                         }
                     }
                 }
             }
+
+            }
     }
-}
+
 
 
 
